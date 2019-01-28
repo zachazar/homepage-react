@@ -1,42 +1,41 @@
+// @flow
+
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
-const Header = ({ siteTitle }) => (
-	<div
-		style={{
-			background: `rebeccapurple`,
-			marginBottom: `1.45rem`,
-		}}
-	>
-		<div
-			style={{
-				margin: `0 auto`,
-				maxWidth: 960,
-				padding: `1.45rem 1.0875rem`,
-			}}
-		>
-			<h1 style={{ margin: 0 }}>
-				<Link
-					to="/"
-					style={{
-						color: `white`,
-						textDecoration: `none`,
-					}}
-				>
-					{siteTitle}
+const styles = {
+	active: {
+		color: 'white',
+		backgroundColor: '#4592cb',
+	},
+}
+
+const Header = () => (
+	<Navbar>
+		<Navbar.Header>
+			<Navbar.Brand>
+				<Link to="/">Zach Azar</Link>
+			</Navbar.Brand>
+		</Navbar.Header>
+		<Nav pullRight>
+			<NavItem eventKey={1}>
+				<Link activeStyle={styles.active} to="/">
+					Résumé
 				</Link>
-			</h1>
-		</div>
-	</div>
+			</NavItem>
+			<NavItem eventKey={2}>
+				<Link activeStyle={styles.active} to="/about">
+					About
+				</Link>
+			</NavItem>
+			<NavItem eventKey={3}>
+				<Link activeStyle={styles.active} to="/contact">
+					Contact
+				</Link>
+			</NavItem>
+		</Nav>
+	</Navbar>
 )
-
-Header.propTypes = {
-	siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-	siteTitle: ``,
-}
 
 export default Header
