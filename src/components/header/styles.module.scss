@@ -1,0 +1,40 @@
+@import '../../lib/style-variables.scss';
+
+.navBar {
+	display: flex;
+	background: #f8f9fa;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	font-weight: 400;
+	font-size: $font-size-large;
+
+	.navHeader {
+		color: #777;
+		padding-top: 0.3125rem;
+		padding-bottom: 0.3125rem;
+		margin-right: 1.5rem;
+	}
+
+	.navRight {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-right: 0.5rem;
+		font-size: $font-size-medium;
+	}
+
+	.navLink {
+		text-decoration: none;
+		padding: 1rem;
+		color: rgba(0, 0, 0, 0.6);
+		&.active {
+			background-color: $color-background;
+			color: white;
+		}
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: rgba(0, 0, 0, 1);
+		}
+	}
+}
