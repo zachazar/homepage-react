@@ -3,7 +3,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../header'
-import 'bootstrap/dist/css/bootstrap.css'
 import styles from './styles.module.scss'
 
 const Layout = ({ children }: { children: PropTypes.node }) => (
