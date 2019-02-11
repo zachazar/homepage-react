@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 2rem;
+	.panel {
+		width: 50%;
+		padding: 0.5rem;
+	}
+}
