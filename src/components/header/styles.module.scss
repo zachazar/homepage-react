@@ -1,8 +1,8 @@
-@import '../../lib/style-variables.scss';
+@import '../../styles/style-variables.scss';
 
 .navBar {
 	display: flex;
-	background: #f8f9fa;
+	background: $color-background;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	padding: 1rem 2rem;
@@ -28,7 +28,7 @@
 		padding: 1rem;
 		color: rgba(0, 0, 0, 0.6);
 		&.active {
-			background-color: $color-background;
+			background-color: $color-active-background;
 			color: white;
 		}
 		&:focus,
