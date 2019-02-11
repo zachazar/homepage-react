@@ -8,7 +8,7 @@ import AboutImage from './about-image'
 const About = () => (
 	<Layout>
 		<SEO title="about" keywords={[`gatsby`, `application`, `react`]} />
-		<h1>About</h1>
+
 		<div className={styles.container}>
 			<div className={styles.aboutItem}>
 				<div className={styles.aboutImage}>
@@ -16,6 +16,7 @@ const About = () => (
 				</div>
 			</div>
 			<div className={styles.aboutItem}>
+				<h1>About</h1>
 				<p>
 					My name is Zach Azar and I&#39;m a Full Stack Software Engineer
 					currently seeking employment in San Francisco, CA.
