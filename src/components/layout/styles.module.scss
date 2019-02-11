@@ -8,5 +8,10 @@
 		padding: 0px 1.0875rem 1.45rem;
 		padding-top: 0;
 		background-color: white;
+		border-radius: 10px;
+
+		@media (max-width: 960px) {
+			border-radius: 0px;
+		}
 	}
 }
