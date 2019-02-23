@@ -5,6 +5,7 @@
 	"version": "0.1.0",
 	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
 	"dependencies": {
+		"d3": "^5.9.1",
 		"eslint-plugin-flowtype": "^3.4.2",
 		"eslint-plugin-react": "^7.12.4",
 		"gatsby": "^2.1.17",
@@ -20,9 +21,11 @@
 		"gatsby-transformer-sharp": "^2.1.14",
 		"node-sass": "^4.11.0",
 		"prop-types": "^15.7.2",
+		"ramda": "^0.26.1",
 		"react": "^16.8.3",
 		"react-dom": "^16.8.3",
 		"react-helmet": "^5.2.0",
+		"react-transition-group": "^2.5.3",
 		"react-typography": "^0.16.18",
 		"typography": "^0.16.18",
 		"typography-theme-moraga": "^0.16.18"
