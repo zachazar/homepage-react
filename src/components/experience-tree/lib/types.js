@@ -5,6 +5,6 @@ export type ExperienceData = {
 	title: string,
 	subtitle: string,
 	tertiaryTitle: string,
-	desctiptionTitle?: string,
+	descriptionTitle?: string,
 	description: string,
 }

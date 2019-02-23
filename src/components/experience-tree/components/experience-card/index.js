@@ -9,9 +9,11 @@ const ExperienceCard = ({ experienceData }: Props) => (
 			<div className={styles.mainTitle}>{experienceData.title}</div>
 			<div className={styles.tertiaryTitle}>{experienceData.tertiaryTitle}</div>
 		</div>
-		<div className={styles.desctiptionTitle}>
-			{experienceData.descriptionTitle}
-		</div>
+		{experienceData.descriptionTitle && (
+			<div className={styles.desctiptionTitle}>
+				{experienceData.descriptionTitle}
+			</div>
+		)}
 		<div className={styles.description}>{experienceData.description}</div>
 	</div>
 )
