@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import ExperienceCard from './components/experience-card'
+import SkillTree from './components/skill-tree'
 import type { ExperienceData } from './lib/types'
 
 const education: Array<ExperienceData> = [
@@ -14,6 +15,11 @@ const education: Array<ExperienceData> = [
 			'Thesis: PECCit - An Omniscient Debugger for Web Development',
 		description:
 			'PECCit is a multi-application software system which offers a tool for improved backend debugging. Built using PHP, C++, Linux, MySQL, JavaScript, jQuery, AJAX, a REST API, HTML, CSS, Bootstrap, etc.',
+		skills: {
+			PHP: 'HIGH',
+			MySQL: 'HIGH',
+			'Advanced Data Structures and Algorithms': 'MAX',
+		},
 	},
 	{
 		_id: 2,
@@ -22,15 +28,24 @@ const education: Array<ExperienceData> = [
 		tertiaryTitle: 'GPA: 3.70',
 		description:
 			"Minors: Engineering Management, Mathematics\nHonors: Cum Laude, Honors in Computer Science, Dean's List",
+		skills: {
+			'Object Oriented Programming': 'MAX',
+			Java: 'HIGH',
+			'C++': 'HIGH',
+		},
 	},
 ]
 
 const ExperienceTree = () => {
+	const [active, setActive] = React.useState(0)
 	const experienceCards = education.map(experienceData => (
-		<ExperienceCard key={experienceData._id} experienceData={experienceData} />
+		<ExperienceCard
+			key={experienceData._id}
+			isActive={experienceData._id === active}
+			experienceData={experienceData}
+			setActive={setActive}
+		/>
 	))
-	console.log(experienceCards)
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.panel} id="leftPanel">
@@ -39,7 +54,10 @@ const ExperienceTree = () => {
 				<h2>Experience</h2>
 				<h2>Projects</h2>
 			</div>
-			<div className={styles.panel} id="rightPanel" />
+			<div className={styles.panel} id="rightPanel">
+				<h2>Technologies and Languages</h2>
+				<SkillTree experiences={education} active={active} />
+			</div>
 		</div>
 	)
 }
