@@ -6,6 +6,13 @@
 	border-radius: 10px;
 	padding: 1.5rem;
 	cursor: pointer;
+	border: 2px solid $color-background;
+
+	&:hover,
+	&:active {
+		border: 2px solid $color-active-blue;
+	}
+
 	div {
 		display: inline-block;
 	}
