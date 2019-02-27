@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import ExperienceCard from './components/experience-card'
 import SkillTree from './components/skill-tree'
 import type { ExperienceData } from './lib/types'
+import { SizeMe } from 'react-sizeme'
 
 const education: Array<ExperienceData> = [
 	{
@@ -56,7 +57,15 @@ const ExperienceTree = () => {
 			</div>
 			<div className={styles.panel} id="rightPanel">
 				<h2>Technologies and Languages</h2>
-				<SkillTree experiences={education} active={active} />
+				<SizeMe>
+					{({ size }) => (
+						<SkillTree
+							experiences={education}
+							active={active}
+							width={size.width}
+						/>
+					)}
+				</SizeMe>
 			</div>
 		</div>
 	)
