@@ -24,10 +24,10 @@ const ExperienceTree = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.panel} id="leftPanel">
-				<h2>Education</h2>
-				{educationCards}
 				<h2>Experience</h2>
 				{workExperienceCards}
+				<h2>Education</h2>
+				{educationCards}
 				<h2>Projects</h2>
 				{projectCards}
 			</div>
