@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group'
 import type { ExperienceData, useStateFn } from '../../lib/types'
 
 const defaultStyle = {
-	transition: `opacity 100ms ease, display 500ms ease`,
+	transition: 'opacity 100ms ease, display 500ms ease',
 	opacity: 0,
 	display: 'none',
 }
