@@ -3,7 +3,6 @@ import React from 'react'
 import styles from './styles.module.scss'
 import ExperienceCard from './components/experience-card'
 import SkillTree from './components/skill-tree'
-import type { ExperienceData } from './lib/types'
 import { SizeMe } from 'react-sizeme'
 import { education, workExperience, projects } from './lib/experience-data'
 
