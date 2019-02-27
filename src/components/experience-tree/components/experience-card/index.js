@@ -26,6 +26,7 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 			<div className={styles.mainTitle}>{experienceData.title}</div>
 			<div className={styles.tertiaryTitle}>{experienceData.tertiaryTitle}</div>
 		</div>
+		<div>{experienceData.subtitle}</div>
 		<Transition in={isActive} timeout={100}>
 			{state => (
 				<div
