@@ -7,18 +7,19 @@ import type { ExperienceData } from '../../lib/types'
 type Props = {
 	active?: number,
 	experiences: Array<ExperienceData>,
+	width: number,
 }
 
 function convertSkillValueToNumber(skillValue) {
 	switch (skillValue) {
 		case 'LOW':
-			return 2
+			return 0.2
 		case 'MED':
-			return 5
+			return 0.5
 		case 'HIGH':
-			return 8
+			return 0.8
 		case 'MAX':
-			return 10
+			return 1.0
 		default:
 			throw new Error('Unexpected skill value')
 	}
@@ -40,14 +41,14 @@ export default class SkillTree extends React.Component<Props> {
 	d3container: any // D3 node
 	d3skillGroup: any // D3 node
 	skills: any // D3 node
-	width: number
+	rectWidth: number
 	experiences: Array<ExperienceData>
 	skillList: Array<string>
 	experiencesById: { [number]: ExperienceData }
+	svgHeight: number
 
 	constructor(props: Props) {
 		super(props)
-		this.width = 500 // TODO change this to a prop
 
 		this.id = 'skilltree'
 		this.svgStyles = {
@@ -55,7 +56,7 @@ export default class SkillTree extends React.Component<Props> {
 			margin: {
 				top: 10,
 				bottom: 10,
-				left: 10,
+				left: 2,
 				right: 30,
 			},
 			itemMargin: 10,
@@ -70,15 +71,16 @@ export default class SkillTree extends React.Component<Props> {
 			[],
 			this.props.experiences
 		).sort()
+
+		this.svgHeight =
+			this.skillList.length *
+				(this.svgStyles.fontSize + this.svgStyles.margin.bottom) +
+			this.svgStyles.margin.top +
+			this.svgStyles.margin.bottom
 	}
 
 	initializeSVG() {
-		this.d3container = d3
-			.select(`#${this.id}`)
-			.append('svg')
-			.attr('width', 500)
-			.attr('height', 500)
-			.style('margin-left', 100)
+		this.d3container = d3.select(`#${this.id}`).append('svg')
 
 		this.d3skillGroup = this.d3container
 			.append('g')
@@ -88,6 +90,15 @@ export default class SkillTree extends React.Component<Props> {
 			)
 	}
 
+	resizeSVG() {
+		console.log(`resizing with width: ${this.props.width}`)
+		this.rectWidth =
+			this.props.width -
+			(this.svgStyles.margin.left + this.svgStyles.margin.right)
+		this.d3container
+			.attr('width', this.props.width)
+			.attr('height', this.svgHeight)
+	}
 	initializeData() {
 		this.skills = this.d3skillGroup
 			.selectAll('.skill__group')
@@ -154,7 +165,7 @@ export default class SkillTree extends React.Component<Props> {
 								this.experiencesById[this.props.active].skills[d]
 						  )
 						: 0
-					return (this.width * value) / 10
+					return this.rectWidth * value
 				} else {
 					return 0
 				}
@@ -166,7 +177,7 @@ export default class SkillTree extends React.Component<Props> {
 								this.experiencesById[this.props.active].skills[d]
 						  )
 						: 0
-					return value / 10
+					return value
 				} else {
 					return 100
 				}
@@ -229,11 +240,13 @@ export default class SkillTree extends React.Component<Props> {
 
 	componentDidMount() {
 		this.initializeSVG()
+		this.resizeSVG()
 		this.initializeData()
 		this.draw()
 	}
 
 	componentDidUpdate() {
+		this.resizeSVG()
 		this.draw()
 	}
 
