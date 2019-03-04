@@ -25,7 +25,11 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 			<div className={styles.mainTitle}>{experienceData.title}</div>
 			<div>
 				{experienceData.tertiaryUrl ? (
-					<a target="blank" href={experienceData.tertiaryUrl}>
+					<a
+						className={styles.tertiaryUrl}
+						target="blank"
+						href={experienceData.tertiaryUrl}
+					>
 						{experienceData.tertiaryTitle}
 					</a>
 				) : (
@@ -48,8 +52,10 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 						</div>
 					)}
 					<div className={styles.descriptionContainer}>
-						{experienceData.descriptions.map(description => (
-							<p className={styles.description}>{description}</p>
+						{experienceData.descriptions.map((description, i) => (
+							<p key={i} className={styles.description}>
+								{description}
+							</p>
 						))}
 					</div>
 				</div>
