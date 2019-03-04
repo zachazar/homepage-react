@@ -5,8 +5,9 @@ export type ExperienceData = {|
 	title: string,
 	subtitle: string,
 	tertiaryTitle: string,
+	tertiaryUrl?: string,
 	descriptionTitle?: string,
-	description: string,
+	descriptions: Array<string>,
 	skills: { [skillName: string]: 'MAX' | 'HIGH' | 'MED' | 'Low' },
 |}
 

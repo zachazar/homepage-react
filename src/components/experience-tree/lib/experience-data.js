@@ -9,8 +9,9 @@ export const education: Array<ExperienceData> = [
 		tertiaryTitle: 'GPA: 3.97',
 		descriptionTitle:
 			'Thesis: PECCit - An Omniscient Debugger for Web Development',
-		description:
+		descriptions: [
 			'PECCit is a multi-application software system which offers a tool for improved backend debugging. Built using PHP, C++, Linux, MySQL, JavaScript, jQuery, AJAX, a REST API, HTML, CSS, Bootstrap, etc.',
+		],
 		skills: {
 			PHP: 'HIGH',
 			MySQL: 'HIGH',
@@ -22,8 +23,10 @@ export const education: Array<ExperienceData> = [
 		title: 'B.S. in Computer Science',
 		subtitle: 'Vanderbilt University (2007 - 2011)',
 		tertiaryTitle: 'GPA: 3.70',
-		description:
-			"Minors: Engineering Management, Mathematics\nHonors: Cum Laude, Honors in Computer Science, Dean's List",
+		descriptions: [
+			'Minors: Engineering Management, Mathematics',
+			"Honors: Cum Laude, Honors in Computer Science, Dean's List",
+		],
 		skills: {
 			'Object Oriented Programming': 'MAX',
 			Java: 'HIGH',
@@ -38,8 +41,10 @@ export const workExperience: Array<ExperienceData> = [
 		title: 'Co-Founder and Lead Engineer',
 		subtitle: 'Lever Insights, LLC',
 		tertiaryTitle: 'Feb 2016 - July 2016',
-		description:
-			'- Designed a full-stack solution for a data visualization web application-Developed a Single-Page Application (SPA) prototype using Node.js, Express, AngularJS, D3, Bootstrap, Sass',
+		descriptions: [
+			'- Designed a full-stack solution for a data visualization web application',
+			'- Developed a Single-Page Application (SPA) prototype using Node.js, Express, AngularJS, D3, Bootstrap, Sass',
+		],
 		skills: {
 			AngularJS: 'MAX',
 			D3: 'HIGH',
@@ -53,9 +58,11 @@ export const projects: Array<ExperienceData> = [
 		_id: 7,
 		title: 'Homepage',
 		subtitle: 'Angular - version 1',
-		tertiaryTitle: 'https://github.com/zachazar/homepage',
-		description:
+		tertiaryTitle: 'Project on GitHub',
+		tertiaryUrl: 'https://github.com/zachazar/homepage',
+		descriptions: [
 			'Built a personal homepage (this website) using Angular, D3, Bootstrap, PHP, Webpack, Sass',
+		],
 		skills: {
 			AngularJS: 'MAX',
 			Bootstrap: 'HIGH',

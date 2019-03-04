@@ -23,7 +23,15 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 	>
 		<div className={styles.title}>
 			<div className={styles.mainTitle}>{experienceData.title}</div>
-			<div className={styles.tertiaryTitle}>{experienceData.tertiaryTitle}</div>
+			<div>
+				{experienceData.tertiaryUrl ? (
+					<a target="blank" href={experienceData.tertiaryUrl}>
+						{experienceData.tertiaryTitle}
+					</a>
+				) : (
+					experienceData.tertiaryTitle
+				)}
+			</div>
 		</div>
 		<div>{experienceData.subtitle}</div>
 		<Transition in={isActive} timeout={100}>
@@ -39,7 +47,11 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 							{experienceData.descriptionTitle}
 						</div>
 					)}
-					<div className={styles.description}>{experienceData.description}</div>
+					<div className={styles.descriptionContainer}>
+						{experienceData.descriptions.map(description => (
+							<p className={styles.description}>{description}</p>
+						))}
+					</div>
 				</div>
 			)}
 		</Transition>
