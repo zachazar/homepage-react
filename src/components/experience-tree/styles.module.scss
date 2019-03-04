@@ -5,5 +5,7 @@
 	.panel {
 		width: 50%;
 		padding: 0.5rem;
+		max-height: 1200px;
+		overflow-y: scroll;
 	}
 }
