@@ -16,6 +16,24 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
 					}}
 					link={[
 						{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+						{
+							rel: 'stylesheet',
+							type: 'text/css',
+							href:
+								'https://use.fontawesome.com/releases/v5.7.2/css/brands.css',
+							integrity:
+								'sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK',
+							crossorigin: 'anonymous',
+						},
+						{
+							rel: 'stylesheet',
+							type: 'text/css',
+							href:
+								'https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css',
+							integrity:
+								'sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+',
+							crossorigin: 'anonymous',
+						},
 					]}
 					title={title}
 					titleTemplate={`%s | ${data.site.siteMetadata.title}`}
