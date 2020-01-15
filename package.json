@@ -1,9 +1,9 @@
 {
-	"name": "gatsby-starter-default",
+	"name": "Zach Azar Website v2",
 	"private": true,
-	"description": "A simple starter to get up and developing quickly with Gatsby",
+	"description": "Personal website for Zach v2",
 	"version": "0.1.0",
-	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
+	"author": "Zach Azar",
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"d3": "^5.15.0",
