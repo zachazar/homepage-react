@@ -56,6 +56,19 @@ export const workExperience: Array<ExperienceData> = [
 export const projects: Array<ExperienceData> = [
 	{
 		_id: 7,
+		title: 'Homepage - Revised',
+		subtitle: 'React - version 2',
+		tertiaryTitle: 'Project on GitHub',
+		tertiaryUrl: 'https://github.com/zachazar/homepage-react',
+		descriptions: [
+			'I revised my website using React instead of Angular. Additionally, I used create-react-app, gatsby, and deployed with Netlify.',
+		],
+		skills: {
+			React: 'MAX',
+		},
+	},
+	{
+		_id: 8,
 		title: 'Homepage',
 		subtitle: 'Angular - version 1',
 		tertiaryTitle: 'Project on GitHub',
