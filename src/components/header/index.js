@@ -6,30 +6,24 @@ import styles from './styles.module.scss'
 
 const Header = () => (
 	<div className={styles.navBar}>
-		<div className={styles.navHeader}>
-			<Link className={styles.navLink} to="/">
-				Zach Azar
-			</Link>
-		</div>
-		<div className={styles.navRight}>
-			<Link className={styles.navLink} activeClassName={styles.active} to="/">
-				Résumé
-			</Link>
-			<Link
-				className={styles.navLink}
-				activeClassName={styles.active}
-				to="/about"
-			>
-				About
-			</Link>
-			<Link
-				className={styles.navLink}
-				activeClassName={styles.active}
-				to="/contact"
-			>
-				Contact
-			</Link>
-		</div>
+		<div className={styles.title}>Zach Azar</div>
+		<Link className={styles.navLink} activeClassName={styles.active} to="/">
+			Résumé
+		</Link>
+		<Link
+			className={styles.navLink}
+			activeClassName={styles.active}
+			to="/about"
+		>
+			About
+		</Link>
+		<Link
+			className={styles.navLink}
+			activeClassName={styles.active}
+			to="/contact"
+		>
+			Contact
+		</Link>
 	</div>
 )
 

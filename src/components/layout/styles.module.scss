@@ -24,10 +24,8 @@
 	.main {
 		margin: 0 auto;
 		max-width: 1200px;
-		padding: 0px 1.0875rem 1.45rem;
-		padding-top: 0;
-		background-color: white;
-		border-radius: 10px;
+		padding: 0.5rem 0;
+		border-radius: $border-radius-default;
 
 		@media (max-width: 1200px) {
 			border-radius: 0px;

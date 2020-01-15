@@ -2,8 +2,9 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import { Transition } from 'react-transition-group'
-import type { ExperienceData, useStateFn } from '../../lib/types'
+import classnames from 'classnames'
 
+import type { ExperienceData, useStateFn } from '../../lib/types'
 const defaultStyle = {
 	transition: 'opacity 100ms ease, display 500ms ease',
 	opacity: 0,
@@ -18,7 +19,9 @@ const transitionStyles = {
 
 const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 	<div
-		className={styles.container}
+		className={classnames(styles.container, {
+			[styles.isActive]: isActive,
+		})}
 		onClick={() => (isActive ? setActive(0) : setActive(experienceData._id))}
 	>
 		<div className={styles.title}>
