@@ -5,9 +5,9 @@ import SEO from '../../components/seo'
 import styles from './styles.module.scss'
 import AboutImage from './about-image'
 
-const About = () => (
+const AboutPage = () => (
 	<Layout>
-		<SEO title="about" keywords={[`gatsby`, `application`, `react`]} />
+		<SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
 
 		<div className={styles.container}>
 			<div className={styles.aboutItem}>
@@ -16,7 +16,7 @@ const About = () => (
 				</div>
 			</div>
 			<div className={styles.aboutItem}>
-				<h1>About</h1>
+				<h1>Welcome!</h1>
 				<p>
 					My name is Zach Azar and I&#39;m a Full Stack Software Engineer
 					currently seeking employment in San Francisco, CA.
@@ -46,4 +46,4 @@ const About = () => (
 	</Layout>
 )
 
-export default About
+export default AboutPage

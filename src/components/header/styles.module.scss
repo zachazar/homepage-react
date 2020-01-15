@@ -12,7 +12,7 @@
 		text-align: center;
 	}
 	.title {
-		padding: 0.75rem;
+		padding: 0.5rem 0.75rem;
 		margin: 1px;
 		border-right-width: 1px;
 		border-right-style: solid;
@@ -21,15 +21,10 @@
 	.navLink {
 		text-decoration: none;
 		margin: 0 1px;
-		padding: 0.75rem;
+		padding: 0.5rem 0.75rem;
 		color: rgba(0, 0, 0, 0.6);
 		&.active {
-			background-color: $color-active-background;
-			color: white;
-			&:focus,
-			&:hover {
-				color: white;
-			}
+			color: $color-active-blue;
 		}
 		&:focus,
 		&:hover {

@@ -7,7 +7,7 @@ import { SizeMe } from 'react-sizeme'
 import { education, workExperience, projects } from './lib/experience-data'
 
 const ExperienceTree = () => {
-	const [active, setActive] = React.useState(0)
+	const [active, setActive] = React.useState(workExperience[0]._id)
 
 	const experienceDataToCard = experienceData => (
 		<ExperienceCard

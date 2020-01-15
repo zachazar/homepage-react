@@ -8,14 +8,14 @@ const Header = () => (
 	<div className={styles.navBar}>
 		<div className={styles.title}>Zach Azar</div>
 		<Link className={styles.navLink} activeClassName={styles.active} to="/">
-			Résumé
+			About
 		</Link>
 		<Link
 			className={styles.navLink}
 			activeClassName={styles.active}
-			to="/about"
+			to="/resume"
 		>
-			About
+			Résumé
 		</Link>
 		<Link
 			className={styles.navLink}
