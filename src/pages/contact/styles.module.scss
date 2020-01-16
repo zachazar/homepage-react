@@ -5,4 +5,14 @@
 	border: 0px solid black;
 	border-radius: $border-radius-default;
 	padding: 2rem;
+
+	.inputContainer {
+		label {
+			display: block;
+		}
+		input,
+		textarea {
+			border-radius: 4px;
+		}
+	}
 }

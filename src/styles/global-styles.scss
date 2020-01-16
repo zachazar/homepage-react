@@ -1,4 +1,7 @@
 @import './style-variables.scss';
+@import 'bulma/sass/utilities/_all';
+@import 'bulma/sass/base/_all';
+
 body {
 	background-color: $color-background !important;
 }

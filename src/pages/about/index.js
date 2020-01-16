@@ -1,9 +1,11 @@
 // @flow
 import React from 'react'
+import classnames from 'classnames'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import styles from './styles.module.scss'
 import AboutImage from './about-image'
+import styles from './styles.module.scss'
+import b from '../../styles/bulma.module.scss'
 
 const AboutPage = () => (
 	<Layout>
@@ -16,7 +18,9 @@ const AboutPage = () => (
 				</div>
 			</div>
 			<div className={styles.aboutItem}>
-				<h1>Welcome!</h1>
+				<div className={classnames(b.title, b.hasTextWeightLight)}>
+					Welcome!
+				</div>
 				<p>
 					My name is Zach Azar and I&#39;m a Full Stack Software Engineer
 					currently seeking employment in San Francisco, CA.
