@@ -5,6 +5,7 @@
 	"version": "0.1.0",
 	"author": "Zach Azar",
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.12.0",
 		"bulma": "^0.8.0",
 		"classnames": "^2.2.6",
 		"d3": "^5.15.0",
@@ -29,10 +30,7 @@
 		"react-helmet": "^5.2.1",
 		"react-scripts": "^3.3.0",
 		"react-sizeme": "^2.6.11",
-		"react-transition-group": "^2.9.0",
-		"react-typography": "^0.16.19",
-		"typography": "^0.16.19",
-		"typography-theme-moraga": "^0.16.19"
+		"react-transition-group": "^2.9.0"
 	},
 	"keywords": [
 		"gatsby"

@@ -14,68 +14,47 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
 					htmlAttributes={{
 						lang,
 					}}
-					link={[
-						{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
-						{
-							rel: 'stylesheet',
-							type: 'text/css',
-							href:
-								'https://use.fontawesome.com/releases/v5.7.2/css/brands.css',
-							integrity:
-								'sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK',
-							crossorigin: 'anonymous',
-						},
-						{
-							rel: 'stylesheet',
-							type: 'text/css',
-							href:
-								'https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css',
-							integrity:
-								'sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+',
-							crossorigin: 'anonymous',
-						},
-					]}
 					title={title}
 					titleTemplate={`%s | ${data.site.siteMetadata.title}`}
 					meta={[
 						{
-							name: `description`,
+							name: 'description',
 							content: metaDescription,
 						},
 						{
-							property: `og:title`,
+							property: 'og:title',
 							content: title,
 						},
 						{
-							property: `og:description`,
+							property: 'og:description',
 							content: metaDescription,
 						},
 						{
-							property: `og:type`,
-							content: `website`,
+							property: 'og:type',
+							content: 'website',
 						},
 						{
-							name: `twitter:card`,
-							content: `summary`,
+							name: 'twitter:card',
+							content: 'summary',
 						},
 						{
-							name: `twitter:creator`,
+							name: 'twitter:creator',
 							content: data.site.siteMetadata.author,
 						},
 						{
-							name: `twitter:title`,
+							name: 'twitter:title',
 							content: title,
 						},
 						{
-							name: `twitter:description`,
+							name: 'twitter:description',
 							content: metaDescription,
 						},
 					]
 						.concat(
 							keywords.length > 0
 								? {
-										name: `keywords`,
-										content: keywords.join(`, `),
+										name: 'keywords',
+										content: keywords.join(', '),
 								  }
 								: []
 						)
@@ -87,7 +66,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
 )
 
 SEO.defaultProps = {
-	lang: `en`,
+	lang: 'en',
 	meta: [],
 	keywords: [],
 }

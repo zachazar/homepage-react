@@ -6,13 +6,11 @@
 	border-radius: $border-radius-default;
 	padding: 2rem;
 
-	.inputContainer {
-		label {
-			display: block;
-		}
-		input,
+	.control {
+		margin-top: 8px;
+
 		textarea {
-			border-radius: 4px;
+			min-height: 200px;
 		}
 	}
 }
