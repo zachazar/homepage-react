@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import classnames from 'classnames'
+import cx from 'classnames'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import AboutImage from './about-image'
@@ -18,9 +18,7 @@ const AboutPage = () => (
 				</div>
 			</div>
 			<div className={styles.aboutItem}>
-				<div className={classnames(b.title, b.hasTextWeightLight)}>
-					Welcome!
-				</div>
+				<div className={cx(b.title, b.hasTextWeightLight)}>Welcome!</div>
 				<p>
 					My name is Zach Azar and I&#39;m a Full Stack Software Engineer
 					currently seeking employment in San Francisco, CA.

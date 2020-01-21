@@ -27,6 +27,7 @@ function convertSkillValueToNumber(skillValue) {
 
 export default class SkillTree extends React.Component<Props> {
 	id: string
+
 	svgStyles: {
 		fontSize: number,
 		margin: {
@@ -38,13 +39,24 @@ export default class SkillTree extends React.Component<Props> {
 		itemMargin: number,
 		rectFill: string,
 	}
-	d3container: any // D3 node
-	d3skillGroup: any // D3 node
-	skills: any // D3 node
+
+	d3container: any
+
+	// D3 node
+	d3skillGroup: any
+
+	// D3 node
+	skills: any
+
+	// D3 node
 	rectWidth: number
+
 	experiences: Array<ExperienceData>
+
 	skillList: Array<string>
+
 	experiencesById: { [number]: ExperienceData }
+
 	svgHeight: number
 
 	constructor(props: Props) {
@@ -99,6 +111,7 @@ export default class SkillTree extends React.Component<Props> {
 			.attr('width', this.props.width)
 			.attr('height', this.svgHeight)
 	}
+
 	initializeData() {
 		this.skills = this.d3skillGroup
 			.selectAll('.skill__group')
@@ -108,12 +121,14 @@ export default class SkillTree extends React.Component<Props> {
 			.attr('class', 'skill__group')
 			.style('font-size', this.svgStyles.fontSize)
 			.style('cursor', 'default')
-			.attr('transform', (d, i) => {
-				return `translate(0,${i *
-					(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
-			})
+			.attr(
+				'transform',
+				(d, i) =>
+					`translate(0,${i *
+						(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
+			)
 
-		//Create the rectangles
+		// Create the rectangles
 		this.skills
 			.append('rect')
 			.attr('class', 'skill__rect')
@@ -125,65 +140,63 @@ export default class SkillTree extends React.Component<Props> {
 			.attr('ry', 10)
 			.style('fill', this.svgStyles.rectFill)
 
-		//Create the texts
+		// Create the texts
 		this.skills
 			.append('text')
 			.attr('class', 'skill__text')
 			.attr('x', 0)
 			.attr('y', 0)
 			.attr('dx', '0.5em')
-			.text(d => {
-				return d
-			})
+			.text(d => d)
 			.attr('text-anchor', 'start')
 			.attr('dominant-baseline', 'mathematical')
 	}
 
 	draw() {
-		//Sort the data based on the active key
+		// Sort the data based on the active key
 		this.sortData()
 
-		//Render the data in the correct places
+		// Render the data in the correct places
 		this.d3skillGroup
 			.selectAll('.skill__group')
 			.transition()
 			.duration(1000)
-			.attr('transform', (d, i) => {
-				return `translate(0,${i *
-					(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
-			})
+			.attr(
+				'transform',
+				(d, i) =>
+					`translate(0,${i *
+						(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
+			)
 
-		//Adjust rectangle widths and opacities to skill's value
+		// Adjust rectangle widths and opacities to skill's value
 		this.d3skillGroup
 			.selectAll('.skill__rect')
 			.transition()
 			.duration(1000)
 			.attr('width', d => {
 				if (this.props.active) {
-					let value = this.experiencesById[this.props.active].skills[d]
+					const value = this.experiencesById[this.props.active].skills[d]
 						? convertSkillValueToNumber(
 								this.experiencesById[this.props.active].skills[d]
 						  )
 						: 0
 					return this.rectWidth * value
-				} else {
-					return 0
 				}
+				return 0
 			})
 			.attr('fill-opacity', d => {
 				if (this.props.active) {
-					let value = this.experiencesById[this.props.active].skills[d]
+					const value = this.experiencesById[this.props.active].skills[d]
 						? convertSkillValueToNumber(
 								this.experiencesById[this.props.active].skills[d]
 						  )
 						: 0
 					return value
-				} else {
-					return 100
 				}
+				return 100
 			})
 
-		//If the skill is active, make it white over the rectangle
+		// If the skill is active, make it white over the rectangle
 		this.d3skillGroup
 			.selectAll('.skill__text')
 			.transition()
@@ -193,22 +206,21 @@ export default class SkillTree extends React.Component<Props> {
 					return this.experiencesById[this.props.active].skills[d]
 						? 'white'
 						: 'black'
-				} else {
-					return 'black'
 				}
+				return 'black'
 			})
 	}
 
 	sortData() {
 		this.skills.sort((a, b) => {
-			const active = this.props.active
-			if (!!active) {
-				//Active item has both skills
+			const { active } = this.props
+			if (active) {
+				// Active item has both skills
 				if (
 					this.experiencesById[active].skills[a] &&
 					this.experiencesById[active].skills[b]
 				) {
-					//Sort on value, breaking tie alphabetically
+					// Sort on value, breaking tie alphabetically
 					return this.experiencesById[active].skills[a] ===
 						this.experiencesById[active].skills[b]
 						? a <= b
@@ -221,20 +233,18 @@ export default class SkillTree extends React.Component<Props> {
 									this.experiencesById[active].skills[a]
 								)
 				}
-				//The active item is missing one or both of the skills.
-				else {
-					//Return the non-missing skill, or sort alphabetically if neither exists
-					return this.experiencesById[active].skills[a]
-						? -1
-						: this.experiencesById[active].skills[b]
-						? 1
-						: a <= b
-						? -1
-						: 1
-				}
-			} else {
-				return a <= b ? -1 : 1
+				// The active item is missing one or both of the skills.
+
+				// Return the non-missing skill, or sort alphabetically if neither exists
+				return this.experiencesById[active].skills[a]
+					? -1
+					: this.experiencesById[active].skills[b]
+					? 1
+					: a <= b
+					? -1
+					: 1
 			}
+			return a <= b ? -1 : 1
 		})
 	}
 
