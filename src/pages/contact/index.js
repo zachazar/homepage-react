@@ -65,8 +65,11 @@ const ContactPage = () => (
 					</div>
 					<div className={b.field}>
 						<div className={cx(b.control, styles.control)}>
-							<button className={b.button} type="submit">
-								Submit
+							<button
+								className={cx(b.button, b.isMedium, styles.button)}
+								type="submit"
+							>
+								Send it
 							</button>
 						</div>
 					</div>

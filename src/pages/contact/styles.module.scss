@@ -12,5 +12,11 @@
 		textarea {
 			min-height: 200px;
 		}
+		.button {
+			@media (max-width: $break-tablet-small) {
+				display: flex;
+				width: 100%;
+			}
+		}
 	}
 }

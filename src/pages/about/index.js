@@ -9,7 +9,7 @@ import b from '../../styles/bulma.module.scss'
 
 const AboutPage = () => (
 	<Layout>
-		<SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+		<SEO title="About" keywords={['gatsby', 'application', 'react']} />
 
 		<div className={styles.container}>
 			<div className={styles.aboutItem}>
@@ -20,28 +20,33 @@ const AboutPage = () => (
 			<div className={styles.aboutItem}>
 				<div className={cx(b.title, b.hasTextWeightLight)}>Welcome!</div>
 				<p>
-					My name is Zach Azar and I&#39;m a Full Stack Software Engineer
-					currently seeking employment in San Francisco, CA.
+					My name is Zach Azar and I&apos;m a Software Engineer living in
+					Seattle, WA. Originally from Albuquerque, NM, I discovered Computer
+					Science while attending Vanderbilt University in Nashville, TN and
+					I&apos;ve never looked back.
 				</p>
 				<p>
-					Originally from Albuquerque, NM, I attended undergrad at Vanderbilt
-					University in Nashville, TN. There I discovered Computer Science and
-					never looked back. After receiving my degree, I worked for a short
-					time in Nashville. I decided to move back to Albuquerque to spend time
-					with family. After working in Albuquerque as a Software Engineer with
-					New Signature, I decided to further my knowledge with a M.S. from the
-					University of Denver.
+					After graduating, I worked in industry for a few years, then returned
+					to academia to try out being a Teaching Assistant and to get my M.S.
+					from the from the University of Denver.
 				</p>
 				<p>
-					Upon defending my thesis, I was approached by a friend with a great
-					startup idea. We founded a company and built a data visualization tool
-					for the restaurant space. Though the startup was short lived, I
-					learned a tremendous amount (including some new technologies like
-					Node.js, AngularJS, and D3).
+					After graduating, I was a technical cofounder briefly (it didn&apos;t
+					blast off unfortunately) but then I found
+					<a href="https://www.buildingconnected.com/"> BuildingConnected </a>
+					and was fortunate enough to experience real startup growth in SF 🚀.
+					Starting as a full stack engineer, I ramped up to lead a team of
+					engineers, and then became an Engineering Manager helping to train
+					other managers and oversee engineering of our Subcontractor product.
 				</p>
 				<p>
-					In my free time, I enjoy hiking with my girlfriend, longboarding with
-					my little wolf, playing soccer, and taking road trips.
+					It&apos;s been a whirlwind. After we got acquired by Autodesk, I
+					decided to return to the technical track and now I work fully remotely
+					out of Seattle for our Backend Platform team.
+				</p>
+				<p>
+					In my free time, my weekend activity is to road trip around Washington
+					with my wife and dog.
 				</p>
 			</div>
 		</div>
