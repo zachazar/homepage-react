@@ -27,12 +27,12 @@ const AboutPage = () => (
 				</p>
 				<p>
 					After graduating, I worked in industry for a few years, then returned
-					to academia to try out being a Teaching Assistant and to get my M.S.
-					from the from the University of Denver.
+					to academia to work as a Teaching Assistant and earn my M.S. from the
+					University of Denver.
 				</p>
 				<p>
 					After graduating, I was a technical cofounder briefly (it didn&apos;t
-					blast off unfortunately) but then I found
+					blast off unfortunately) but then I joined
 					<a href="https://www.buildingconnected.com/"> BuildingConnected </a>
 					and was fortunate enough to experience real startup growth in SF 🚀.
 					Starting as a full stack engineer, I ramped up to lead a team of
@@ -45,8 +45,8 @@ const AboutPage = () => (
 					out of Seattle for our Backend Platform team.
 				</p>
 				<p>
-					In my free time, my weekend activity is to road trip around Washington
-					with my wife and dog.
+					In my free time, my favorite weekend activity is to road trip around
+					Washington with my wife and dog.
 				</p>
 			</div>
 		</div>
