@@ -1,9 +1,11 @@
 // @flow
 import React from 'react'
+import { SizeMe } from 'react-sizeme'
+import cx from 'classnames'
+
 import styles from './styles.module.scss'
 import ExperienceCard from './components/experience-card'
 import SkillTree from './components/skill-tree'
-import { SizeMe } from 'react-sizeme'
 import { education, workExperience, projects } from './lib/experience-data'
 
 const ExperienceTree = () => {
@@ -22,7 +24,7 @@ const ExperienceTree = () => {
 	const projectCards = projects.map(experienceDataToCard)
 	return (
 		<div className={styles.container}>
-			<div className={styles.panel} id="leftPanel">
+			<div className={cx(styles.panel, styles.leftPanel)} id="leftPanel">
 				<h2>Experience</h2>
 				{workExperienceCards}
 				<h2>Education</h2>
@@ -30,7 +32,7 @@ const ExperienceTree = () => {
 				<h2>Projects</h2>
 				{projectCards}
 			</div>
-			<div className={styles.panel} id="rightPanel">
+			<div className={cx(styles.panel, styles.rightPanel)} id="rightPanel">
 				<h2>Technologies and Languages</h2>
 				<SizeMe>
 					{({ size }) => (

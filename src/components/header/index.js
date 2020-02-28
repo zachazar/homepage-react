@@ -7,7 +7,10 @@ import styles from './styles.module.scss'
 const Header = () => (
 	<div className={styles.navBar}>
 		<Link to="/">
-			<div className={styles.title}>Zach Azar</div>
+			<div className={styles.title}>
+				Zach
+				<span className={styles.lastName}> Azar</span>
+			</div>
 		</Link>
 		<Link className={styles.navLink} activeClassName={styles.active} to="/">
 			About
