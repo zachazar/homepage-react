@@ -6,7 +6,7 @@
 	border-radius: $border-radius-default;
 	padding: 2rem;
 
-	@media (max-width: $break-tablet-medium) {
+	@media (max-width: $break-width-medium) {
 		border-radius: 0px;
 	}
 
@@ -17,7 +17,7 @@
 			min-height: 200px;
 		}
 		.button {
-			@media (max-width: $break-tablet-small) {
+			@media (max-width: $break-width-small) {
 				display: flex;
 				width: 100%;
 			}

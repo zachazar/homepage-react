@@ -4,7 +4,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	margin: 0px -5px; // Counters the panel margin's far left and right
-	@media (max-width: $break-tablet-small) {
+	@media (max-width: $break-width-small) {
 		display: block;
 	}
 	.panel {
@@ -23,19 +23,19 @@
 		@media (max-height: 600px) {
 			max-height: 400px;
 		}
-		@media (max-width: $break-tablet-small) {
+		@media (max-width: $break-width-small) {
 			border-radius: 0;
 			margin: 0px;
 			max-height: none;
 		}
 	}
 	.leftPanel {
-		@media (max-width: $break-tablet-small) {
+		@media (max-width: $break-width-small) {
 			width: 100%;
 		}
 	}
 	.rightPanel {
-		@media (max-width: $break-tablet-small) {
+		@media (max-width: $break-width-small) {
 			// Ideally we actually unmount for
 			// performance reasons but I keep
 			// running into bugs

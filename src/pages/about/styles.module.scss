@@ -1,18 +1,28 @@
 @import '../../styles/style-variables.scss';
 .container {
 	display: flex;
+}
+.items {
+	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	background-color: $color-nav-footer;
 	border: 0px solid black;
 	border-radius: $border-radius-default;
-	padding: 0.5rem 0.5rem;
 
-	@media (max-width: $break-tablet-medium) {
+	padding: 4rem 3rem;
+
+	@media (max-width: $break-width-large) {
 		border-radius: 0px;
+		padding: 0.5rem;
 	}
-	@media (max-width: $break-tablet-small) {
+	@media (max-width: $break-width-small) {
 		display: block;
+	}
+
+	@media (min-height: 1200px) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
 	}
 
 	.aboutItem {

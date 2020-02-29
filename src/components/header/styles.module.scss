@@ -8,7 +8,7 @@
 	padding: 0 1rem;
 	font-weight: 400;
 	font-size: $font-size-medium;
-	@media (max-width: $break-tablet-teeny) {
+	@media (max-width: $break-width-teeny) {
 		justify-content: center;
 	}
 	.rightLinks {
@@ -22,11 +22,11 @@
 		// border-right-style: solid;
 		// border-right-color: black;
 		color: black;
-		@media (max-width: $break-tablet-teeny) {
+		@media (max-width: $break-width-teeny) {
 			display: none;
 		}
 		.lastName {
-			@media (max-width: $break-tablet-tiny) {
+			@media (max-width: $break-width-tiny) {
 				display: none;
 			}
 		}

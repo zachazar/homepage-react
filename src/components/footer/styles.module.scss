@@ -22,7 +22,7 @@
 	.copyright {
 		text-align: right;
 		margin: 0 0.25rem;
-		@media (max-width: $break-tablet-small) {
+		@media (max-width: $break-width-small) {
 			text-align: center;
 		}
 	}

@@ -26,13 +26,17 @@
 		}
 	}
 	.main {
+		flex-grow: 1;
 		margin: 0 auto;
-		max-width: 1200px;
+		max-width: 1800px;
 		padding: 0.5rem 0;
 		border-radius: $border-radius-default;
-		min-height: 600px;
 
-		@media (max-width: $break-tablet-medium) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@media (max-width: $break-width-medium) {
 			border-radius: 0px;
 		}
 	}
