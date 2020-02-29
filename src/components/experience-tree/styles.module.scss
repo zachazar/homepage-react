@@ -13,9 +13,16 @@
 		background-color: #f8f8f8;
 		border-radius: $border-radius-default;
 		padding: 1rem;
-		max-height: 1200px;
 		overflow-y: scroll;
 
+		max-height: 800px;
+
+		@media (max-height: 800px) {
+			max-height: 600px;
+		}
+		@media (max-height: 600px) {
+			max-height: 400px;
+		}
 		@media (max-width: $break-tablet-small) {
 			border-radius: 0;
 			margin: 0px;

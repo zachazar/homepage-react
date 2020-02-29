@@ -4,6 +4,10 @@
 // @import 'bulma/sass/base/_all';
 // @import 'bulma/sass/bulma/sass';
 
+html {
+	background-color: $color-nav-footer !important;
+}
+
 body {
 	background-color: $color-background !important;
 }
