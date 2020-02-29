@@ -6,6 +6,10 @@
 	border-radius: $border-radius-default;
 	padding: 2rem;
 
+	@media (max-width: $break-tablet-medium) {
+		border-radius: 0px;
+	}
+
 	.control {
 		margin-top: 8px;
 
