@@ -21,6 +21,13 @@ const Footer = () => (
 				>
 					<i className="fab fa-github" />
 				</a>
+				<a
+					className={styles.socialLink}
+					target="blank"
+					href="https://twitter.com/zachrazar"
+				>
+					<i className="fab fa-twitter" />
+				</a>
 			</div>
 			<div className={styles.copyright}>© 2020 Zach Azar</div>
 		</div>

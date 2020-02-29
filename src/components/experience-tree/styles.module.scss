@@ -26,6 +26,7 @@
 		@media (max-width: $break-tablet-small) {
 			border-radius: 0;
 			margin: 0px;
+			max-height: none;
 		}
 	}
 	.leftPanel {
@@ -35,7 +36,12 @@
 	}
 	.rightPanel {
 		@media (max-width: $break-tablet-small) {
+			// Ideally we actually unmount for
+			// performance reasons but I keep
+			// running into bugs
 			visibility: hidden;
+			height: 0px;
+			padding: 0px;
 		}
 	}
 }
