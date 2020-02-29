@@ -33,8 +33,6 @@
 		border-radius: $border-radius-default;
 
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
 
 		@media (max-width: $break-width-medium) {
 			border-radius: 0px;
