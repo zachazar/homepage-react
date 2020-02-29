@@ -4,8 +4,18 @@
 	display: flex;
 	flex-flow: row nowrap;
 	margin: 0px -5px; // Counters the panel margin's far left and right
+
+	// width: $break-width-medium;
+	@media (max-width: $break-width-smallish) {
+		width: $break-width-small;
+	}
+	@media (max-width: $break-width-medium) {
+		width: $break-width-smallish;
+	}
+
 	@media (max-width: $break-width-small) {
 		display: block;
+		width: 100%;
 	}
 	.panel {
 		margin: 0 5px;
@@ -17,12 +27,12 @@
 
 		max-height: 800px;
 
-		@media (max-height: 800px) {
-			max-height: 600px;
+		@media (min-height: 1200px) {
+			max-height: 1000px;
 		}
-		@media (max-height: 600px) {
-			max-height: 400px;
-		}
+		// @media (max-height: 600px) {
+		// 	max-height: 400px;
+		// }
 		@media (max-width: $break-width-small) {
 			border-radius: 0;
 			margin: 0px;
