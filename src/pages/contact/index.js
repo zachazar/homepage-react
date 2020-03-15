@@ -23,7 +23,14 @@ const ContactPage = () => (
 				<div className={cx(b.title, b.hasTextWeightLight)}>
 					Let&apos;s chat!
 				</div>
-				<form name="contactForm" method="POST" data-netlify="true">
+				<form
+					name="contactForm"
+					method="POST"
+					data-netlify="true"
+					data-netlify-honeypot="important-field"
+				>
+					<input type="hidden" name="form-name" value="contact" />
+					<input type="hidden" name="important-field" />
 					<div className={b.field}>
 						<label className={b.label} htmlFor="name">
 							Name
