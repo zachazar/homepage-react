@@ -34,7 +34,7 @@ const AboutPage = () => (
 					<p>
 						After graduating, I was a technical cofounder briefly (it
 						didn&apos;t blast off unfortunately) but then I joined
-						<a href="https://www.buildingconnected.com/"> BuildingConnected </a>
+						<a target="blank" href="https://www.buildingconnected.com/"> BuildingConnected </a>
 						and was fortunate enough to experience real startup growth in SF 🚀.
 						Starting as a full stack engineer, I ramped up to lead a team of
 						engineers, and then became an Engineering Manager helping to train
