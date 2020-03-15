@@ -39,6 +39,7 @@ const ContactPage = () => (
 									className={b.input}
 									type="text"
 									id="name"
+									name="name"
 									placeholder=""
 									required
 								/>
@@ -49,13 +50,14 @@ const ContactPage = () => (
 						</label>
 					</div>
 					<div className={b.field}>
-						<label className={b.label} htmlFor="emailAddress">
+						<label className={b.label} htmlFor="email">
 							Email address
 							<div className={cx(b.control, b.hasIconsLeft, styles.control)}>
 								<input
 									className={b.input}
 									type="email"
-									id="emailAddress"
+									id="email"
+									name="email"
 									placeholder=""
 									required
 								/>
@@ -73,6 +75,7 @@ const ContactPage = () => (
 									className={b.textarea}
 									type="text"
 									id="message"
+									name="message"
 									placeholder="What should we talk about?"
 									required
 								/>
