@@ -23,7 +23,7 @@ const ContactPage = () => (
 				<div className={cx(b.title, b.hasTextWeightLight)}>
 					Let&apos;s chat!
 				</div>
-				<form action="" name="contactForm" data-netlify="true">
+				<form name="contactForm" method="POST" data-netlify="true">
 					<div className={b.field}>
 						<label className={b.label} htmlFor="name">
 							Name
