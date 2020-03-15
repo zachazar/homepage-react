@@ -29,7 +29,7 @@ const ContactPage = () => (
 					data-netlify="true"
 					data-netlify-honeypot="important-field"
 				>
-					<input type="hidden" name="form-name" value="contact" />
+					<input type="hidden" name="form-name" value="contactForm" />
 					<input type="hidden" name="important-field" />
 					<div className={b.field}>
 						<label className={b.label} htmlFor="name">
