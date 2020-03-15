@@ -1,0 +1,8 @@
+@import '../../styles/style-variables.scss';
+
+.container {
+	background-color: $color-nav-footer;
+	border: 0px solid black;
+	border-radius: $border-radius-default;
+	padding: 2rem;
+}
