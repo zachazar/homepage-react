@@ -12,7 +12,7 @@
 	a {
 		font-size: 2em;
 		color: black;
-		margin-right: 1em;
+		margin: 0rem 1rem;
 		&:active,
 		&:hover,
 		&:focus {
@@ -20,10 +20,8 @@
 		}
 	}
 	.copyright {
-		text-align: right;
+		text-align: center;
 		margin: 0 0.25rem;
-		@media (max-width: $break-width-small) {
-			text-align: center;
-		}
+		font-size: 0.75rem;
 	}
 }
