@@ -4,7 +4,7 @@
 	border: 0px solid black;
 	border-radius: $border-radius-default;
 	margin: 0px !important; // Override weird Bulma rule
-	padding: 4rem 3rem;
+	padding: 2rem;
 
 	@media (max-width: $break-width-small) {
 		display: block;
