@@ -26,16 +26,12 @@
 		}
 	}
 	.main {
-		flex-grow: 1;
-		margin: 0 auto;
-		max-width: 1800px;
-		padding: 0.5rem 0;
+		padding: 0.5rem 2rem;
 		border-radius: $border-radius-default;
-
-		display: flex;
 
 		@media (max-width: $break-width-medium) {
 			border-radius: 0px;
+			padding: 0.5rem 1rem;
 		}
 	}
 }

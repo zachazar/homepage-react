@@ -56,7 +56,7 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 					}}
 				>
 					{experienceData.descriptionTitle && (
-						<div className={styles.desctiptionTitle}>
+						<div className={styles.descriptionTitle}>
 							{experienceData.descriptionTitle}
 						</div>
 					)}

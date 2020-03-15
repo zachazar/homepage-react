@@ -1,13 +1,12 @@
 @import '../../styles/style-variables.scss';
 
 .container {
-	background-color: $color-nav-footer;
-	border: 0px solid black;
-	border-radius: $border-radius-default;
-	padding: 2rem;
-
-	@media (max-width: $break-width-medium) {
-		border-radius: 0px;
+	margin: 0px !important; //counters odd Bulma column rule
+	.formContainer {
+		background-color: $color-nav-footer;
+		border: 0px solid black;
+		border-radius: $border-radius-default;
+		padding: 1rem;
 	}
 
 	.control {

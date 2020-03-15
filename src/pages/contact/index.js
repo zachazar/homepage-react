@@ -11,9 +11,18 @@ import b from '../../styles/bulma.module.scss'
 const ContactPage = () => (
 	<Layout>
 		<SEO title="Contact" keywords={['gatsby', 'application', 'react']} />
-		<div className={styles.container}>
-			<h1 className={cx(b.title, b.hasTextWeightLight)}>Let&apos;s chat!</h1>
-			<div className={styles.formContainer}>
+		<div className={cx(styles.container, b.columns)}>
+			<div
+				className={cx(
+					b.column,
+					b.isHalf,
+					b.isOffsetOneQuarter,
+					styles.formContainer
+				)}
+			>
+				<div className={cx(b.title, b.hasTextWeightLight)}>
+					Let&apos;s chat!
+				</div>
 				<form action="" name="contactForm" data-netlify="true">
 					<div className={b.field}>
 						<label className={b.label} htmlFor="name">

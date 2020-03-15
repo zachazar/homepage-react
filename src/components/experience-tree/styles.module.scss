@@ -1,17 +1,8 @@
 @import '../../styles/style-variables.scss';
 
 .container {
-	display: flex;
-	flex-flow: row nowrap;
 	margin: 0px -5px; // Counters the panel margin's far left and right
-
-	// width: $break-width-medium;
-	@media (max-width: $break-width-smallish) {
-		width: $break-width-small;
-	}
-	@media (max-width: $break-width-medium) {
-		width: $break-width-smallish;
-	}
+	margin-bottom: 0px !important; // Counters an odd rule in Bulma
 
 	@media (max-width: $break-width-small) {
 		display: block;
@@ -19,7 +10,6 @@
 	}
 	.panel {
 		margin: 0 5px;
-		width: 50%;
 		background-color: #f8f8f8;
 		border-radius: $border-radius-default;
 		padding: 1rem;
@@ -30,11 +20,10 @@
 		@media (min-height: 1200px) {
 			max-height: 1000px;
 		}
-		// @media (max-height: 600px) {
-		// 	max-height: 400px;
-		// }
+		@media (min-height: 1600px) {
+			max-height: 1400px;
+		}
 		@media (max-width: $break-width-small) {
-			border-radius: 0;
 			margin: 0px;
 			max-height: none;
 		}

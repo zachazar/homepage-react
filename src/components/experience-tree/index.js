@@ -2,6 +2,7 @@
 import React from 'react'
 import { SizeMe } from 'react-sizeme'
 import cx from 'classnames'
+import b from '../../styles/bulma.module.scss'
 
 import styles from './styles.module.scss'
 import ExperienceCard from './components/experience-card'
@@ -23,17 +24,25 @@ const ExperienceTree = () => {
 	const workExperienceCards = workExperience.map(experienceDataToCard)
 	const projectCards = projects.map(experienceDataToCard)
 	return (
-		<div className={styles.container}>
-			<div className={cx(styles.panel, styles.leftPanel)} id="leftPanel">
-				<h2>Experience</h2>
+		<div className={cx(b.columns, styles.container)}>
+			<div
+				className={cx(b.column, styles.panel, styles.leftPanel)}
+				id="leftPanel"
+			>
+				<div className={cx(b.title, b.hasTextWeightLight)}>Experience</div>
 				{workExperienceCards}
-				<h2>Education</h2>
+				<div className={cx(b.title, b.hasTextWeightLight)}>Education</div>
 				{educationCards}
-				<h2>Projects</h2>
+				<div className={cx(b.title, b.hasTextWeightLight)}>Projects</div>
 				{projectCards}
 			</div>
-			<div className={cx(styles.panel, styles.rightPanel)} id="rightPanel">
-				<h2>Technologies and Languages</h2>
+			<div
+				className={cx(b.column, styles.panel, styles.rightPanel)}
+				id="rightPanel"
+			>
+				<div className={cx(b.title, b.hasTextWeightLight)}>
+					Technologies and Languages
+				</div>
 				<SizeMe>
 					{({ size }) => (
 						<SkillTree

@@ -12,13 +12,13 @@ const AboutPage = () => (
 		<SEO title="About" keywords={['gatsby', 'application', 'react']} />
 
 		<div className={styles.container}>
-			<div className={styles.items}>
-				<div className={styles.aboutItem}>
+			<div className={cx(b.columns, styles.items)}>
+				<div className={cx(b.column, styles.aboutItem)}>
 					<div className={styles.aboutImage}>
 						<AboutImage />
 					</div>
 				</div>
-				<div className={styles.aboutItem}>
+				<div className={cx(b.column, styles.aboutItem)}>
 					<div className={cx(b.title, b.hasTextWeightLight)}>Welcome!</div>
 					<p>
 						My name is Zach Azar and I&apos;m a Software Engineer living in
