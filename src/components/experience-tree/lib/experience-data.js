@@ -10,11 +10,11 @@ export const workExperience: Array<ExperienceData> = [
 		descriptions: [
 			'(Autodesk acquired BuildingConnected in January 2019)',
 			'- Assist with distributing ownership of key BE infrastructure to feature teams',
-			'- Participate in a BE Pattern Maintainers group to help guide our next generation of NodeJS BE patterns.',
+			'- Participate in a BE Pattern Maintainers group to help guide our next generation of Node.js BE patterns.',
 			'- Project Manage our efforts to better scale our systems (both in terms of people/process challenges around ownership and accountability but also our backend system scaling to meet high-growth demands)',
 		],
 		skills: {
-			NodeJS: 'MAX',
+			'Node.js': 'MAX',
 			'Vision/Strategy': 'MED',
 			'Project Management': 'MED',
 			MongoDB: 'MAX',
@@ -51,7 +51,7 @@ export const workExperience: Array<ExperienceData> = [
 			'People Management': 'HIGH',
 			Agile: 'MED',
 			'Vision/Strategy': 'MED',
-			NodeJS: 'LOW',
+			'Node.js': 'LOW',
 			React: 'LOW',
 			MongoDB: 'LOW',
 			'Project Management': 'LOW',
@@ -68,7 +68,7 @@ export const workExperience: Array<ExperienceData> = [
 			'Specialized mostly in backend systems, complex data models, and migrations.',
 		],
 		skills: {
-			NodeJS: 'MAX',
+			'Node.js': 'MAX',
 			React: 'MED',
 			MongoDB: 'MAX',
 		},
