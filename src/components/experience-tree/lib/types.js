@@ -8,7 +8,7 @@ export type ExperienceData = {|
 	tertiaryUrl?: string,
 	descriptionTitle?: string,
 	descriptions: Array<string>,
-	skills: { [skillName: string]: 'MAX' | 'HIGH' | 'MED' | 'Low' },
+	skills: { [skillName: string]: 'MAX' | 'HIGH' | 'MED' | 'LOW' },
 |}
 
 export type useStateFn<T> = ((T => T) | T) => void
