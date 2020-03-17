@@ -43,7 +43,7 @@ const AboutPage = () => (
 					<p>
 						It&apos;s been a whirlwind. After we got acquired by Autodesk, I
 						decided to return to the technical track and now I work fully
-						remotely out of Seattle for our Backend Platform team.
+						remote out of Seattle for our Backend Platform team.
 					</p>
 					<p>
 						In my free time, my favorite weekend activity is to road trip around
