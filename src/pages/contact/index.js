@@ -24,12 +24,12 @@ const ContactPage = () => (
 					Let&apos;s chat!
 				</div>
 				<form
-					name="contactForm"
+					name="homepage-contact-form"
 					method="POST"
 					data-netlify="true"
 					data-netlify-honeypot="important-field"
 				>
-					<input type="hidden" name="form-name" value="contactForm" />
+					<input type="hidden" name="form-name" value="homepage-contact-form" />
 					<input type="hidden" name="important-field" />
 					<div className={b.field}>
 						<label className={b.label} htmlFor="name">
