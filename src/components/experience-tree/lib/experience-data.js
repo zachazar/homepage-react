@@ -4,18 +4,20 @@ import type { ExperienceData } from './types'
 export const workExperience: Array<ExperienceData> = [
 	{
 		_id: 12,
-		title: 'Principal Engineer',
+		title: 'Principal Engineer and Team Lead',
 		subtitle: 'Autodesk - San Francisco',
 		tertiaryTitle: 'July 2019 - Present',
 		descriptions: [
 			'(Autodesk acquired BuildingConnected in January 2019)',
 			'- Assist with distributing ownership of key BE infrastructure to feature teams',
+			'- Currently, I also lead our team of 6 and thus focus on people management and strategic planning.',
 			'- Participate in a BE Pattern Maintainers group to help guide our next generation of Node.js BE patterns.',
 			'- Project Manage our efforts to better scale our systems (both in terms of people/process challenges around ownership and accountability but also our backend system scaling to meet high-growth demands)',
 		],
 		skills: {
 			'Node.js': 'MAX',
-			'Vision/Strategy': 'MED',
+			'People Management': 'MED',
+			'Vision/Strategy': 'HIGH',
 			'Project Management': 'MED',
 			MongoDB: 'MAX',
 			'Parallel and Distributed Computing': 'MED',

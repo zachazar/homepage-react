@@ -32,13 +32,13 @@ const AboutPage = () => (
 						M.S. from the University of Denver.
 					</p>
 					<p>
-						After graduating, I was a technical cofounder briefly (it
+						After graduating, I was a technical co-founder briefly (it
 						didn&apos;t blast off unfortunately) but then I joined
 						<a target="blank" href="https://www.buildingconnected.com/"> BuildingConnected </a>
 						and was fortunate enough to experience real startup growth in SF 🚀.
-						Starting as a full stack engineer, I ramped up to lead a team of
+						Starting as a full-stack engineer, I ramped up to lead a team of
 						engineers, and then became an Engineering Manager helping to train
-						other managers and oversee engineering of our subcontractor product.
+						other managers and overseeing engineering of our subcontractor product.
 					</p>
 					<p>
 						It&apos;s been a whirlwind. After we got acquired by Autodesk, I
