@@ -29,7 +29,7 @@ const Footer = () => (
 					<i className="fab fa-twitter" />
 				</a>
 			</div>
-			<div className={styles.copyright}>© 2020 Zach Azar</div>
+			<div className={styles.copyright}>© 2021 Zach Azar</div>
 		</div>
 	</footer>
 )
