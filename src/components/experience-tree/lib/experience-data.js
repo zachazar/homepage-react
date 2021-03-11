@@ -1,7 +1,4 @@
-// @flow
-import type { ExperienceData } from './types'
-
-export const workExperience: Array<ExperienceData> = [
+export const workExperience = [
 	{
 		_id: 12,
 		title: 'Principal Engineer and Team Lead',
@@ -166,7 +163,7 @@ export const workExperience: Array<ExperienceData> = [
 	},
 ]
 
-export const projects: Array<ExperienceData> = [
+export const projects = [
 	{
 		_id: 2,
 		title: 'Homepage - Revised',
@@ -174,7 +171,7 @@ export const projects: Array<ExperienceData> = [
 		tertiaryTitle: 'Project on GitHub',
 		tertiaryUrl: 'https://github.com/zachazar/homepage-react',
 		descriptions: [
-			'I revised my website using React instead of Angular. Additionally, I used create-react-app, D3, Flow, Bulma, Gatsby, and deployed with Netlify.',
+			'I revised my website using React instead of Angular. Additionally, I used create-react-app, D3, Bulma, Gatsby, and deployed with Netlify.',
 		],
 		skills: {
 			React: 'MAX',
@@ -198,7 +195,7 @@ export const projects: Array<ExperienceData> = [
 	},
 ]
 
-export const education: Array<ExperienceData> = [
+export const education = [
 	{
 		_id: -1,
 		title: 'M.S. in Computer Science',

@@ -5,7 +5,7 @@ module.exports = {
 		author: '@zachazar',
 	},
 	plugins: [
-		'gatsby-plugin-flow',
+		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-plugin-google-analytics',
@@ -13,7 +13,6 @@ module.exports = {
 				trackingId: 'UA-81758415-2',
 			},
 		},
-		'gatsby-plugin-sass',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -21,8 +20,9 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
-		'gatsby-transformer-sharp',
+		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

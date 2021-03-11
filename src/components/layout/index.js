@@ -1,12 +1,10 @@
-// @flow
-import React from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
-
 import Header from '../header'
 import Footer from '../footer'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
-const Layout = ({ children }: { children: PropTypes.node }) => (
+const Layout = ({ children }) => (
 	<div className={styles.container}>
 		<Header />
 		<div className={styles.main}>{children}</div>
@@ -17,5 +15,4 @@ const Layout = ({ children }: { children: PropTypes.node }) => (
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
 }
-
 export default Layout

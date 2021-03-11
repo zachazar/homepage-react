@@ -1,12 +1,10 @@
-// @flow
-
-import React from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
-import styles from './styles.module.scss'
+import * as styles from './styles.module.scss'
 
 const Header = () => (
 	<div className={styles.navBar}>
-		<div className={styles.leftLinks}>
+		<div>
 			<Link to="/">
 				<div className={styles.title}>
 					Zach

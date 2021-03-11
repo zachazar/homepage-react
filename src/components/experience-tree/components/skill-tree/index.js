@@ -1,14 +1,9 @@
-// @flow
-import React from 'react'
+import * as React from 'react'
 import * as d3 from 'd3'
 import * as R from 'ramda'
-import type { ExperienceData } from '../../lib/types'
+import PropTypes from 'prop-types'
 
-type Props = {
-	active?: number,
-	experiences: Array<ExperienceData>,
-	width: number,
-}
+import { ExperienceData } from '../../lib/types'
 
 function convertSkillValueToNumber(skillValue) {
 	switch (skillValue) {
@@ -25,41 +20,41 @@ function convertSkillValueToNumber(skillValue) {
 	}
 }
 
-export default class SkillTree extends React.Component<Props> {
-	id: string
+class SkillTree extends React.Component {
+	// id: string
 
-	svgStyles: {
-		fontSize: number,
-		margin: {
-			top: number,
-			bottom: number,
-			left: number,
-			right: number,
-		},
-		itemMargin: number,
-		rectFill: string,
-	}
+	// svgStyles: {
+	// 	fontSize: number,
+	// 	margin: {
+	// 		top: number,
+	// 		bottom: number,
+	// 		left: number,
+	// 		right: number,
+	// 	},
+	// 	itemMargin: number,
+	// 	rectFill: string,
+	// }
 
-	d3container: any
+	// d3container: any
 
-	// D3 node
-	d3skillGroup: any
+	// // D3 node
+	// d3skillGroup: any
 
-	// D3 node
-	skills: any
+	// // D3 node
+	// skills: any
 
-	// D3 node
-	rectWidth: number
+	// // D3 node
+	// rectWidth: number
 
-	experiences: Array<ExperienceData>
+	// experiences: Array<ExperienceData>
 
-	skillList: Array<string>
+	// skillList: Array<string>
 
-	experiencesById: { [number]: ExperienceData }
+	// experiencesById: { [number]: ExperienceData }
 
-	svgHeight: number
+	// svgHeight: number
 
-	constructor(props: Props) {
+	constructor(props) {
 		super(props)
 
 		this.id = 'skilltree'
@@ -124,8 +119,9 @@ export default class SkillTree extends React.Component<Props> {
 			.attr(
 				'transform',
 				(d, i) =>
-					`translate(0,${i *
-						(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
+					`translate(0,${
+						i * (this.svgStyles.fontSize + this.svgStyles.itemMargin)
+					})`
 			)
 
 		// Create the rectangles
@@ -147,7 +143,7 @@ export default class SkillTree extends React.Component<Props> {
 			.attr('x', 0)
 			.attr('y', 0)
 			.attr('dx', '0.5em')
-			.text(d => d)
+			.text((d) => d)
 			.attr('text-anchor', 'start')
 			.attr('dominant-baseline', 'mathematical')
 	}
@@ -164,8 +160,9 @@ export default class SkillTree extends React.Component<Props> {
 			.attr(
 				'transform',
 				(d, i) =>
-					`translate(0,${i *
-						(this.svgStyles.fontSize + this.svgStyles.itemMargin)})`
+					`translate(0,${
+						i * (this.svgStyles.fontSize + this.svgStyles.itemMargin)
+					})`
 			)
 
 		// Adjust rectangle widths and opacities to skill's value
@@ -173,7 +170,7 @@ export default class SkillTree extends React.Component<Props> {
 			.selectAll('.skill__rect')
 			.transition()
 			.duration(1000)
-			.attr('width', d => {
+			.attr('width', (d) => {
 				if (this.props.active) {
 					const value = this.experiencesById[this.props.active].skills[d]
 						? convertSkillValueToNumber(
@@ -184,7 +181,7 @@ export default class SkillTree extends React.Component<Props> {
 				}
 				return 0
 			})
-			.attr('fill-opacity', d => {
+			.attr('fill-opacity', (d) => {
 				if (this.props.active) {
 					const value = this.experiencesById[this.props.active].skills[d]
 						? convertSkillValueToNumber(
@@ -201,7 +198,7 @@ export default class SkillTree extends React.Component<Props> {
 			.selectAll('.skill__text')
 			.transition()
 			.duration(1000)
-			.style('fill', d => {
+			.style('fill', (d) => {
 				if (this.props.active) {
 					return this.experiencesById[this.props.active].skills[d]
 						? 'white'
@@ -264,3 +261,11 @@ export default class SkillTree extends React.Component<Props> {
 		return <div id={this.id} />
 	}
 }
+
+SkillTree.propTypes = {
+	active: PropTypes.number.isRequired,
+	experiences: PropTypes.arrayOf(ExperienceData).isRequired,
+	width: PropTypes.number.isRequired,
+}
+
+export default SkillTree

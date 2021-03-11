@@ -1,9 +1,10 @@
-// @flow
-import React from 'react'
+import * as React from 'react'
 import { Transition } from 'react-transition-group'
 import cx from 'classnames'
-import styles from './styles.module.scss'
-import type { ExperienceData, useStateFn } from '../../lib/types'
+import PropTypes from 'prop-types'
+
+import { ExperienceData } from '../../lib/types'
+import * as styles from './styles.module.scss'
 
 const defaultStyle = {
 	transition: 'opacity 100ms ease, display 500ms ease',
@@ -17,13 +18,7 @@ const transitionStyles = {
 	exiting: { opacity: 0.4, display: 'inline-block' },
 }
 
-type Props = {
-	experienceData: ExperienceData,
-	isActive: boolean,
-	setActive: useStateFn<number>,
-}
-
-const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
+const ExperienceCard = ({ experienceData, isActive, setActive }) => (
 	<div
 		className={cx(styles.container, {
 			[styles.isActive]: isActive,
@@ -48,7 +43,7 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 		</div>
 		<div>{experienceData.subtitle}</div>
 		<Transition in={isActive} timeout={100}>
-			{state => (
+			{(state) => (
 				<div
 					style={{
 						...defaultStyle,
@@ -56,12 +51,10 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 					}}
 				>
 					{experienceData.descriptionTitle && (
-						<div className={styles.descriptionTitle}>
-							{experienceData.descriptionTitle}
-						</div>
+						<div>{experienceData.descriptionTitle}</div>
 					)}
 					<div className={styles.descriptionContainer}>
-						{experienceData.descriptions.map(description => (
+						{experienceData.descriptions.map((description) => (
 							<p key={description} className={styles.description}>
 								{description}
 							</p>
@@ -72,5 +65,11 @@ const ExperienceCard = ({ experienceData, isActive, setActive }: Props) => (
 		</Transition>
 	</div>
 )
+
+ExperienceCard.propTypes = {
+	experienceData: PropTypes.exact(ExperienceData).isRequired,
+	isActive: PropTypes.bool.isRequired,
+	setActive: PropTypes.func.isRequired,
+}
 
 export default ExperienceCard
