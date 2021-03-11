@@ -1,14 +1,14 @@
-// @flow
+import PropTypes from 'prop-types'
 
-export type ExperienceData = {|
-	_id: number,
-	title: string,
-	subtitle: string,
-	tertiaryTitle: string,
-	tertiaryUrl?: string,
-	descriptionTitle?: string,
-	descriptions: Array<string>,
-	skills: { [skillName: string]: 'MAX' | 'HIGH' | 'MED' | 'LOW' },
-|}
+export const ExperienceData = {
+	_id: PropTypes.number.isRequired,
+	title: PropTypes.string.isRequired,
+	subtitle: PropTypes.string.isRequired,
+	tertiaryTitle: PropTypes.string.isRequired,
+	tertiaryUrl: PropTypes.string,
+	descriptionTitle: PropTypes.string,
+	descriptions: PropTypes.arrayOf(PropTypes.string),
+	skills: PropTypes.oneOf(['MAX', 'HIGH', 'MED', 'LOW']),
+}
 
-export type useStateFn<T> = ((T => T) | T) => void
+export default ExperienceData

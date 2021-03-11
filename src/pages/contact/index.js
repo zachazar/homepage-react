@@ -1,26 +1,23 @@
-// @flow
-
-import React from 'react'
+import * as React from 'react'
 import cx from 'classnames'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import styles from './styles.module.scss'
-import b from '../../styles/bulma.module.scss'
+import * as styles from './styles.module.scss'
 
 const ContactPage = () => (
 	<Layout>
 		<SEO title="Contact" keywords={['gatsby', 'application', 'react']} />
-		<div className={cx(styles.container, b.columns)}>
+		<div className={cx(styles.container, 'columns')}>
 			<div
 				className={cx(
-					b.column,
-					b.isHalf,
-					b.isOffsetOneQuarter,
+					'column',
+					'is-half',
+					'is-offset-one-quarter',
 					styles.formContainer
 				)}
 			>
-				<div className={cx(b.title, b.hasTextWeightLight)}>
+				<div className={cx('title', 'has-text-weight-light')}>
 					Let&apos;s chat!
 				</div>
 				<form
@@ -31,48 +28,48 @@ const ContactPage = () => (
 				>
 					<input type="hidden" name="form-name" value="homepage-contact-form" />
 					<input type="hidden" name="important-field" />
-					<div className={b.field}>
-						<label className={b.label} htmlFor="name">
+					<div className={'field'}>
+						<label className={'label'} htmlFor="name">
 							Name
-							<div className={cx(b.control, b.hasIconsLeft, styles.control)}>
+							<div className={cx('control', 'has-icons-left', styles.control)}>
 								<input
-									className={b.input}
+									className={'input'}
 									type="text"
 									id="name"
 									name="name"
 									placeholder=""
 									required
 								/>
-								<span className={cx(b.icon, b.isSmall, b.isLeft)}>
+								<span className={cx('icon', 'is-small', 'is-left')}>
 									<i className="far fa-user-circle" />
 								</span>
 							</div>
 						</label>
 					</div>
-					<div className={b.field}>
-						<label className={b.label} htmlFor="email">
+					<div className={'field'}>
+						<label className={'label'} htmlFor="email">
 							Email address
-							<div className={cx(b.control, b.hasIconsLeft, styles.control)}>
+							<div className={cx('control', 'has-icons-left', styles.control)}>
 								<input
-									className={b.input}
+									className={'input'}
 									type="email"
 									id="email"
 									name="email"
 									placeholder=""
 									required
 								/>
-								<span className={cx(b.icon, b.isSmall, b.isLeft)}>
+								<span className={cx('icon', 'is-small', 'is-left')}>
 									<i className="far fa-envelope" />
 								</span>
 							</div>
 						</label>
 					</div>
-					<div className={b.field}>
-						<label className={b.label} htmlFor="message">
+					<div className={'field'}>
+						<label className={'label'} htmlFor="message">
 							Message
-							<div className={cx(b.control, styles.control)}>
+							<div className={cx('control', styles.control)}>
 								<textarea
-									className={b.textarea}
+									className={'textarea'}
 									type="text"
 									id="message"
 									name="message"
@@ -82,10 +79,10 @@ const ContactPage = () => (
 							</div>
 						</label>
 					</div>
-					<div className={b.field}>
-						<div className={cx(b.control, styles.control)}>
+					<div className={'field'}>
+						<div className={cx('control', styles.control)}>
 							<button
-								className={cx(b.button, b.isMedium, styles.button)}
+								className={cx('button', 'is-medium', styles.button)}
 								type="submit"
 							>
 								Send it

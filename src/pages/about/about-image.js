@@ -1,23 +1,10 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import * as React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const AboutImage = () => (
-	<StaticQuery
-		query={graphql`
-			query {
-				placeholderImage: file(
-					relativePath: { eq: "ZachAzar_Professional_small.jpg" }
-				) {
-					childImageSharp {
-						fluid(maxWidth: 300) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-			}
-		`}
-		render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+	<StaticImage
+		src="../../images/ZachAzar_Professional_small.jpg"
+		alt="Photo of Zach"
 	/>
 )
 export default AboutImage

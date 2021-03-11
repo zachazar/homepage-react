@@ -1,8 +1,5 @@
 @import './style-variables.scss';
-// Consider uncommenting to remove double-import of classes
-// @import 'bulma/sass/utilities/_all';
-// @import 'bulma/sass/base/_all';
-// @import 'bulma/sass/bulma/sass';
+@import '~bulma/bulma.sass';
 
 html {
 	background-color: $color-nav-footer !important;

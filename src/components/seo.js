@@ -1,13 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import favicon from '../../static/favicon.ico'
+import PropTypes from 'prop-types'
 
-const SEO = ({ description, lang, meta, keywords, title }) => (
+const detailsQuery = graphql`
+	query DefaultSEOQuery {
+		site {
+			siteMetadata {
+				title
+				description
+				author
+			}
+		}
+	}
+`
+
+const SEO = ({ description, lang = 'en', meta = [], keywords = [], title }) => (
 	<StaticQuery
 		query={detailsQuery}
-		render={data => {
+		render={(data) => {
 			const metaDescription = description || data.site.siteMetadata.description
 			return (
 				<Helmet
@@ -66,6 +77,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
 )
 
 SEO.defaultProps = {
+	description: 'TODO',
 	lang: 'en',
 	meta: [],
 	keywords: [],
@@ -74,21 +86,8 @@ SEO.defaultProps = {
 SEO.propTypes = {
 	description: PropTypes.string,
 	lang: PropTypes.string,
-	meta: PropTypes.array,
+	meta: PropTypes.arrayOf(PropTypes.string),
 	keywords: PropTypes.arrayOf(PropTypes.string),
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 }
-
 export default SEO
-
-const detailsQuery = graphql`
-	query DefaultSEOQuery {
-		site {
-			siteMetadata {
-				title
-				description
-				author
-			}
-		}
-	}
-`
