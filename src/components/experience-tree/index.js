@@ -26,6 +26,7 @@ const ExperienceTree = () => {
 			<div
 				className={cx('column', styles.panel, styles.leftPanel)}
 				id="leftPanel"
+				role="tree"
 			>
 				<div className={cx('title', 'has-text-weight-light')}>Experience</div>
 				{workExperienceCards}

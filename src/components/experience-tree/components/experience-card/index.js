@@ -24,6 +24,9 @@ const ExperienceCard = ({ experienceData, isActive, setActive }) => (
 			[styles.isActive]: isActive,
 		})}
 		onClick={() => (isActive ? setActive(0) : setActive(experienceData._id))}
+		onKeyPress={() => (isActive ? setActive(0) : setActive(experienceData._id))}
+		role="treeitem"
+		tabIndex="0"
 	>
 		<div className={styles.title}>
 			<div className={styles.mainTitle}>{experienceData.title}</div>
