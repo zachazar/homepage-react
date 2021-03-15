@@ -28,12 +28,12 @@ const ContactPage = () => (
 				>
 					<input type="hidden" name="form-name" value="homepage-contact-form" />
 					<input type="hidden" name="important-field" />
-					<div className={'field'}>
-						<label className={'label'} htmlFor="name">
+					<div className="field">
+						<label className="label" htmlFor="name">
 							Name
 							<div className={cx('control', 'has-icons-left', styles.control)}>
 								<input
-									className={'input'}
+									className="input"
 									type="text"
 									id="name"
 									name="name"
@@ -46,12 +46,12 @@ const ContactPage = () => (
 							</div>
 						</label>
 					</div>
-					<div className={'field'}>
-						<label className={'label'} htmlFor="email">
+					<div className="field">
+						<label className="label" htmlFor="email">
 							Email address
 							<div className={cx('control', 'has-icons-left', styles.control)}>
 								<input
-									className={'input'}
+									className="input"
 									type="email"
 									id="email"
 									name="email"
@@ -64,12 +64,12 @@ const ContactPage = () => (
 							</div>
 						</label>
 					</div>
-					<div className={'field'}>
-						<label className={'label'} htmlFor="message">
+					<div className="field">
+						<label className="label" htmlFor="message">
 							Message
 							<div className={cx('control', styles.control)}>
 								<textarea
-									className={'textarea'}
+									className="textarea"
 									type="text"
 									id="message"
 									name="message"
@@ -79,7 +79,7 @@ const ContactPage = () => (
 							</div>
 						</label>
 					</div>
-					<div className={'field'}>
+					<div className="field">
 						<div className={cx('control', styles.control)}>
 							<button
 								className={cx('button', 'is-medium', styles.button)}
