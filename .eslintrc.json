@@ -3,7 +3,12 @@
 		"browser": true,
 		"es6": true
 	},
-	"extends": ["plugin:react/recommended", "airbnb"],
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"prettier",
+		"eslint:recommended"
+	],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
@@ -16,15 +21,15 @@
 		"ecmaVersion": 2018,
 		"sourceType": "module"
 	},
-	"plugins": ["react"],
+	"plugins": ["react", "prettier"],
 	"rules": {
 		"semi": "off",
 		"react/jsx-filename-extension": "off",
-		"indent": ["error", "tab"],
-		"no-tabs": "off",
 		"react/jsx-indent": ["error", "tab"],
 		"arrow-parens": "off",
 		"react/jsx-indent-props": "off",
-		"no-underscore-dangle": "off"
+		"no-underscore-dangle": "off",
+		"prettier/prettier": ["error"],
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
 	}
 }
