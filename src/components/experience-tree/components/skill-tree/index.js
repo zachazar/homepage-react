@@ -69,14 +69,14 @@ class SkillTree extends React.Component {
 			itemMargin: 10,
 			rectFill: '#1777bf',
 		}
-
-		this.experiencesById = R.indexBy(R.prop('_id'), this.props.experiences)
+		const { experiences } = props
+		this.experiencesById = R.indexBy(R.prop('_id'), experiences)
 
 		// All possible skills
 		this.skillList = R.reduce(
 			(acc, experience) => R.union(acc, Object.keys(experience.skills)),
 			[],
-			this.props.experiences
+			experiences
 		).sort()
 
 		this.svgHeight =
@@ -84,6 +84,18 @@ class SkillTree extends React.Component {
 				(this.svgStyles.fontSize + this.svgStyles.margin.bottom) +
 			this.svgStyles.margin.top +
 			this.svgStyles.margin.bottom
+	}
+
+	componentDidMount() {
+		this.initializeSVG()
+		this.resizeSVG()
+		this.initializeData()
+		this.draw()
+	}
+
+	componentDidUpdate() {
+		this.resizeSVG()
+		this.draw()
 	}
 
 	initializeSVG() {
@@ -98,13 +110,10 @@ class SkillTree extends React.Component {
 	}
 
 	resizeSVG() {
-		console.log(`resizing with width: ${this.props.width}`)
+		const { width } = this.props
 		this.rectWidth =
-			this.props.width -
-			(this.svgStyles.margin.left + this.svgStyles.margin.right)
-		this.d3container
-			.attr('width', this.props.width)
-			.attr('height', this.svgHeight)
+			width - (this.svgStyles.margin.left + this.svgStyles.margin.right)
+		this.d3container.attr('width', width).attr('height', this.svgHeight)
 	}
 
 	initializeData() {
@@ -149,6 +158,7 @@ class SkillTree extends React.Component {
 	}
 
 	draw() {
+		const { active } = this.props
 		// Sort the data based on the active key
 		this.sortData()
 
@@ -171,22 +181,18 @@ class SkillTree extends React.Component {
 			.transition()
 			.duration(1000)
 			.attr('width', (d) => {
-				if (this.props.active) {
-					const value = this.experiencesById[this.props.active].skills[d]
-						? convertSkillValueToNumber(
-								this.experiencesById[this.props.active].skills[d]
-						  )
+				if (active) {
+					const value = this.experiencesById[active].skills[d]
+						? convertSkillValueToNumber(this.experiencesById[active].skills[d])
 						: 0
 					return this.rectWidth * value
 				}
 				return 0
 			})
 			.attr('fill-opacity', (d) => {
-				if (this.props.active) {
-					const value = this.experiencesById[this.props.active].skills[d]
-						? convertSkillValueToNumber(
-								this.experiencesById[this.props.active].skills[d]
-						  )
+				if (active) {
+					const value = this.experiencesById[active].skills[d]
+						? convertSkillValueToNumber(this.experiencesById[active].skills[d])
 						: 0
 					return value
 				}
@@ -199,10 +205,8 @@ class SkillTree extends React.Component {
 			.transition()
 			.duration(1000)
 			.style('fill', (d) => {
-				if (this.props.active) {
-					return this.experiencesById[this.props.active].skills[d]
-						? 'white'
-						: 'black'
+				if (active) {
+					return this.experiencesById[active].skills[d] ? 'white' : 'black'
 				}
 				return 'black'
 			})
@@ -218,43 +222,29 @@ class SkillTree extends React.Component {
 					this.experiencesById[active].skills[b]
 				) {
 					// Sort on value, breaking tie alphabetically
-					return this.experiencesById[active].skills[a] ===
+					if (
+						this.experiencesById[active].skills[a] ===
 						this.experiencesById[active].skills[b]
-						? a <= b
-							? -1
-							: 1
-						: convertSkillValueToNumber(
-								this.experiencesById[active].skills[b]
-						  ) -
-								convertSkillValueToNumber(
-									this.experiencesById[active].skills[a]
-								)
+					) {
+						return a <= b ? -1 : 1
+					}
+					return (
+						convertSkillValueToNumber(this.experiencesById[active].skills[b]) -
+						convertSkillValueToNumber(this.experiencesById[active].skills[a])
+					)
 				}
-				// The active item is missing one or both of the skills.
-
-				// Return the non-missing skill, or sort alphabetically if neither exists
-				return this.experiencesById[active].skills[a]
-					? -1
-					: this.experiencesById[active].skills[b]
-					? 1
-					: a <= b
-					? -1
-					: 1
+				// Else, the active item is missing one or both of the skills. Return
+				// the non-missing skill, or sort alphabetically if neither exists.
+				if (this.experiencesById[active].skills[a]) {
+					return -1
+				}
+				if (this.experiencesById[active].skills[b]) {
+					return 1
+				}
+				return a <= b ? -1 : 1
 			}
 			return a <= b ? -1 : 1
 		})
-	}
-
-	componentDidMount() {
-		this.initializeSVG()
-		this.resizeSVG()
-		this.initializeData()
-		this.draw()
-	}
-
-	componentDidUpdate() {
-		this.resizeSVG()
-		this.draw()
 	}
 
 	render() {
