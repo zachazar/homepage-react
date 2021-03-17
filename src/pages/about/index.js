@@ -1,5 +1,6 @@
 import * as React from 'react'
 import cx from 'classnames'
+import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import AboutImage from './about-image'
@@ -39,13 +40,22 @@ const AboutPage = () => (
 						and was fortunate enough to experience real startup growth in SF 🚀.
 						Starting as a full-stack engineer, I ramped up to lead a team of
 						engineers, and then became an Engineering Manager helping to train
-						other managers and overseeing engineering of our subcontractor
-						product.
+						other managers. Meanwhile, I was overseeing engineering for our
+						subcontractor product (
+						<a
+							href="https://www.buildingconnected.com/bid-board/"
+							target="blank"
+						>
+							Bid Board
+						</a>
+						).
 					</p>
 					<p>
 						It&apos;s been a whirlwind. After we got acquired by Autodesk, I
-						decided to return to the technical track and now I work fully remote
-						out of Seattle for our Backend Platform team.
+						decided to return to the technical track and now I work fully
+						remotely out of Seattle. Check out{' '}
+						<Link to="/resume">the Résumé page</Link> to see all of the skills
+						I&apos;ve picked up along the way.
 					</p>
 					<p>
 						In my free time, my favorite weekend activity is to road trip around
