@@ -19,6 +19,13 @@ const Header = () => (
 			<Link
 				className={styles.navLink}
 				activeClassName={styles.active}
+				to="/blog"
+			>
+				Blog
+			</Link>
+			<Link
+				className={styles.navLink}
+				activeClassName={styles.active}
 				to="/resume"
 			>
 				Résumé
