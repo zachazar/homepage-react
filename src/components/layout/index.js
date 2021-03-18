@@ -7,7 +7,9 @@ import * as styles from './styles.module.scss'
 const Layout = ({ children }) => (
 	<div className={styles.container}>
 		<Header />
+		<div className={styles.spacer} />
 		<div className={styles.main}>{children}</div>
+		<div className={styles.spacer} />
 		<Footer />
 	</div>
 )

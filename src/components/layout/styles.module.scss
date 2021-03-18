@@ -4,8 +4,11 @@
 	background-color: $color-background;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	min-height: 100vh;
+	.spacer {
+		background-color: $color-background;
+		height: 15px;
+	}
 	.footer {
 		padding: 0.5rem 2.5rem;
 		display: flex;
@@ -26,12 +29,12 @@
 		}
 	}
 	.main {
-		padding: 0.5rem 2rem;
+		background-color: $color-nav-main;
 		border-radius: $border-radius-default;
+		flex-grow: 1;
 
 		@media (max-width: $break-width-medium) {
 			border-radius: 0px;
-			padding: 0.5rem 1rem;
 		}
 	}
 }

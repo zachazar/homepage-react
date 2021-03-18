@@ -12,8 +12,8 @@ const ContactPage = () => (
 			<div
 				className={cx(
 					'column',
-					'is-half',
-					'is-offset-one-quarter',
+					'is-three-fifths',
+					'is-offset-one-fifth',
 					styles.formContainer
 				)}
 			>

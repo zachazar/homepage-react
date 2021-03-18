@@ -3,7 +3,7 @@
 .container {
 	margin: 0px -5px; // Counters the panel margin's far left and right
 	margin-bottom: 0px !important; // Counters an odd rule in Bulma
-
+	background-color: $color-background;
 	@media (max-width: $break-width-small) {
 		display: block;
 		width: 100%;
@@ -15,14 +15,8 @@
 		padding: 1rem;
 		overflow-y: scroll;
 
-		max-height: 800px;
+		max-height: 85vh;
 
-		@media (min-height: 1200px) {
-			max-height: 1000px;
-		}
-		@media (min-height: 1600px) {
-			max-height: 1400px;
-		}
 		@media (max-width: $break-width-small) {
 			margin: 0px;
 			max-height: none;
