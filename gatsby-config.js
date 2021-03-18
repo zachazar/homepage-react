@@ -3,6 +3,7 @@ module.exports = {
 		title: 'Zach Azar',
 		description: 'Personal homepage',
 		author: '@zachazar',
+		siteUrl: 'https://www.zachazar.com/',
 	},
 	plugins: [
 		'gatsby-plugin-sass',
@@ -35,6 +36,7 @@ module.exports = {
 				icon: 'src/images/favicon-circle.png', // This path is relative to the root of the site.
 			},
 		},
+		'gatsby-plugin-sitemap',
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.app/offline
 		// 'gatsby-plugin-offline',
