@@ -14,11 +14,13 @@ const ContactPage = () => (
 					'column',
 					'is-three-fifths',
 					'is-offset-one-fifth',
-					styles.formContainer
+					styles.columnContainer
 				)}
 			>
-				<div className={cx('title', 'has-text-weight-light')}>
-					Let&apos;s chat!
+				<div
+					className={cx('title', 'has-text-weight-light', styles.columnHeader)}
+				>
+					Let&apos;s chat! 👋
 				</div>
 				<form
 					name="homepage-contact-form"
