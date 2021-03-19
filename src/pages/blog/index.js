@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
+import BlogPostPreview from '../../components/blog-post-preview'
 
 const Blog = ({
 	data: {
@@ -16,13 +17,7 @@ const Blog = ({
 			{posts
 				.filter((post) => post.node.frontmatter.title.length > 0)
 				.map(({ node: post }) => (
-					<div className="blog-post-preview" key={post.id}>
-						<h1>
-							<Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-						</h1>
-						<h2>{post.frontmatter.date}</h2>
-						<p>{post.excerpt}</p>
-					</div>
+					<BlogPostPreview post={post} />
 				))}
 		</div>
 	</Layout>
@@ -43,15 +38,24 @@ export const pageQuery = graphql`
 		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
 			edges {
 				node {
-					excerpt(pruneLength: 250)
 					id
+					excerpt(pruneLength: 250)
+					timeToRead
 					frontmatter {
 						title
 						date(formatString: "MMMM DD, YYYY")
 						slug
+						tags
 					}
 				}
 			}
 		}
 	}
 `
+// image {
+// 	childImageSharp {
+// 		fluid(maxWidth: 800) {
+// 			...GatsbyImageSharpFluid
+// 		}
+// 	}
+// }

@@ -1,0 +1,35 @@
+@import '../../styles/style-variables.scss';
+
+.container {
+	padding: 2rem;
+}
+
+.after-icon {
+	padding-left: 5px;
+}
+
+.spacer::before {
+	content: '|';
+}
+
+.title {
+	color: $color-text;
+	&:hover {
+		color: $color-active-blue;
+	}
+}
+
+.excerpt {
+	color: $color-text;
+}
+
+.tag {
+	color: $color-text;
+	&:hover {
+		color: $color-active-blue;
+	}
+}
+
+.thumbnail {
+	cursor: pointer;
+}
