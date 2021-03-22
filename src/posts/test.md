@@ -3,7 +3,8 @@ slug: '/blog/test'
 date: '2021-03-17'
 title: 'Tester'
 tags: ['animals', 'Chicago', 'zoos']
-image: '../src/images/ZachAzar_Professional_small.jpg'
+image: ../images/1.jpg
+imageAlt: 'image of skatepark'
 ---
 
 Tester 1

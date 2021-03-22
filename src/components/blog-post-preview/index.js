@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import cx from 'classnames'
 
 import * as styles from './styles.module.scss'
@@ -10,58 +10,45 @@ const BlogPostPreview = ({
 	post: {
 		excerpt,
 		timeToRead,
-		frontmatter: { date, slug, title, tags, image },
+		frontmatter: { date, slug, title, tags, image, imageAlt },
 	},
 }) => (
 	<div className={styles.container}>
 		<div className="columns">
 			<div className="column">
-				{/* <StaticImage
-					src={image}
-					alt="Photo of Zach"
-					layout="constrained"
-					width={250}
-					onClick={() => navigate(slug)}
-					className={styles.thumbnail}
-					role="link"
-					onKeyPress={() => navigate(slug)}
-					tabIndex={0}
-				/> */}
-				{/* <GatsbyImage fluid={image.childImageSharp.fluid} /> */}
+				<GatsbyImage
+					image={image.childImageSharp.gatsbyImageData}
+					alt={imageAlt}
+				/>
 			</div>
-			<div className="column">
+			<div className="column is-three-fifths">
 				<p className="title has-text-weight-light">
 					<Link to={slug} className={styles.title}>
 						{title}
 					</Link>
 				</p>
-				<div className="level">
-					<div className="level-left">
-						<div className="level-item">
-							<i className="fas fa-calendar-alt" />
-							<p className={styles.afterIcon}>{date}</p>
-						</div>
-						<div className={cx('level-item', styles.spacer)} />
-						<div className="level-item">
-							<i className="fas fa-book-open" />
-							<p className={styles.afterIcon}>{`${timeToRead} min`}</p>
-						</div>
-						<div className={cx('level-item', styles.spacer)} />
-						<div className="level-item">
-							<div className="level buttons are-small">
-								{tags.map((tag) => (
-									<Link
-										className={cx(
-											'level-item',
-											'button is-rounded',
-											styles.tag
-										)}
-										to={`blog/tags/${tag}`}
-									>
-										{tag}
-									</Link>
-								))}
-							</div>
+				<div className={styles.info}>
+					<div>
+						<i className="fas fa-calendar-alt" />
+						<p className={styles.afterIcon}>{date}</p>
+					</div>
+					<div className={cx(styles.spacer)} />
+					<div>
+						<i className="fas fa-book-open" />
+						<p className={styles.afterIcon}>{`${timeToRead} min`}</p>
+					</div>
+					<div className={cx(styles.spacer)} />
+					<div>
+						<div className="buttons are-small">
+							{tags.map((tag) => (
+								<Link
+									className={cx('button is-rounded', styles.tag)}
+									to={`blog/tags/${tag}`}
+									key={tag}
+								>
+									{tag}
+								</Link>
+							))}
 						</div>
 					</div>
 				</div>
@@ -74,15 +61,18 @@ const BlogPostPreview = ({
 )
 
 BlogPostPreview.propTypes = {
-	post: PropTypes.objectOf({
+	post: PropTypes.shape({
 		excerpt: PropTypes.string,
-		frontmatter: PropTypes.objectOf({
+		timeToRead: PropTypes.number,
+		frontmatter: PropTypes.shape({
 			date: PropTypes.string,
 			slug: PropTypes.string,
 			title: PropTypes.string,
 			timeToRead: PropTypes.number,
 			tags: PropTypes.arrayOf(PropTypes.string),
-			// image: PropTypes.string,
+			imageAlt: PropTypes.string,
+			// eslint-disable-next-line react/forbid-prop-types
+			image: PropTypes.object,
 		}),
 	}).isRequired,
 }

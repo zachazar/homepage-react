@@ -8,8 +8,11 @@
 	padding-left: 5px;
 }
 
-.spacer::before {
-	content: '|';
+.spacer {
+	padding: 0.5rem;
+	&::before {
+		content: '|';
+	}
 }
 
 .title {
@@ -32,4 +35,13 @@
 
 .thumbnail {
 	cursor: pointer;
+}
+
+.info {
+	padding-bottom: 0.5rem;
+
+	& div,
+	p {
+		display: inline;
+	}
 }

@@ -7,6 +7,9 @@ module.exports = {
 	},
 	plugins: [
 		'gatsby-plugin-sass',
+		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+		'gatsby-transformer-remark',
 		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-plugin-google-analytics',
@@ -28,10 +31,9 @@ module.exports = {
 				path: `${__dirname}/src/posts`,
 			},
 		},
-		'gatsby-transformer-remark',
+
 		'gatsby-plugin-image',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
+
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

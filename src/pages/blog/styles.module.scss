@@ -1,0 +1,14 @@
+@import '../../styles/style-variables.scss';
+
+a {
+	color: black;
+	&:active,
+	&:hover,
+	&:focus {
+		color: $color-active-blue;
+	}
+}
+
+.spacer {
+	height: 40px;
+}
