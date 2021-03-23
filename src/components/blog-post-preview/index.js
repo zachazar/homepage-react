@@ -13,27 +13,29 @@ const BlogPostPreview = ({
 		frontmatter: { date, slug, title, tags, image, imageAlt },
 	},
 }) => (
-	<div className="columns">
-		<div className="column">
-			<GatsbyImage
-				image={image.childImageSharp.gatsbyImageData}
-				alt={imageAlt}
-				className={styles.thumbnail}
-				tabIndex={0}
-				onClick={() => navigate(slug)}
-				onKeyPress={() => navigate(slug)}
-			/>
-		</div>
-		<div className="column is-three-fifths">
-			<p className="title has-text-weight-light">
-				<Link to={slug} className={styles.title}>
-					{title}
+	<div className={styles.container}>
+		<div className="columns">
+			<div className="column">
+				<GatsbyImage
+					image={image.childImageSharp.gatsbyImageData}
+					alt={imageAlt}
+					className={styles.thumbnail}
+					tabIndex={0}
+					onClick={() => navigate(slug)}
+					onKeyPress={() => navigate(slug)}
+				/>
+			</div>
+			<div className="column is-three-fifths">
+				<p className="title has-text-weight-light">
+					<Link to={slug} className={styles.title}>
+						{title}
+					</Link>
+				</p>
+				<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+				<Link className={styles.excerpt} to={slug}>
+					{excerpt}
 				</Link>
-			</p>
-			<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
-			<Link className={styles.excerpt} to={slug}>
-				{excerpt}
-			</Link>
+			</div>
 		</div>
 	</div>
 )

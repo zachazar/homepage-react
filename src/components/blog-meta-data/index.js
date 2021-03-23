@@ -1,8 +1,7 @@
 import * as React from 'react'
-import cx from 'classnames'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
+import TagList from '../tag-list'
 import * as styles from './styles.module.scss'
 
 const BlogMetaData = ({ date, timeToRead, tags }) => (
@@ -18,17 +17,7 @@ const BlogMetaData = ({ date, timeToRead, tags }) => (
 		</div>
 		<div className={styles.spacer} />
 		<div>
-			<div className="buttons are-small">
-				{tags.map((tag) => (
-					<Link
-						className={cx('button is-rounded', styles.tag)}
-						to={`/blog/tags/${tag}`}
-						key={tag}
-					>
-						{tag}
-					</Link>
-				))}
-			</div>
+			<TagList tags={tags} />
 		</div>
 	</div>
 )

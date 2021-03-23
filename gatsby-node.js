@@ -1,6 +1,6 @@
 async function createBlogPages({ createPage, graphql, reporter }) {
 	const blogPostTemplate = require.resolve(
-		`./src/templates/blog-post-template/index.js`
+		`./src/templates/blog-post-template.js`
 	)
 
 	const result = await graphql(`
@@ -42,7 +42,7 @@ async function createBlogPages({ createPage, graphql, reporter }) {
 
 async function createTagPages({ createPage, graphql, reporter }) {
 	const tagPageTemplate = require.resolve(
-		`./src/templates/tag-page-template/index.js`
+		`./src/templates/tag-page-template.js`
 	)
 
 	const result = await graphql(`
@@ -63,12 +63,15 @@ async function createTagPages({ createPage, graphql, reporter }) {
 		return
 	}
 
-	result.data.allMarkdownRemark.group.forEach(({ tag }) => {
+	const tags = result.data.allMarkdownRemark.group.map(({ tag }) => tag)
+
+	tags.forEach((tag) => {
 		createPage({
 			path: `blog/tags/${tag}`,
 			component: tagPageTemplate,
 			context: {
 				tag,
+				allTags: [...tags],
 			},
 		})
 	})

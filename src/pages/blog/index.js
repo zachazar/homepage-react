@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import BlogPostPreview from '../../components/blog-post-preview'
-import * as styles from './styles.module.scss'
+import BlogPreviewList from '../../components/blog-preview-list'
+import BlogLayout from '../../components/blog-layout'
 
 const Blog = ({
 	data: {
@@ -14,33 +14,12 @@ const Blog = ({
 }) => (
 	<Layout>
 		<SEO title="Blog" keywords={['gatsby', 'application', 'react']} />
-		<div className="section">
-			<div className={styles.topSpacer} />
-			<div className="columns">
-				<div className="column is-four-fifths">
-					{posts
-						.filter((post) => post.node.frontmatter.title.length > 0)
-						.map(({ node: post }) => (
-							<div className={styles.post}>
-								<BlogPostPreview post={post} key={post.id} />
-							</div>
-						))}
-				</div>
-				<div className="column">
-					<div className={styles.spacer} />
-					<div className="card">
-						<div className="card-content">
-							You can also find me on Twitter{' '}
-							<a target="blank" href="https://twitter.com/zachrazar">
-								<i className="fab fa-twitter" />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<BlogLayout>
+			<BlogPreviewList posts={posts} />
+		</BlogLayout>
 	</Layout>
 )
+
 Blog.propTypes = {
 	data: PropTypes.shape({
 		allMarkdownRemark: PropTypes.shape({

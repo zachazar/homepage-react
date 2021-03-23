@@ -1,0 +1,40 @@
+@import '../../styles/style-variables.scss';
+
+.container {
+	padding: 3rem 1.5rem 3rem 3rem;
+}
+
+.slim-top {
+	padding-top: 1.5rem;
+}
+
+.top-spacer {
+	height: 1.5rem;
+}
+
+.side-spacer {
+	height: 40px;
+}
+
+.after-icon {
+	padding-left: 5px;
+}
+
+.back {
+	& a {
+		color: black;
+
+		& i {
+			opacity: 0.7;
+		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			color: $color-active-blue;
+			& i {
+				opacity: 1;
+			}
+		}
+	}
+}

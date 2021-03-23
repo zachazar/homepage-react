@@ -2,7 +2,7 @@
 slug: '/blog/test2'
 date: '2021-03-17'
 title: 'Tester2'
-tags: ['animals', 'Chicago', 'zoos']
+tags: ['bird']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
 ---
