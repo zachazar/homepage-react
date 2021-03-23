@@ -1,0 +1,27 @@
+@import '../../styles/style-variables.scss';
+
+.spacer {
+	padding: 0.5rem;
+	&::before {
+		content: '|';
+	}
+}
+
+.info {
+	padding-bottom: 0.5rem;
+
+	& div,
+	p {
+		display: inline;
+	}
+}
+.tag {
+	color: $color-text;
+	&:hover {
+		color: $color-active-blue;
+	}
+}
+
+.after-icon {
+	padding-left: 5px;
+}

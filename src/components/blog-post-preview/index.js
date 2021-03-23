@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Link, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import cx from 'classnames'
 
+import BlogMetaData from '../blog-meta-data'
 import * as styles from './styles.module.scss'
 
 const BlogPostPreview = ({
@@ -13,49 +13,27 @@ const BlogPostPreview = ({
 		frontmatter: { date, slug, title, tags, image, imageAlt },
 	},
 }) => (
-	<div className={styles.container}>
-		<div className="columns">
-			<div className="column">
-				<GatsbyImage
-					image={image.childImageSharp.gatsbyImageData}
-					alt={imageAlt}
-				/>
-			</div>
-			<div className="column is-three-fifths">
-				<p className="title has-text-weight-light">
-					<Link to={slug} className={styles.title}>
-						{title}
-					</Link>
-				</p>
-				<div className={styles.info}>
-					<div>
-						<i className="fas fa-calendar-alt" />
-						<p className={styles.afterIcon}>{date}</p>
-					</div>
-					<div className={cx(styles.spacer)} />
-					<div>
-						<i className="fas fa-book-open" />
-						<p className={styles.afterIcon}>{`${timeToRead} min`}</p>
-					</div>
-					<div className={cx(styles.spacer)} />
-					<div>
-						<div className="buttons are-small">
-							{tags.map((tag) => (
-								<Link
-									className={cx('button is-rounded', styles.tag)}
-									to={`blog/tags/${tag}`}
-									key={tag}
-								>
-									{tag}
-								</Link>
-							))}
-						</div>
-					</div>
-				</div>
-				<Link className={styles.excerpt} to={slug}>
-					{excerpt}
+	<div className="columns">
+		<div className="column">
+			<GatsbyImage
+				image={image.childImageSharp.gatsbyImageData}
+				alt={imageAlt}
+				className={styles.thumbnail}
+				tabIndex={0}
+				onClick={() => navigate(slug)}
+				onKeyPress={() => navigate(slug)}
+			/>
+		</div>
+		<div className="column is-three-fifths">
+			<p className="title has-text-weight-light">
+				<Link to={slug} className={styles.title}>
+					{title}
 				</Link>
-			</div>
+			</p>
+			<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+			<Link className={styles.excerpt} to={slug}>
+				{excerpt}
+			</Link>
 		</div>
 	</div>
 )

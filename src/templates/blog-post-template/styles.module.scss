@@ -1,0 +1,30 @@
+@import '../../styles/style-variables.scss';
+
+.spacer {
+	height: 40px;
+}
+
+.after-icon {
+	padding-left: 5px;
+}
+
+.back {
+	height: 30px;
+
+	&:active,
+	&:hover,
+	&:focus {
+		color: $color-active-blue;
+		& i {
+			opacity: 1;
+		}
+	}
+
+	& i {
+		opacity: 0.7;
+	}
+}
+
+.blog-column {
+	padding-top: 1.5rem;
+}

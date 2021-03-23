@@ -1,20 +1,5 @@
 @import '../../styles/style-variables.scss';
 
-.container {
-	padding: 2rem;
-}
-
-.after-icon {
-	padding-left: 5px;
-}
-
-.spacer {
-	padding: 0.5rem;
-	&::before {
-		content: '|';
-	}
-}
-
 .title {
 	color: $color-text;
 	&:hover {
@@ -26,22 +11,6 @@
 	color: $color-text;
 }
 
-.tag {
-	color: $color-text;
-	&:hover {
-		color: $color-active-blue;
-	}
-}
-
 .thumbnail {
 	cursor: pointer;
-}
-
-.info {
-	padding-bottom: 0.5rem;
-
-	& div,
-	p {
-		display: inline;
-	}
 }
