@@ -1,9 +1,18 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Zach Azar',
-		description: 'Personal homepage',
+		description:
+			"Zach Azar's personal homepage blogging about tech, software engineering, engineering management, and entrpreneurship",
 		author: '@zachazar',
 		siteUrl: 'https://www.zachazar.com/',
+		social: {
+			twitter: 'https://twitter.com/zachrazar',
+		},
+		socialLinks: {
+			twitter: 'https://twitter.com/zachrazar',
+			linkedin: 'https://www.linkedin.com/in/zach-azar',
+			github: 'https://github.com/zachazar/',
+		},
 	},
 	plugins: [
 		'gatsby-plugin-sass',
@@ -19,6 +28,7 @@ module.exports = {
 							maxWidth: 800,
 						},
 					},
+					{ resolve: 'gatsby-remark-prismjs' },
 				],
 			},
 		},
@@ -58,7 +68,78 @@ module.exports = {
 				icon: 'src/images/favicon-circle.png', // This path is relative to the root of the site.
 			},
 		},
-		'gatsby-plugin-sitemap',
+		{
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				exclude: [`/tags/*`],
+			},
+		},
+		{
+			resolve: `gatsby-plugin-feed`,
+			options: {
+				// graphQL query to get siteMetadata
+				query: `{
+					site {
+						siteMetadata {
+							title
+							description
+							siteUrl
+							siteUrl: siteUrl,
+							author
+						}
+					}
+				}`,
+				feeds: [
+					{
+						serialize: ({ query: { site, allMarkdownRemark } }) => {
+							const {
+								siteMetadata: { siteUrl, author },
+							} = site
+							return allMarkdownRemark.edges.map((edge) => {
+								const {
+									node: {
+										frontmatter: { title, date, slug },
+										excerpt,
+										html,
+									},
+								} = edge
+								return {
+									...edge.node.frontmatter,
+									language: `en-us`,
+									title,
+									author,
+									date,
+									description: excerpt,
+									url: siteUrl + slug,
+									guid: siteUrl + slug,
+									custom_elements: [{ 'content:encoded': html }],
+								}
+							})
+						},
+						// query to get blog post data
+						query: ` {
+							allMarkdownRemark(
+								sort: { order: DESC, fields: [frontmatter___date] },
+							){
+								edges {
+									node {
+										excerpt
+										html
+										frontmatter {
+											slug
+											date
+											title
+										}
+									}
+								}
+							}
+						}`,
+						output: '/rss.xml',
+						title: `Zach Azar | RSS Feed`,
+					},
+				],
+			},
+		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.app/offline
 		// 'gatsby-plugin-offline',

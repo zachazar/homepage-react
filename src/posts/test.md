@@ -10,6 +10,18 @@ imageAlt: 'image of skatepark'
 Tester 1
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis nisi pharetra mauris facilisis, at aliquet mauris vestibulum. Duis massa mi, feugiat id libero at, efficitur ullamcorper ante. Phasellus dapibus efficitur odio eget commodo. Phasellus ullamcorper dui a elit commodo fermentum. Donec felis urna, cursus sed erat eu, efficitur elementum dui. Nam ullamcorper vulputate arcu, nec feugiat ipsum eleifend non. Nunc non purus ac eros maximus viverra. Morbi mattis orci nulla, sed pharetra velit congue ac. Nullam non euismod mi. Nulla dignissim odio sit amet justo ornare, quis finibus felis maximus. Donec tincidunt nisi ante, ut consectetur dolor commodo id. Integer vitae tincidunt ligula. Aliquam sodales metus ultrices, maximus nulla non, egestas lectus. Nam porttitor ipsum at nibh malesuada elementum.
 
+```js
+const a = 3
+const b = 18
+
+function add(x) {
+	console.log('hello')
+	return x + a
+}
+
+add(a)
+```
+
 Phasellus pulvinar, nunc in accumsan sollicitudin, leo tellus efficitur turpis, et elementum odio leo non dui. Ut enim sem, tristique eget metus eget, eleifend vestibulum felis. Nulla facilisi. Mauris quis neque id lorem pharetra scelerisque. In commodo tristique justo, a luctus neque laoreet a. Ut ac nisl nec dui iaculis auctor. Mauris mi urna, imperdiet ut felis at, tristique accumsan massa. Integer gravida, turpis vel ornare bibendum, felis risus laoreet tortor, mattis pulvinar eros nisi nec est. Morbi iaculis nisi eget orci ullamcorper facilisis. Maecenas ac diam id nunc gravida tincidunt.
 
 Suspendisse nec libero sed ex lacinia pellentesque. Sed sollicitudin rutrum tempor. Suspendisse tortor ipsum, ultricies interdum molestie a, bibendum at felis. Mauris venenatis iaculis sapien non posuere. Praesent sem dui, dignissim eu elementum a, sodales at est. Fusce malesuada, risus quis lacinia convallis, orci urna euismod elit, a hendrerit lectus ante id nisl. Nullam mollis gravida lorem, nec bibendum urna vehicula ultrices.

@@ -1,1 +1,20 @@
 @import '~bulma/bulma.sass';
+
+/* Bulma overrides */
+
+// These screw up prismjs
+.token.tag,
+.token.content,
+.token.number {
+	display: inline;
+	padding: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	vertical-align: inherit;
+	border-radius: inherit;
+	font-weight: inherit;
+	white-space: inherit;
+	background: inherit;
+	margin: inherit;
+}
