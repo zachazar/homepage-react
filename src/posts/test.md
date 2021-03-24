@@ -2,7 +2,7 @@
 slug: '/blog/test'
 date: '2021-03-17'
 title: 'Tester'
-tags: ['zebra', 'dog']
+tags: ['product', 'startup']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
 ---

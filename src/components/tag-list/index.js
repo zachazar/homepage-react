@@ -5,14 +5,16 @@ import cx from 'classnames'
 
 import * as styles from './styles.module.scss'
 
+const tagToSlug = (tag) => tag.replace(' ', '-')
+
 const TagList = ({ tags, activeTag }) => (
-	<div className={cx(styles.tags, 'buttons are-small')}>
+	<div className={cx('buttons are-small', styles.tags)}>
 		{tags.map((tag) => (
 			<Link
-				className={cx('button is-rounded', styles.tag, {
+				className={cx('button is-rounded', {
 					[styles.active]: tag === activeTag,
 				})}
-				to={`/blog/tags/${tag}`}
+				to={`/blog/tags/${tagToSlug(tag)}`}
 				key={tag}
 			>
 				{tag}

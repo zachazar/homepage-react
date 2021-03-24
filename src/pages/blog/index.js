@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import BlogPreviewList from '../../components/blog-preview-list'
 import BlogLayout from '../../components/blog-layout'
+import BlogPreviewList from '../../components/blog-preview-list'
 
 const Blog = ({
 	data: {
@@ -14,7 +14,7 @@ const Blog = ({
 }) => (
 	<Layout>
 		<SEO title="Blog" keywords={['gatsby', 'application', 'react']} />
-		<BlogLayout>
+		<BlogLayout showTwitterCard>
 			<BlogPreviewList posts={posts} />
 		</BlogLayout>
 	</Layout>

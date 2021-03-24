@@ -15,7 +15,7 @@ const Tags = ({
 }) => (
 	<Layout>
 		<SEO title={`${tag} posts`} keywords={['gatsby', 'application', 'react']} />
-		<BlogLayout hasBackButton tags={allTags} activeTag={tag}>
+		<BlogLayout hasBackButton tags={allTags} activeTag={tag} showTwitterCard>
 			<BlogPreviewList posts={posts} />
 		</BlogLayout>
 	</Layout>

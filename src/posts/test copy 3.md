@@ -1,8 +1,8 @@
 ---
-slug: '/blog/test2'
+slug: '/blog/tester4'
 date: '2021-03-17'
-title: 'Tester2'
-tags: ['cat', 'dog', 'goat']
+title: 'tester4'
+tags: ['engineering management', 'react']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
 ---

@@ -1,8 +1,8 @@
 ---
-slug: '/blog/test2'
+slug: '/blog/tester6'
 date: '2021-03-17'
-title: 'Tester2'
-tags: ['cat', 'horse']
+title: 'tester6'
+tags: ['heroku', 'mongoDB']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
 ---

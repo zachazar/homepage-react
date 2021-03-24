@@ -5,8 +5,8 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BlogPostMeta from '../components/blog-meta-data'
 import BlogLayout from '../components/blog-layout'
+import BlogPostMeta from '../components/blog-meta-data'
 
 const BlogPostTemplate = ({
 	// this prop will be injected by the GraphQL query below.
@@ -23,10 +23,12 @@ const BlogPostTemplate = ({
 		<BlogLayout hasBackButton>
 			<h1 className="title has-text-weight-light">{title}</h1>
 			<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
-			<GatsbyImage
-				image={image.childImageSharp.gatsbyImageData}
-				alt={imageAlt}
-			/>
+			<div className="has-text-centered">
+				<GatsbyImage
+					image={image.childImageSharp.gatsbyImageData}
+					alt={imageAlt}
+				/>
+			</div>
 			{/* eslint-disable-next-line react/no-danger */}
 			<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
 		</BlogLayout>

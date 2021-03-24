@@ -1,3 +1,5 @@
+const tagToSlug = (tag) => tag.replace(' ', '-')
+
 async function createBlogPages({ createPage, graphql, reporter }) {
 	const blogPostTemplate = require.resolve(
 		`./src/templates/blog-post-template.js`
@@ -67,7 +69,7 @@ async function createTagPages({ createPage, graphql, reporter }) {
 
 	tags.forEach((tag) => {
 		createPage({
-			path: `blog/tags/${tag}`,
+			path: `blog/tags/${tagToSlug(tag)}`,
 			component: tagPageTemplate,
 			context: {
 				tag,
