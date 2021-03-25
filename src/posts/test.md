@@ -1,7 +1,7 @@
 ---
-slug: '/blog/test'
+slug: '/blog/vivamus-sodales-sapien-aliquam-leo-pretium-rutrum'
 date: '2021-03-17'
-title: 'Tester'
+title: 'Vivamus sodales sapien aliquam leo pretium rutrum'
 tags: ['product', 'startup']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'

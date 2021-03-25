@@ -1,7 +1,7 @@
 ---
-slug: '/blog/tester3'
+slug: '/blog/mauris-venenatis-iaculis-sapien-non-posuere'
 date: '2021-03-17'
-title: 'tester3'
+title: 'Mauris venenatis iaculis sapien non posuere'
 tags: ['engineering management']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
