@@ -1,9 +1,7 @@
 const tagToSlug = (tag) => tag.replace(' ', '-')
 
 async function createBlogPages({ createPage, graphql, reporter }) {
-	const blogPostTemplate = require.resolve(
-		`./src/templates/blog-post-template.js`
-	)
+	const blogPostTemplate = require.resolve(`./src/templates/blog-post-template`)
 
 	const result = await graphql(`
 		{
@@ -43,9 +41,7 @@ async function createBlogPages({ createPage, graphql, reporter }) {
 }
 
 async function createTagPages({ createPage, graphql, reporter }) {
-	const tagPageTemplate = require.resolve(
-		`./src/templates/tag-page-template.js`
-	)
+	const tagPageTemplate = require.resolve(`./src/templates/tag-page-template`)
 
 	const result = await graphql(`
 		{

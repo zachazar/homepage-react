@@ -2,8 +2,8 @@ module.exports = {
 	siteMetadata: {
 		title: 'Zach Azar',
 		description:
-			"Zach Azar's personal homepage blogging about tech, software engineering, engineering management, and entrpreneurship",
-		author: '@zachazar',
+			"Zach Azar's personal homepage blogging about tech, software engineering, engineering management, and entrepreneurship",
+		author: '@zachrazar',
 		siteUrl: 'https://www.zachazar.com/',
 		social: {
 			twitter: 'https://twitter.com/zachrazar',
@@ -138,6 +138,12 @@ module.exports = {
 						title: `Zach Azar | RSS Feed`,
 					},
 				],
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				policy: [{ userAgent: '*', allow: '/' }],
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,9 +1,14 @@
 @import '../../styles/style-variables.scss';
 
-.title {
-	color: $color-text;
-	&:hover {
-		color: $color-active-blue;
+.title-container {
+	@media (max-width: $break-width-small) {
+		text-align: center;
+	}
+	.title {
+		color: $color-text;
+		&:hover {
+			color: $color-active-blue;
+		}
 	}
 }
 
@@ -11,6 +16,19 @@
 	color: $color-text;
 }
 
-.thumbnail {
-	cursor: pointer;
+.thumbnail-container {
+	@media (max-width: $break-width-small) {
+		text-align: center;
+	}
+
+	.thumbnail {
+		cursor: pointer;
+		&:focus-within {
+			border: 3px solid $color-active-blue;
+		}
+	}
+}
+
+.meta-container {
+	margin-bottom: 0.5rem;
 }

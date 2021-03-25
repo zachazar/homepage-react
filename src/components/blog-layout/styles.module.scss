@@ -12,8 +12,20 @@
 	height: 1.5rem;
 }
 
-.side-spacer {
+.side-spacer-upper {
 	height: 40px;
+
+	@media (max-width: $break-width-small) {
+		height: 0px;
+	}
+}
+
+.side-spacer-between-elements {
+	height: 120px;
+
+	@media (max-width: $break-width-small) {
+		height: 20px;
+	}
 }
 
 .after-icon {
@@ -36,5 +48,14 @@
 				opacity: 1;
 			}
 		}
+	}
+}
+
+.left-spacing-column {
+	@media (max-width: $break-width-small) {
+		display: none;
+	}
+	&.always-hide {
+		display: none;
 	}
 }

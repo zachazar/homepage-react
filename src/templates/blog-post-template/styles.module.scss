@@ -1,0 +1,15 @@
+@import '../../styles/style-variables.scss';
+
+.title-container {
+	@media (max-width: $break-width-small) {
+		text-align: center;
+	}
+}
+
+.metaContainer {
+	margin: 1rem 0;
+}
+
+.image-container {
+	text-align: center;
+}

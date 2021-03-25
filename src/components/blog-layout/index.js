@@ -11,7 +11,7 @@ const BlogLayout = ({
 	children,
 	tags,
 	activeTag,
-	showTwitterCard,
+	showSideInfo,
 }) => (
 	<div className={cx(styles.container, { [styles.slimTop]: hasBackButton })}>
 		{hasBackButton ? (
@@ -30,17 +30,32 @@ const BlogLayout = ({
 			<div className={styles.topSpacer} />
 		)}
 		<div className="columns">
-			{!showTwitterCard && <div className="column" />}
+			<div
+				className={cx('column', styles.leftSpacingColumn, {
+					[styles.alwaysHide]: showSideInfo,
+				})}
+			/>
+
 			<div className="column is-four-fifths">{children}</div>
 			<div className="column">
-				{showTwitterCard && (
+				{showSideInfo && (
 					<div>
-						<div className={styles.sideSpacer} />
+						<div className={styles.sideSpacerUpper} />
 						<div className="card">
 							<div className="card-content">
 								You can also find me on Twitter{' '}
 								<a target="blank" href="https://twitter.com/zachrazar">
 									<i className="fab fa-twitter" />
+								</a>
+							</div>
+						</div>
+						<div className={styles.sideSpacerBetweenElements} />
+						<div className="card">
+							<div className="card-content">
+								Keep up with the latest using{' '}
+								<a target="blank" href="/rss.xml">
+									RSS
+									<i className="fas fa-rss" />
 								</a>
 							</div>
 						</div>
@@ -55,7 +70,7 @@ BlogLayout.defaultProps = {
 	hasBackButton: false,
 	tags: null,
 	activeTag: null,
-	showTwitterCard: false,
+	showSideInfo: false,
 }
 
 BlogLayout.propTypes = {
@@ -63,7 +78,7 @@ BlogLayout.propTypes = {
 	children: PropTypes.node.isRequired,
 	tags: PropTypes.arrayOf(PropTypes.string),
 	activeTag: PropTypes.string,
-	showTwitterCard: PropTypes.bool,
+	showSideInfo: PropTypes.bool,
 }
 
 export default BlogLayout

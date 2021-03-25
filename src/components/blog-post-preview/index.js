@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import BlogMetaData from '../blog-meta-data'
@@ -14,7 +15,7 @@ const BlogPostPreview = ({
 	},
 }) => (
 	<div className="columns">
-		<div className="column">
+		<div className={cx('column', styles.thumbnailContainer)}>
 			<GatsbyImage
 				image={image.childImageSharp.gatsbyImageData}
 				alt={imageAlt}
@@ -25,12 +26,14 @@ const BlogPostPreview = ({
 			/>
 		</div>
 		<div className="column is-three-fifths">
-			<p className="title has-text-weight-light">
+			<p className={cx('title has-text-weight-light', styles.titleContainer)}>
 				<Link to={slug} className={styles.title}>
 					{title}
 				</Link>
 			</p>
-			<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+			<div className={styles.metaContainer}>
+				<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+			</div>
 			<Link className={styles.excerpt} to={slug}>
 				{excerpt}
 			</Link>

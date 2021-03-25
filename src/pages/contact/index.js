@@ -7,7 +7,10 @@ import * as styles from './styles.module.scss'
 
 const ContactPage = () => (
 	<Layout>
-		<SEO title="Contact" keywords={['gatsby', 'application', 'react']} />
+		<SEO
+			title="Contact"
+			keywords={['zach azar', 'contact', 'blog', 'gatsby', 'react']}
+		/>
 		<div className={cx(styles.container, 'columns')}>
 			<div
 				className={cx(

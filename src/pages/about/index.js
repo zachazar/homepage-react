@@ -8,7 +8,7 @@ import * as styles from './styles.module.scss'
 
 const AboutPage = () => (
 	<Layout>
-		<SEO title="About" keywords={['gatsby', 'application', 'react']} />
+		<SEO title="About" keywords={['zach azar', 'blog', 'gatsby', 'react']} />
 
 		<div className={cx('columns', styles.items)}>
 			<div className={cx('column', styles.aboutItem)}>

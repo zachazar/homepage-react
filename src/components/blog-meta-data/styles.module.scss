@@ -8,11 +8,13 @@
 }
 
 .info {
-	padding-bottom: 0.5rem;
-
 	& div,
 	p {
 		display: inline;
+	}
+
+	@media (max-width: $break-width-small) {
+		text-align: center;
 	}
 }
 .tag {

@@ -3,10 +3,12 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import BlogLayout from '../components/blog-layout'
-import BlogPostMeta from '../components/blog-meta-data'
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
+import BlogLayout from '../../components/blog-layout'
+import BlogPostMeta from '../../components/blog-meta-data'
+
+import * as styles from './styles.module.scss'
 
 const BlogPostTemplate = ({
 	// this prop will be injected by the GraphQL query below.
@@ -19,11 +21,20 @@ const BlogPostTemplate = ({
 	},
 }) => (
 	<Layout>
-		<SEO title={title} keywords={['gatsby', 'application', 'react']} />
+		<SEO
+			isBlogPost
+			title={title}
+			imageAlt={imageAlt}
+			keywords={[...tags, 'blog', 'zach azar']}
+		/>
 		<BlogLayout hasBackButton>
-			<h1 className="title has-text-weight-light">{title}</h1>
-			<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
-			<div className="has-text-centered">
+			<div className={styles.titleContainer}>
+				<h1 className="title has-text-weight-light">{title}</h1>
+			</div>
+			<div className={styles.metaContainer}>
+				<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
+			</div>
+			<div className={styles.imageContainer}>
 				<GatsbyImage
 					image={image.childImageSharp.gatsbyImageData}
 					alt={imageAlt}

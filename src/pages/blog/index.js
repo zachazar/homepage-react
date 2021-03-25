@@ -13,8 +13,8 @@ const Blog = ({
 	},
 }) => (
 	<Layout>
-		<SEO title="Blog" keywords={['gatsby', 'application', 'react']} />
-		<BlogLayout showTwitterCard>
+		<SEO title="Blog" keywords={['zach azar', 'blog', 'gatsby', 'react']} />
+		<BlogLayout showSideInfo>
 			<BlogPreviewList posts={posts} />
 		</BlogLayout>
 	</Layout>
