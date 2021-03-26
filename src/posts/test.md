@@ -1,8 +1,9 @@
 ---
 slug: '/blog/vivamus-sodales-sapien-aliquam-leo-pretium-rutrum'
-date: '2021-03-17'
+date: '2021-11-01'
 title: 'Vivamus sodales sapien aliquam leo pretium rutrum'
 tags: ['product', 'startup']
+additionalKeywords: ['Oozie']
 image: ../images/1.jpg
 imageAlt: 'image of skatepark'
 ---

@@ -7,6 +7,7 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import BlogLayout from '../../components/blog-layout'
 import BlogPostMeta from '../../components/blog-meta-data'
+import useSiteMetadata from '../../hooks/use-site-meta-data'
 
 import * as styles from './styles.module.scss'
 
@@ -16,35 +17,51 @@ const BlogPostTemplate = ({
 		markdownRemark: {
 			html,
 			timeToRead,
-			frontmatter: { title, date, tags, image, imageAlt },
+			frontmatter: { title, date, tags, image, imageAlt, additionalKeywords },
 		},
 	},
-}) => (
-	<Layout>
-		<SEO
-			isBlogPost
-			title={title}
-			imageAlt={imageAlt}
-			keywords={[...tags, 'blog', 'zach azar']}
-		/>
-		<BlogLayout hasBackButton>
-			<div className={styles.titleContainer}>
-				<h1 className="title has-text-weight-light">{title}</h1>
-			</div>
-			<div className={styles.metaContainer}>
-				<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
-			</div>
-			<div className={styles.imageContainer}>
-				<GatsbyImage
-					image={image.childImageSharp.gatsbyImageData}
-					alt={imageAlt}
-				/>
-			</div>
-			{/* eslint-disable-next-line react/no-danger */}
-			<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
-		</BlogLayout>
-	</Layout>
-)
+}) => {
+	const { siteUrl } = useSiteMetadata()
+	const {
+		width,
+		height,
+		images: {
+			fallback: { src: publicURL },
+		},
+	} = image.childImageSharp.gatsbyImageData
+	return (
+		<Layout>
+			<SEO
+				isBlogPost
+				title={title}
+				imageAlt={imageAlt}
+				imageMetaData={{
+					imageAlt,
+					width,
+					height,
+					path: `${siteUrl}${publicURL}`,
+				}}
+				keywords={[...tags, ...(additionalKeywords || []), 'blog', 'zach azar']}
+			/>
+			<BlogLayout hasBackButton>
+				<div className={styles.titleContainer}>
+					<h1 className="title has-text-weight-light">{title}</h1>
+				</div>
+				<div className={styles.metaContainer}>
+					<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
+				</div>
+				<div className={styles.imageContainer}>
+					<GatsbyImage
+						image={image.childImageSharp.gatsbyImageData}
+						alt={imageAlt}
+					/>
+				</div>
+				{/* eslint-disable-next-line react/no-danger */}
+				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+			</BlogLayout>
+		</Layout>
+	)
+}
 
 BlogPostTemplate.propTypes = {
 	data: PropTypes.shape({
@@ -56,6 +73,7 @@ BlogPostTemplate.propTypes = {
 				imageAlt: PropTypes.string,
 				// eslint-disable-next-line react/forbid-prop-types
 				image: PropTypes.object,
+				additionalKeywords: PropTypes.arrayOf(PropTypes.string),
 			}),
 			html: PropTypes.string,
 			timeToRead: PropTypes.number,
@@ -73,6 +91,7 @@ export const pageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				slug
 				tags
+				additionalKeywords
 				image {
 					childImageSharp {
 						gatsbyImageData(layout: CONSTRAINED, width: 800)

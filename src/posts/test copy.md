@@ -1,6 +1,6 @@
 ---
 slug: '/blog/lorem-ipsum-dolor-sit-amet'
-date: '2021-03-17'
+date: '2020-02-17'
 title: 'Lorem ipsum dolor sit amet'
 tags: ['heroku', 'mongoDB']
 image: ../images/1.jpg

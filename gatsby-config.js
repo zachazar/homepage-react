@@ -1,10 +1,11 @@
 module.exports = {
+	// NOTE: if you change these, be sure to update the useSiteMetaData hook
 	siteMetadata: {
 		title: 'Zach Azar',
 		description:
 			"Zach Azar's personal homepage blogging about tech, software engineering, engineering management, and entrepreneurship",
 		author: '@zachrazar',
-		siteUrl: 'https://www.zachazar.com/',
+		siteUrl: 'https://www.zachazar.com',
 		social: {
 			twitter: 'https://twitter.com/zachrazar',
 		},
