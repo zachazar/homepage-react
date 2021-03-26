@@ -8,7 +8,7 @@ export const ExperienceData = {
 	tertiaryUrl: PropTypes.string,
 	descriptionTitle: PropTypes.string,
 	descriptions: PropTypes.arrayOf(PropTypes.string),
-	skills: PropTypes.oneOf(['MAX', 'HIGH', 'MED', 'LOW']),
+	skills: PropTypes.objectOf(PropTypes.oneOf(['MAX', 'HIGH', 'MED', 'LOW'])),
 }
 
 export default ExperienceData
