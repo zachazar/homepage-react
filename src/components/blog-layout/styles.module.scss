@@ -1,11 +1,18 @@
 @import '../../styles/style-variables.scss';
 
 .container {
-	padding: 3rem 1.5rem 3rem 3rem;
-}
+	padding: 3rem;
 
-.slim-top {
-	padding-top: 1.5rem;
+	&.slim-right-side {
+		padding-right: 1.5rem;
+		@media (max-width: $break-width-small) {
+			padding-right: 3rem;
+		}
+	}
+
+	&.slim-top {
+		padding-top: 1.5rem;
+	}
 }
 
 .top-spacer {

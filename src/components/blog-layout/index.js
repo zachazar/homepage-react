@@ -13,7 +13,12 @@ const BlogLayout = ({
 	activeTag,
 	showSideInfo,
 }) => (
-	<div className={cx(styles.container, { [styles.slimTop]: hasBackButton })}>
+	<div
+		className={cx(styles.container, {
+			[styles.slimTop]: hasBackButton,
+			[styles.slimRightSide]: showSideInfo,
+		})}
+	>
 		{hasBackButton ? (
 			<div className={cx(styles.back, 'level')}>
 				<div className="level-left">
