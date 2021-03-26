@@ -6,7 +6,7 @@ import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import BlogLayout from '../../components/blog-layout'
-import BlogPostMeta from '../../components/blog-meta-data'
+import BlogMetaData from '../../components/blog-meta-data'
 import useSiteMetadata from '../../hooks/use-site-meta-data'
 
 import * as styles from './styles.module.scss'
@@ -48,7 +48,7 @@ const BlogPostTemplate = ({
 					<h1 className="title has-text-weight-light">{title}</h1>
 				</div>
 				<div className={styles.metaContainer}>
-					<BlogPostMeta date={date} timeToRead={timeToRead} tags={tags} />
+					<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
 				</div>
 				<div className={styles.imageContainer}>
 					<GatsbyImage
