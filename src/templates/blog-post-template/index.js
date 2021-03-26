@@ -1,7 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -58,6 +58,36 @@ const BlogPostTemplate = ({
 				</div>
 				{/* eslint-disable-next-line react/no-danger */}
 				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+				<div className="card">
+					<div className="card-content">
+						<div className="media">
+							<div className="media-left">
+								<StaticImage
+									src="../../images/favicon-circle-small.png"
+									alt="Photo of Zach"
+									className="image is-48x48"
+									placeholder="blurred"
+								/>
+							</div>
+							<div className="media-content">
+								<p className="title has-text-weight-light is-4">Zach Azar</p>
+								<p className="subtitle is-6">
+									<a target="blank" href="https://twitter.com/zachrazar">
+										@zachrazar
+									</a>
+								</p>
+							</div>
+						</div>
+						<div className="content">
+							If you have a question or comment, I would love to hear from you!
+							Reach out on{' '}
+							<a target="blank" href="https://twitter.com/zachrazar">
+								Twitter <i className="fab fa-twitter" />
+							</a>{' '}
+							or through my <Link to="/contact"> contact page</Link>.
+						</div>
+					</div>
+				</div>
 			</BlogLayout>
 		</Layout>
 	)
