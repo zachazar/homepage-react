@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
+import cx from 'classnames'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -58,9 +59,9 @@ const BlogPostTemplate = ({
 				</div>
 				{/* eslint-disable-next-line react/no-danger */}
 				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
-				<div className="card">
+				<div className={cx('card', styles.card)}>
 					<div className="card-content">
-						<div className="media">
+						<div className={cx('media', styles.media)}>
 							<div className="media-left">
 								<StaticImage
 									src="../../images/favicon-circle-small.png"

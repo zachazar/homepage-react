@@ -13,3 +13,11 @@
 .image-container {
 	text-align: center;
 }
+
+.card {
+	margin-top: 3rem;
+}
+.media {
+	// Bulma sets this to 1.5 but it doesn't look right
+	margin-bottom: 0.5rem !important;
+}
