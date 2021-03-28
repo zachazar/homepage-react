@@ -29,7 +29,7 @@
 		margin: 1.5rem 0;
 
 		@media (max-width: $break-width-small) {
-			display: inline;
+			display: inline-block;
 			margin: 1.5rem;
 		}
 	}
