@@ -2,16 +2,21 @@
 
 .title-container {
 	@media (max-width: $break-width-small) {
+		margin: 3rem 0;
 		text-align: center;
 	}
 }
 
 .metaContainer {
-	margin: 1rem 0;
+	margin: 2rem 0;
+	@media (max-width: $break-width-small) {
+		margin: 3rem 0;
+	}
 }
 
 .image-container {
 	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .media {
@@ -30,7 +35,7 @@
 
 		@media (max-width: $break-width-small) {
 			display: inline-block;
-			margin: 1.5rem;
+			margin: 1rem;
 		}
 	}
 
