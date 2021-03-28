@@ -119,7 +119,7 @@ const BlogPostTemplate = ({
 								)}`}
 								target="blank"
 							>
-								<i className="fab fa-twitter mr-1" /> Tweet
+								<i className="fab fa-twitter mr-1" alt="Twitter logo" /> Tweet
 							</a>
 						</div>
 						<div>
@@ -128,7 +128,7 @@ const BlogPostTemplate = ({
 								href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
 								target="blank"
 							>
-								<i className="fab fa-facebook mr-1" /> Share
+								<i className="fab fa-facebook mr-1" alt="Facebook logo" /> Share
 							</a>
 						</div>
 					</div>
