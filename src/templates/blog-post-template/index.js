@@ -65,57 +65,71 @@ const BlogPostTemplate = ({
 						alt={imageAlt}
 					/>
 				</div>
-				{/* eslint-disable-next-line react/no-danger */}
-				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
-				<div className={cx('columns', styles.shareButtons)}>
-					<div className="column is-4 is-offset-2">
-						<a
-							className="button"
-							href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
-								title
-							)}`}
-							target="blank"
-						>
-							<i className="fab fa-twitter mr-1" /> Tweet
-						</a>
-					</div>
-					<div className="column is-4">
-						<a
-							className="button"
-							href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
-							target="blank"
-						>
-							<i className="fab fa-facebook mr-1" /> Share
-						</a>
-					</div>
-				</div>
-				<div className={cx('card', styles.card)}>
-					<div className="card-content">
-						<div className={cx('media', styles.media)}>
-							<div className="media-left">
-								<StaticImage
-									src="../../images/favicon-circle-small.png"
-									alt="Photo of Zach"
-									className="image is-48x48"
-									placeholder="blurred"
-								/>
-							</div>
-							<div className="media-content">
-								<p className="title has-text-weight-light is-4">Zach Azar</p>
-								<p className="subtitle is-6">
-									<a target="blank" href="https://twitter.com/zachrazar">
-										@zachrazar
-									</a>
-								</p>
+				<div
+					className="content"
+					// eslint-disable-next-line react/no-danger
+					dangerouslySetInnerHTML={{ __html: html }}
+				/>
+				<div className={cx('columns', styles.share)}>
+					<div className="column is-8">
+						<div className="card">
+							<div className="card-content">
+								<div className={cx('media', styles.media)}>
+									<div className="media-left">
+										<StaticImage
+											src="../../images/favicon-circle-small.png"
+											alt="Photo of Zach"
+											className="image is-48x48"
+											placeholder="blurred"
+										/>
+									</div>
+									<div className="media-content">
+										<p className="title has-text-weight-light is-4">
+											Zach Azar
+										</p>
+										<p className="subtitle is-6">
+											<a target="blank" href="https://twitter.com/zachrazar">
+												@zachrazar
+											</a>
+										</p>
+									</div>
+								</div>
+								<div className="content">
+									<p>
+										If you have a question or comment, I would love to hear from
+										you!
+									</p>
+									<p>
+										Reach out on{' '}
+										<a target="blank" href="https://twitter.com/zachrazar">
+											Twitter
+										</a>{' '}
+										or through my <Link to="/contact"> contact page</Link>.
+									</p>
+								</div>
 							</div>
 						</div>
-						<div className="content">
-							If you have a question or comment, I would love to hear from you!
-							Reach out on{' '}
-							<a target="blank" href="https://twitter.com/zachrazar">
-								Twitter
-							</a>{' '}
-							or through my <Link to="/contact"> contact page</Link>.
+					</div>
+					<div className={cx('column', styles.shareButtons)}>
+						<div>
+							<a
+								className="button"
+								href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
+									title
+								)}`}
+								target="blank"
+							>
+								<i className="fab fa-twitter mr-1" /> Tweet
+							</a>
+						</div>
+						<div>
+							<a
+								className="button"
+								href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
+								target="blank"
+							>
+								<i className="fab fa-facebook mr-1" /> Share
+							</a>
 						</div>
 					</div>
 				</div>

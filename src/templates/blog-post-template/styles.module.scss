@@ -14,16 +14,25 @@
 	text-align: center;
 }
 
-.card {
-	margin-top: 3rem;
-}
 .media {
 	// Bulma sets this to 1.5 but it doesn't look right
 	margin-bottom: 0.5rem !important;
 }
 
+.share {
+	margin-top: 4rem;
+}
 .share-buttons {
 	text-align: center;
+
+	& div {
+		margin: 1.5rem 0;
+
+		@media (max-width: $break-width-small) {
+			display: inline;
+			margin: 1.5rem;
+		}
+	}
 
 	& :active,
 	& :hover,
