@@ -18,7 +18,15 @@ const BlogPostTemplate = ({
 		markdownRemark: {
 			html,
 			timeToRead,
-			frontmatter: { title, date, tags, image, imageAlt, additionalKeywords },
+			frontmatter: {
+				title,
+				date,
+				tags,
+				image,
+				imageAlt,
+				additionalKeywords,
+				slug,
+			},
 		},
 	},
 }) => {
@@ -59,6 +67,28 @@ const BlogPostTemplate = ({
 				</div>
 				{/* eslint-disable-next-line react/no-danger */}
 				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+				<div className={cx('columns', styles.shareButtons)}>
+					<div className="column is-4 is-offset-2">
+						<a
+							className="button"
+							href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
+								title
+							)}`}
+							target="blank"
+						>
+							<i className="fab fa-twitter mr-1" /> Tweet
+						</a>
+					</div>
+					<div className="column is-4">
+						<a
+							className="button"
+							href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
+							target="blank"
+						>
+							<i className="fab fa-facebook mr-1" /> Share
+						</a>
+					</div>
+				</div>
 				<div className={cx('card', styles.card)}>
 					<div className="card-content">
 						<div className={cx('media', styles.media)}>
@@ -83,7 +113,7 @@ const BlogPostTemplate = ({
 							If you have a question or comment, I would love to hear from you!
 							Reach out on{' '}
 							<a target="blank" href="https://twitter.com/zachrazar">
-								Twitter <i className="fab fa-twitter" />
+								Twitter
 							</a>{' '}
 							or through my <Link to="/contact"> contact page</Link>.
 						</div>
@@ -105,6 +135,7 @@ BlogPostTemplate.propTypes = {
 				// eslint-disable-next-line react/forbid-prop-types
 				image: PropTypes.object,
 				additionalKeywords: PropTypes.arrayOf(PropTypes.string),
+				slug: PropTypes.string,
 			}),
 			html: PropTypes.string,
 			timeToRead: PropTypes.number,
