@@ -1,15 +1,33 @@
 export const workExperience = [
 	{
+		_id: 13,
+		title: 'Principal Engineer - Data Platforms and Insights',
+		subtitle: 'Autodesk - San Franciso (remotely from Seattle)',
+		tertiaryTitle: 'October 2020 - Present',
+		descriptions: [
+			'- Identify and incorporate best-practices for automating and monitoring aging data pipelines.',
+			'- Improve coding patterns and practices for repositories using Spark, Python, Oozie, Jenkins, PySpark, Parquet, S3, Qubole, (and soon Airflow).',
+			'- Fullstack development on an internal Sales tool which uses React, Node.js, Postgres, PySpark, and Bootstrap.',
+		],
+		skills: {
+			Python: 'HIGH',
+			'Node.js': 'HIGH',
+			React: 'HIGH',
+			PySpark: 'MED',
+			Postgres: 'MED',
+		},
+	},
+	{
 		_id: 12,
-		title: 'Principal Engineer and Team Lead',
+		title: 'Principal Engineer and Team Lead - Backend Platform',
 		subtitle: 'Autodesk - San Francisco',
-		tertiaryTitle: 'July 2019 - Present',
+		tertiaryTitle: 'July 2019 - October 2020',
 		descriptions: [
 			'(Autodesk acquired BuildingConnected in January 2019)',
-			'- Assist with distributing ownership of key BE infrastructure to feature teams',
-			'- Currently, I also lead our team of 6 and thus focus on people management and strategic planning.',
-			'- Participate in a BE Pattern Maintainers group to help guide our next generation of Node.js BE patterns.',
-			'- Project Manage our efforts to better scale our systems (both in terms of people/process challenges around ownership and accountability but also our backend system scaling to meet high-growth demands)',
+			'- Assisted with distributing ownership of key BE infrastructure to feature teams.',
+			'- For part of this time, I also lead our team of 6 and thus focussed on people management and strategic planning.',
+			'- Participated in a BE Pattern Maintainers group to help guide our next generation of Node.js BE patterns.',
+			'- Project managed our efforts to better scale our systems (both in terms of people/process challenges around ownership and accountability but also our backend system scaling to meet high-growth demands).',
 		],
 		skills: {
 			'Node.js': 'MAX',
