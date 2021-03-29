@@ -10,7 +10,7 @@ import * as styles from './styles.module.scss'
 
 const homePageImageQuery = graphql`
 	query HomePageImageQuery {
-		allFile(filter: { name: { eq: "ZachAzar_Professional_small" } }) {
+		allFile(filter: { name: { eq: "zach_at_arches" } }) {
 			edges {
 				node {
 					childImageSharp {
@@ -48,7 +48,7 @@ const AboutPage = () => {
 				imageMetaData={{
 					width,
 					height,
-					imageAlt: 'Photo of Zach Azar in a blue shirt smiling',
+					imageAlt: 'Photo of Zach Azar at Arches National park in Moab, Utah',
 					path: `${siteUrl}${publicURL}`,
 				}}
 			/>
@@ -57,8 +57,9 @@ const AboutPage = () => {
 				<div className={cx('column', styles.aboutItem)}>
 					<div className={styles.aboutImage}>
 						<StaticImage
-							src="../../images/ZachAzar_Professional_small.jpg"
-							alt="Photo of Zach"
+							src="../../images/zach_at_arches.jpg"
+							alt="Zach at Arches National park in Moab, Utah"
+							layout="fullWidth"
 						/>
 					</div>
 				</div>

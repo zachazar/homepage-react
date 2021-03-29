@@ -57,7 +57,8 @@
 		"develop": "gatsby develop",
 		"start": "npm run develop",
 		"format": "prettier --write \"src/**/*.js\"",
-		"lint": "eslint src/ --ext .js"
+		"lint": "eslint src/ --ext .js",
+		"clean": "gatsby clean"
 	},
 	"repository": {
 		"type": "git",
