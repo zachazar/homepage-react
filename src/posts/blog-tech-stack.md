@@ -47,7 +47,7 @@ Additionally, using a hosting service that is designed for JAMstack applications
 
 For the domain name and DNS routing, I use [Namecheap](https://www.namecheap.com/).
 
-The code for this site is in [GitHub](https://github.com/) (and it's public if you would like to view [exactly where this line is](TODO)). I pay for the GitHub pro plan at $4 per month for the unlimited private repositories. Also I have Netlify connected to the repo so that when I push code to `main`, it automatically builds and deploys prod. The coolest part is that when I have a PR, it will build a preview deploy. I combine this with [Dependabot](https://dependabot.com/) which will automatically upgrade my dependencies in a PR (and Netlfify will automatically make a preview deploy with those dependency changes) which makes validating an upgrade super easy. Someday I'll add tests too 😉.
+The code for this site is in [GitHub](https://github.com/) (and it's public if you would like to view [exactly where this line is](https://github.com/zachazar/homepage-react/blob/main/src/posts/blog-tech-stack.md#other-tools)). I pay for the GitHub pro plan at $4 per month for the unlimited private repositories. Also I have Netlify connected to the repo so that when I push code to `main`, it automatically builds and deploys prod. The coolest part is that when I have a PR, it will build a preview deploy. I combine this with [Dependabot](https://dependabot.com/) which will automatically upgrade my dependencies in a PR (and Netlfify will automatically make a preview deploy with those dependency changes) which makes validating an upgrade super easy. Someday I'll add tests too 😉.
 
 # Frameworks and Languages
 

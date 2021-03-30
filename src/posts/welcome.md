@@ -8,6 +8,8 @@ image: ../images/blog-welcome.jpg
 imageAlt: 'Zach carrying his dog Rooney'
 ---
 
+This is Rooney. You won't meet a sweeter dog.
+
 # Welcome
 
 Welcome to my new blog 🎉! I'm so excited to have you here.
