@@ -18,7 +18,7 @@ However after I overcame a tricky [React](https://reactjs.org/) error the other 
 
 ![Kanban board of blog ideas in Notion](../images/blog-welcome-list.png)
 
-I've come to the conclusion that you don't need to be an expert at everything to pass along what you know. As you hit roadblocks and discover new information, you should share that with those around you. For example when I get stumped by a problem, I'm constantly discovering blog post articles written by others that save me hours in debugging. I've always enjoyed sharing like this in person when around friends and coworkers, but I've struggled to do this in our virtual, digital world.
+I've come to the conclusion that you don't need to be an expert at everything to pass along what you know. As you hit roadblocks and discover new information, you should share that with those around you. For example when I get stumped by a problem, I'm constantly discovering blog posts written by others that save me hours in debugging. I've always enjoyed sharing like this in person when around friends and coworkers, but I've struggled to do this in our virtual, digital world.
 
 I would be lying if I didn't say that I have other motivations for kicking this off as well. I would like to start an online business one day. To do that, you need to build trust. 95% of the code that I've written is behind private repositories and I'm rarely on social media so I have very little online presence. My hope is that this blog can help me connect, allow others to see who I am, and build their trust - one helpful blog post at a time.
 
