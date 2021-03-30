@@ -73,13 +73,14 @@ const AboutPage = () => {
 						I&apos;ve never looked back.
 					</p>
 					<p>
-						After graduating, I worked in industry for a few years, then
-						returned to academia to work as a Teaching Assistant and earn my
-						M.S. from the University of Denver.
+						After graduating from Vandy, I worked in industry for a few years,
+						then returned to academia to work as a Teaching Assistant and earn
+						my M.S. from the University of Denver.
 					</p>
 					<p>
-						After graduating, I was a technical co-founder briefly (it
-						didn&apos;t blast off unfortunately) but then I joined
+						Once I completed my master&apos;s degree, I was a technical
+						co-founder briefly (it didn&apos;t blast off unfortunately) but then
+						I joined
 						<a target="blank" href="https://www.buildingconnected.com/">
 							{' '}
 							BuildingConnected{' '}
