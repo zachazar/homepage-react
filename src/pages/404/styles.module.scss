@@ -6,3 +6,12 @@
 	border-radius: $border-radius-default;
 	padding: 2rem;
 }
+
+.media {
+	// Bulma sets this to 1.5 but it doesn't look right
+	margin-bottom: 0.5rem !important;
+}
+
+.fog-container {
+	margin: 3rem 0;
+}
