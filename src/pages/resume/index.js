@@ -6,7 +6,10 @@ import ExperienceTree from '../../components/experience-tree'
 
 const ResumePage = () => (
 	<Layout>
-		<SEO title="Resume" keywords={['gatsby', 'application', 'react']} />
+		<SEO
+			title="Resume"
+			keywords={['zach azar', 'resume', 'blog', 'gatsby', 'react']}
+		/>
 		<ExperienceTree />
 	</Layout>
 )

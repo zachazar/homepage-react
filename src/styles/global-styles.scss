@@ -1,5 +1,4 @@
 @import './style-variables.scss';
-@import '~bulma/bulma.sass';
 
 html {
 	background-color: $color-nav-main !important;
@@ -7,4 +6,20 @@ html {
 
 body {
 	background-color: $color-background !important;
+}
+
+.token.tag,
+.token.content,
+.token.number {
+	display: inline;
+	padding: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	vertical-align: inherit;
+	border-radius: inherit;
+	font-weight: inherit;
+	white-space: inherit;
+	background: inherit;
+	margin: inherit;
 }

@@ -1,0 +1,47 @@
+@import '../../styles/style-variables.scss';
+
+.title-container {
+	@media (max-width: $break-width-small) {
+		margin: 3rem 0;
+		text-align: center;
+	}
+}
+
+.metaContainer {
+	margin: 2rem 0;
+	@media (max-width: $break-width-small) {
+		margin: 3rem 0;
+	}
+}
+
+.image-container {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.media {
+	// Bulma sets this to 1.5 but it doesn't look right
+	margin-bottom: 0.5rem !important;
+}
+
+.share {
+	margin-top: 4rem;
+}
+.share-buttons {
+	text-align: center;
+
+	& div {
+		margin: 1.5rem 0;
+
+		@media (max-width: $break-width-small) {
+			display: inline-block;
+			margin: 1rem;
+		}
+	}
+
+	& :active,
+	& :hover,
+	& :focus {
+		color: $color-active-blue;
+	}
+}

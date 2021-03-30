@@ -1,0 +1,13 @@
+@import '../../styles/style-variables.scss';
+
+.tags {
+	display: inline;
+	color: $color-text;
+
+	.active,
+	:active,
+	:hover,
+	:focus {
+		color: $color-active-blue;
+	}
+}

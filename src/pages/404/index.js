@@ -8,7 +8,7 @@ import * as styles from './styles.module.scss'
 
 const NotFoundPage = () => (
 	<Layout>
-		<SEO title="Not found" />
+		<SEO title="Not found" keywords={['not found', 'zach azar', 'gatsby']} />
 		<div className={styles.container}>
 			<div className={cx('title', 'has-text-weight-light')}>Page not found</div>
 			<p>

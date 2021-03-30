@@ -1,0 +1,29 @@
+@import '../../styles/style-variables.scss';
+
+.spacer {
+	padding: 0.5rem;
+	&::before {
+		content: '|';
+	}
+}
+
+.info {
+	& div,
+	p {
+		display: inline;
+	}
+
+	@media (max-width: $break-width-small) {
+		text-align: center;
+	}
+}
+.tag {
+	color: $color-text;
+	&:hover {
+		color: $color-active-blue;
+	}
+}
+
+.after-icon {
+	padding-left: 5px;
+}

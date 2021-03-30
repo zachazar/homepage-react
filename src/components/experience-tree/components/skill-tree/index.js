@@ -21,39 +21,6 @@ function convertSkillValueToNumber(skillValue) {
 }
 
 class SkillTree extends React.Component {
-	// id: string
-
-	// svgStyles: {
-	// 	fontSize: number,
-	// 	margin: {
-	// 		top: number,
-	// 		bottom: number,
-	// 		left: number,
-	// 		right: number,
-	// 	},
-	// 	itemMargin: number,
-	// 	rectFill: string,
-	// }
-
-	// d3container: any
-
-	// // D3 node
-	// d3skillGroup: any
-
-	// // D3 node
-	// skills: any
-
-	// // D3 node
-	// rectWidth: number
-
-	// experiences: Array<ExperienceData>
-
-	// skillList: Array<string>
-
-	// experiencesById: { [number]: ExperienceData }
-
-	// svgHeight: number
-
 	constructor(props) {
 		super(props)
 
@@ -252,10 +219,14 @@ class SkillTree extends React.Component {
 	}
 }
 
+SkillTree.defaultProps = {
+	width: 0,
+}
+
 SkillTree.propTypes = {
 	active: PropTypes.number.isRequired,
-	experiences: PropTypes.arrayOf(ExperienceData).isRequired,
-	width: PropTypes.number.isRequired,
+	experiences: PropTypes.arrayOf(PropTypes.exact(ExperienceData)).isRequired,
+	width: PropTypes.number,
 }
 
 export default SkillTree

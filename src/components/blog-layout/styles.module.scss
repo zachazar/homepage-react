@@ -1,0 +1,68 @@
+@import '../../styles/style-variables.scss';
+
+.container {
+	padding: 3rem;
+
+	&.slim-right-side {
+		padding-right: 1.5rem;
+		@media (max-width: $break-width-small) {
+			padding-right: 3rem;
+		}
+	}
+
+	&.slim-top {
+		padding-top: 1.5rem;
+	}
+}
+
+.top-spacer {
+	height: 1.5rem;
+}
+
+.side-spacer-upper {
+	height: 40px;
+
+	@media (max-width: $break-width-small) {
+		height: 0px;
+	}
+}
+
+.side-spacer-between-elements {
+	height: 120px;
+
+	@media (max-width: $break-width-small) {
+		height: 20px;
+	}
+}
+
+.after-icon {
+	padding-left: 5px;
+}
+
+.back {
+	& a {
+		color: black;
+
+		& i {
+			opacity: 0.7;
+		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			color: $color-active-blue;
+			& i {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.left-spacing-column {
+	@media (max-width: $break-width-small) {
+		display: none;
+	}
+	&.always-hide {
+		display: none;
+	}
+}
