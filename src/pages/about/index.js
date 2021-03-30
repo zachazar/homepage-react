@@ -10,7 +10,7 @@ import * as styles from './styles.module.scss'
 
 const homePageImageQuery = graphql`
 	query HomePageImageQuery {
-		allFile(filter: { name: { eq: "zach_at_arches" } }) {
+		allFile(filter: { name: { eq: "zach-at-arches" } }) {
 			edges {
 				node {
 					childImageSharp {
@@ -57,9 +57,10 @@ const AboutPage = () => {
 				<div className={cx('column', styles.aboutItem)}>
 					<div className={styles.aboutImage}>
 						<StaticImage
-							src="../../images/zach_at_arches.jpg"
+							src="../../images/zach-at-arches.jpg"
 							alt="Zach at Arches National park in Moab, Utah"
 							layout="fullWidth"
+							placeholder="blurred"
 						/>
 					</div>
 				</div>
