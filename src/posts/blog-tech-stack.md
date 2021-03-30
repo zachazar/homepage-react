@@ -1,7 +1,7 @@
 ---
 slug: '/blog/how-I-built-this-blog-tech-stack'
 date: '2021-03-29'
-title: 'How I Built This: Blog Tech Stack'
+title: 'How I built this: The tech stack behind this blog'
 tags: ['Gatsby', 'React', 'blogging', 'meta']
 additionalKeywords: ['JAMstack', 'Netlify', 'D3']
 image: ../images/zach-coding-in-sunlight.jpg
@@ -75,6 +75,6 @@ Other frameworks I considered were next [Next.js](https://nextjs.org/) and [Hugo
 
 ## Other libraries
 
-The site uses [Bulma](https://bulma.io/) for styling (along with Sass). I'm still working on my design skills and Bulma makes it easier to make the right decisions. For local development, I lean heavily on [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/). For the interaction on the [Resume page](https://www.zachazar.com/resume), I use D3 (which is overpowered for that page but at the time of writing it I was on a D3/Angular kick when cofound Lever Insights). Speaking of local development, I'm rocking [VS Code](https://code.visualstudio.com/) on a Mac Book Pro (which is due for an upgrade if I'm honest).
+The site uses [Bulma](https://bulma.io/) for styling (along with Sass). I'm still working on my design skills and Bulma makes it easier to make the right decisions. For local development, I lean heavily on [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/). For the interaction on the [Resume page](https://www.zachazar.com/resume), I use D3 (which is overpowered for that page but at the time of writing it I was on a D3/Angular kick when cofound Lever Insights). Speaking of local development, I'm rocking [VS Code](https://code.visualstudio.com/) on a Mac Book Pro.
 
 In future posts, I'll share how I manage my different projects (including this site) using Notion and how I ensure that I'm making progress each week.
