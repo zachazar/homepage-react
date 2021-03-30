@@ -20,6 +20,7 @@ const BlogPostPreview = ({
 				image={image.childImageSharp.gatsbyImageData}
 				alt={imageAlt}
 				className={styles.thumbnail}
+				placeholder="blurred"
 				tabIndex={0}
 				onClick={() => navigate(slug)}
 				onKeyPress={() => navigate(slug)}

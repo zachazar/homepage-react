@@ -63,6 +63,7 @@ const BlogPostTemplate = ({
 					<GatsbyImage
 						image={image.childImageSharp.gatsbyImageData}
 						alt={imageAlt}
+						placeholder="blurred"
 					/>
 				</div>
 				<div
