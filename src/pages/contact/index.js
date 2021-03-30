@@ -40,6 +40,7 @@ const ContactPage = () => {
 						method="POST"
 						data-netlify="true"
 						data-netlify-honeypot="important-field"
+						action="/submitted/"
 					>
 						<input
 							type="hidden"
