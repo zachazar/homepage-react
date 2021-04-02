@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 
 import * as styles from './styles.module.scss'
 
@@ -16,7 +17,10 @@ const Footer = () => (
 					<i className="fab fa-twitter" />
 				</a>
 			</div>
-			<div className={styles.copyright}>© 2021 Zach Azar</div>
+			<div className={styles.copyright}>
+				© 2021 Zach Azar | <Link to="/privacy-policy">Privacy Policy</Link> |{' '}
+				<Link to="/cookie-policy">Cookie Policy</Link>
+			</div>
 		</div>
 	</footer>
 )
