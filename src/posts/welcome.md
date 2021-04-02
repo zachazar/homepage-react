@@ -3,6 +3,7 @@ slug: '/blog/new-blog-setting-the-mood'
 date: '2021-03-28'
 title: 'New blog! Setting the mood'
 tags: ['blogging', 'meta']
+description: "Welcome! I'm excited to start a blog to share and connect with my digital neighbors. Thanks for joining me!"
 additionalKeywords: ['hello world']
 image: ../images/blog-welcome.jpg
 imageAlt: 'Zach carrying his dog Rooney'

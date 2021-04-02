@@ -23,6 +23,7 @@ const BlogPostTemplate = ({
 				date,
 				tags,
 				image,
+				description,
 				imageAlt,
 				additionalKeywords,
 				slug,
@@ -43,6 +44,7 @@ const BlogPostTemplate = ({
 			<SEO
 				isBlogPost
 				title={title}
+				description={description}
 				imageAlt={imageAlt}
 				imageMetaData={{
 					imageAlt,
@@ -151,6 +153,7 @@ BlogPostTemplate.propTypes = {
 				image: PropTypes.object,
 				additionalKeywords: PropTypes.arrayOf(PropTypes.string),
 				slug: PropTypes.string,
+				description: PropTypes.string,
 			}),
 			html: PropTypes.string,
 			timeToRead: PropTypes.number,
@@ -168,6 +171,7 @@ export const pageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				slug
 				tags
+				description
 				additionalKeywords
 				image {
 					childImageSharp {
