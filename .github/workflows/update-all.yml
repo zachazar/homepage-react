@@ -1,0 +1,18 @@
+name: Weekly update
+on:
+  schedule:
+    - cron: '0 0 * * 2' # Every Tuesday
+
+jobs:
+  update_deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: 'npx ncu -u' # update all dependencies in the package.json
+      - uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          title: 'Update all dependencies'
+          body: 'Update all dependencies'
+          branch: 'automated/update-all-dependencies'
