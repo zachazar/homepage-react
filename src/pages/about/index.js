@@ -107,7 +107,8 @@ const AboutPage = () => {
 					</p>
 					<p>
 						In my free time, my favorite weekend activity is to road trip around
-						Washington with my wife and dog.
+						Washington with my wife and{' '}
+						<Link to="/blog/new-blog-setting-the-mood">dog 🐶</Link> .
 					</p>
 				</div>
 			</div>

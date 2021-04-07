@@ -52,7 +52,7 @@ const BlogPostTemplate = ({
 					height,
 					path: `${siteUrl}${publicURL}`,
 				}}
-				keywords={[...tags, ...(additionalKeywords || []), 'blog', 'zach azar']}
+				keywords={[...tags, ...(additionalKeywords || []), 'blog', 'Zach Azar']}
 			/>
 			<BlogLayout hasBackButton>
 				<div className={styles.titleContainer}>
