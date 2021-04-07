@@ -15,13 +15,13 @@ const SEO = ({
 }) => {
 	const siteMetadata = useSiteMetaData()
 	const metaDescription = description || siteMetadata.description
+	const titleTag = `${title ? `${title} | ` : ''}${siteMetadata.title}`
 	return (
 		<Helmet
 			htmlAttributes={{
 				lang,
 			}}
-			title={title}
-			titleTemplate={`%s | ${siteMetadata.title}`}
+			title={titleTag}
 			meta={[
 				{
 					name: 'description',
@@ -29,7 +29,7 @@ const SEO = ({
 				},
 				{
 					property: 'og:title',
-					content: title,
+					content: titleTag,
 				},
 				{
 					property: 'og:description',
@@ -40,16 +40,12 @@ const SEO = ({
 					content: isBlogPost ? 'article' : 'website',
 				},
 				{
-					name: 'twitter:card',
-					content: 'summary',
-				},
-				{
 					name: 'twitter:creator',
 					content: siteMetadata.author,
 				},
 				{
 					name: 'twitter:title',
-					content: title,
+					content: titleTag,
 				},
 				{
 					name: 'twitter:description',
@@ -81,7 +77,12 @@ const SEO = ({
 									content: imageMetaData.imageAlt,
 								},
 						  ]
-						: []
+						: [
+								{
+									name: 'twitter:card',
+									content: 'summary',
+								},
+						  ]
 				)
 				.concat(
 					keywords.length > 0
