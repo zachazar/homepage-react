@@ -4,6 +4,12 @@ import PropTypes from 'prop-types'
 
 import useSiteMetaData from '../hooks/use-site-meta-data'
 
+/*
+A lot of this referenced from:
+- https://www.wesleylhandy.net/blog/seo-accessibility-first-gatsby.html
+- https://blog.dustinschau.com/search-engine-optimization-with-gatsby
+*/
+
 const SEO = ({
 	description,
 	isBlogPost,
@@ -83,6 +89,20 @@ const SEO = ({
 									content: 'summary',
 								},
 						  ]
+				)
+				.concat(
+					imageMetaData && imageMetaData.path.includes('https')
+						? [
+								{
+									property: 'twitter:image:secure_url',
+									content: imageMetaData.path,
+								},
+								{
+									property: 'og:image:secure_url',
+									content: imageMetaData.path,
+								},
+						  ]
+						: []
 				)
 				.concat(
 					keywords.length > 0
