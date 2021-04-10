@@ -175,7 +175,7 @@ export const pageQuery = graphql`
 				additionalKeywords
 				image {
 					childImageSharp {
-						gatsbyImageData(layout: CONSTRAINED, width: 800)
+						gatsbyImageData(layout: CONSTRAINED, width: 1200)
 					}
 				}
 				imageAlt

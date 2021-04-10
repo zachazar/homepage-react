@@ -13,7 +13,6 @@ const blogPageQuery = graphql`
 			edges {
 				node {
 					id
-					excerpt(pruneLength: 250)
 					timeToRead
 					frontmatter {
 						title
@@ -22,10 +21,11 @@ const blogPageQuery = graphql`
 						tags
 						image {
 							childImageSharp {
-								gatsbyImageData(layout: CONSTRAINED, width: 300)
+								gatsbyImageData(layout: CONSTRAINED, width: 600)
 							}
 						}
 						imageAlt
+						description
 					}
 				}
 			}

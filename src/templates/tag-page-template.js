@@ -47,16 +47,16 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					id
-					excerpt(pruneLength: 250)
 					timeToRead
 					frontmatter {
 						title
 						date(formatString: "MMMM DD, YYYY")
 						slug
 						tags
+						description
 						image {
 							childImageSharp {
-								gatsbyImageData(layout: CONSTRAINED, width: 300)
+								gatsbyImageData(layout: CONSTRAINED, width: 600)
 							}
 						}
 						imageAlt

@@ -1,11 +1,10 @@
 @import '../../styles/style-variables.scss';
-.items {
-	background-color: $color-nav-main;
-	border: 0px solid black;
-	border-radius: $border-radius-default;
-	margin: 0px !important; // Override weird Bulma rule
+.container {
 	padding: 2rem;
-
+	background-color: $color-nav-main;
+}
+.items {
+	margin: 0px !important; // Override weird Bulma rule
 	@media (max-width: $break-width-small) {
 		display: block;
 		padding: 0px;
@@ -28,4 +27,8 @@
 		margin: 0 auto;
 		padding-top: 8px;
 	}
+}
+
+.recentPosts {
+	padding: 2rem;
 }

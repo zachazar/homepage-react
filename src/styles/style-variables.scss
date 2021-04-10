@@ -6,6 +6,68 @@ $break-width-smallish: 900px;
 $break-width-medium: 1200px;
 $break-width-large: 1800px;
 
+@mixin on-screens-smaller-than-teeny {
+	@media (max-width: $break-width-teeny) {
+		@content;
+	}
+}
+@mixin on-screens-smaller-than-tiny {
+	@media (max-width: $break-width-tiny) {
+		@content;
+	}
+}
+@mixin on-screens-smaller-than-small {
+	@media (max-width: $break-width-small) {
+		@content;
+	}
+}
+@mixin on-screens-smaller-than-smallish {
+	@media (max-width: $break-width-smallish) {
+		@content;
+	}
+}
+@mixin on-screens-smaller-than-medium {
+	@media (max-width: $break-width-medium) {
+		@content;
+	}
+}
+@mixin on-screens-smaller-than-large {
+	@media (max-width: $break-width-large) {
+		@content;
+	}
+}
+
+@mixin on-screens-larger-than-teeny {
+	@media (min-width: $break-width-teeny) {
+		@content;
+	}
+}
+@mixin on-screens-larger-than-tiny {
+	@media (min-width: $break-width-tiny) {
+		@content;
+	}
+}
+@mixin on-screens-larger-than-small {
+	@media (min-width: $break-width-small) {
+		@content;
+	}
+}
+@mixin on-screens-larger-than-smallish {
+	@media (min-width: $break-width-smallish) {
+		@content;
+	}
+}
+@mixin on-screens-larger-than-medium {
+	@media (min-width: $break-width-medium) {
+		@content;
+	}
+}
+@mixin on-screens-larger-than-large {
+	@media (min-width: $break-width-large) {
+		@content;
+	}
+}
+
 //Colors
 $color-background: #ebebeb;
 $color-active-background: #58707c;
@@ -14,9 +76,10 @@ $color-nav-main: #f8f9fa;
 $color-text: #4a4a4a;
 
 // Font sizes
+$font-size-teeny: 0.75rem;
 $font-size-small: 1rem;
 $font-size-medium: 1.25rem;
-$font-size-large: 2.5rem;
+$font-size-large: 1.5rem;
 
 // Border Radius
 $border-radius-default: 0px;

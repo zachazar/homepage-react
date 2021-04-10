@@ -14,10 +14,10 @@ const BlogPreviewList = ({ posts }) =>
 BlogPreviewList.propTypes = {
 	posts: PropTypes.arrayOf(
 		PropTypes.shape({
-			excerpt: PropTypes.string,
 			timeToRead: PropTypes.number,
 			frontmatter: PropTypes.shape({
 				date: PropTypes.string,
+				description: PropTypes.string,
 				slug: PropTypes.string,
 				title: PropTypes.string,
 				timeToRead: PropTypes.number,

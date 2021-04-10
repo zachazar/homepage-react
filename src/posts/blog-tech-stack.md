@@ -3,7 +3,7 @@ slug: '/blog/how-I-built-this-blog-tech-stack'
 date: '2021-03-29'
 title: 'How I built this: The tech stack behind this blog'
 tags: ['Gatsby', 'React', 'blogging', 'technical']
-description: 'This blog is made with a handful of different technologies including the JAMstack, Netlify, React, Gatsby, Bulma, and D3'
+description: 'This blog is made with a handful of different technologies including the JAMstack, Netlify, React, Gatsby, Bulma, and D3.'
 additionalKeywords: ['JAMstack', 'Netlify', 'D3']
 image: ../images/zach-coding-in-sunlight.jpg
 imageAlt: 'Zach coding in the sun'
