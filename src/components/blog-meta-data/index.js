@@ -15,17 +15,23 @@ const BlogMetaData = ({ date, timeToRead, tags }) => (
 			<i className="fas fa-book-open" />
 			<p className={styles.afterIcon}>{`${timeToRead} min`}</p>
 		</div>
-		<div className={styles.spacer} />
-		<div>
-			<TagList tags={tags} />
-		</div>
+		{tags && (
+			<>
+				<div className={styles.spacer} />
+				<TagList tags={tags} />
+			</>
+		)}
 	</div>
 )
+
+BlogMetaData.defaultProps = {
+	tags: null,
+}
 
 BlogMetaData.propTypes = {
 	date: PropTypes.string.isRequired,
 	timeToRead: PropTypes.number.isRequired,
-	tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+	tags: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default BlogMetaData

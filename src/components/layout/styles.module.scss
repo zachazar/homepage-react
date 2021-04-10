@@ -1,40 +1,19 @@
 @import '../../styles/style-variables.scss';
 
-.container {
-	background-color: $color-background;
+.root {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	.spacer {
-		background-color: $color-background;
-		height: 15px;
-	}
-	.footer {
-		padding: 0.5rem 2.5rem;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		div {
-			margin: auto 0;
-		}
-		a {
-			font-size: 2em;
-			color: black;
-			margin-right: 1em;
-			&:active,
-			&:hover,
-			&:focus {
-				color: $color-active-blue;
-			}
-		}
-	}
 	.main {
-		background-color: $color-nav-main;
-		border-radius: $border-radius-default;
+		background-color: $color-background;
 		flex-grow: 1;
 
-		@media (max-width: $break-width-medium) {
-			border-radius: 0px;
+		padding: 1.5rem 0;
+
+		@media (min-width: $break-width-large) {
+			padding: 3rem 18rem;
+			box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+				0 0px 0 1px rgba(10, 10, 10, 0.02);
 		}
 	}
 }

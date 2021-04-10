@@ -5,11 +5,9 @@ import Footer from '../footer'
 import * as styles from './styles.module.scss'
 
 const Layout = ({ children }) => (
-	<div className={styles.container}>
+	<div className={styles.root}>
 		<Header />
-		<div className={styles.spacer} />
 		<div className={styles.main}>{children}</div>
-		<div className={styles.spacer} />
 		<Footer />
 	</div>
 )

@@ -17,15 +17,8 @@ const ContactPage = () => {
 				title="Contact"
 				keywords={['zach azar', 'contact', 'blog', 'gatsby', 'react']}
 			/>
-			<div className={cx(styles.container, 'columns')}>
-				<div
-					className={cx(
-						'column',
-						'is-three-fifths',
-						'is-offset-one-fifth',
-						styles.columnContainer
-					)}
-				>
+			<div className={cx(styles.container, 'container is-max-desktop')}>
+				<div className={cx(styles.columnContainer)}>
 					<div
 						className={cx(
 							'title',

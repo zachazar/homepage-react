@@ -6,6 +6,12 @@ html {
 
 body {
 	background-color: $color-background !important;
+	font-size: $font-size-small;
+	font-weight: 300;
+
+	@media (min-width: $break-width-large) {
+		font-size: $font-size-medium;
+	}
 }
 
 .token.tag,
