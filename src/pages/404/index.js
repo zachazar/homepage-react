@@ -17,7 +17,7 @@ const NotFoundPage = () => (
 				<Link to="/"> Click here to go to the homepage.</Link>
 			</p>
 			<div className={styles.fogContainer}>
-				<p>Maybe it was lost in the fog?</p>
+				<p>Maybe it was lost in the San Francisco fog?</p>
 				<StaticImage
 					src="../../images/fog-404.jpg"
 					alt="A foggy lake with some boats"
