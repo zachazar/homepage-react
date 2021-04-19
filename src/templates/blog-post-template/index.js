@@ -95,9 +95,7 @@ const BlogPostTemplate = ({
 					</div>
 				</div>
 				<div className="level">
-					<p className={cx('level-item', styles.endDivider, styles.first)}>
-						. . .
-					</p>
+					<p className={cx('level-item', styles.endDivider)}>. . .</p>
 				</div>
 				<div className={cx('columns', styles.footerSection)}>
 					<div className="column is-7">
