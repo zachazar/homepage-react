@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
+import LoadingIcon from '../loading-icon'
 import * as styles from './styles.module.scss'
 
 // Reference: https://www.codewithlinda.com/blog/email-newsletter-subscription-for-gatsby-using-convertkit/
@@ -66,11 +67,15 @@ const SubscriptionForm = () => {
 	const buttonText = () => {
 		switch (status) {
 			case STATUSES.LOADING:
-				return 'Sending ...'
+				return (
+					<span>
+						Sending... <LoadingIcon />
+					</span>
+				)
 			case STATUSES.SUCCESS:
-				return 'Subscribed 🎉'
+				return <span>Subscribed 🎉</span>
 			default:
-				return 'Subscribe 🤘'
+				return <span>Subscribe 🤘</span>
 		}
 	}
 	return (
