@@ -84,6 +84,7 @@ const PrivacyPolicy = () => (
 			<ul>
 				<li>Improve user experience</li>
 				<li>Run and operate the Website and Services</li>
+				<li>Power the newsletter</li>
 			</ul>
 			<p>
 				Processing your Personal Information depends on how you interact with
@@ -397,7 +398,7 @@ const PrivacyPolicy = () => (
 				and your Personal Information, you may do so via the{' '}
 				<Link to="/contact">contact form</Link>.
 			</p>
-			<p>This document was last updated on April 2, 2021</p>
+			<p>This document was last updated on April 19, 2021</p>
 		</div>
 	</Layout>
 )

@@ -24,19 +24,19 @@
 	margin-bottom: 0.5rem !important;
 }
 
-.share {
+.footer-section {
 	margin-top: 4rem;
 }
+
+.end-divider {
+	font-size: 30px;
+	margin: 1rem 0 8rem 0;
+}
+
 .share-buttons {
-	text-align: center;
-
-	& div {
-		margin: 1.5rem 0;
-
-		@media (max-width: $break-width-small) {
-			display: inline-block;
-			margin: 1rem;
-		}
+	margin-top: 6rem;
+	& a {
+		margin: 1rem;
 	}
 
 	& :active,

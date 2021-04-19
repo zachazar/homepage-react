@@ -1,22 +1,21 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import cx from 'classnames'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import * as styles from './styles.module.scss'
 
-const SubmittedPage = () => (
+const Subscribed = () => (
 	<Layout>
-		<SEO title="Submitted" keywords={['submitted', 'zach azar', 'gatsby']} />
+		<SEO title="Subscribed" keywords={['subscribed', 'zach azar']} />
 		<div className={styles.container}>
-			<div className={cx('title', 'has-text-weight-light')}>Sent 📬 </div>
-			<p>
-				Thanks for reaching out!
-				<Link to="/"> Click here to go back to the homepage.</Link>
-			</p>
+			<p className="title is-spaced has-text-weight-light">Subscribed 🎉 </p>
+			<p className="subtitle ">Thanks for subscribing!</p>
 			<div className={styles.rooContainer}>
+				<p>
+					You&apos;ve earned a bonus picture of my dog Rooney looking
+					ridiculous. Nice work!
+				</p>
 				<StaticImage
 					src="../../images/rooney-face.jpg"
 					alt="My dog Rooney making a ridiculous face"
@@ -24,10 +23,9 @@ const SubmittedPage = () => (
 					aspectRatio={3024 / 3537}
 					width={500}
 				/>
-				<p>You&apos;ve earned a bonus picture of Rooney. Nice work.</p>
 			</div>
 		</div>
 	</Layout>
 )
 
-export default SubmittedPage
+export default Subscribed
