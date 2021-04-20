@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import cx from 'classnames'
 
+import SubscriptionForm from '../subscription-form'
 import TagList from '../tag-list'
 import * as styles from './styles.module.scss'
 
@@ -44,8 +45,10 @@ const BlogLayout = ({
 			<div className="column is-four-fifths">{children}</div>
 			<div className="column">
 				{showSideInfo && (
-					<div>
+					<>
 						<div className={styles.sideSpacerUpper} />
+						<SubscriptionForm />
+						<div className={styles.sideSpacerBetweenElements} />
 						<div className="card">
 							<div className="card-content">
 								You can also find me on Twitter{' '}
@@ -57,14 +60,14 @@ const BlogLayout = ({
 						<div className={styles.sideSpacerBetweenElements} />
 						<div className="card">
 							<div className="card-content">
-								Keep up with the latest using{' '}
 								<a target="blank" href="/rss.xml">
 									RSS
-									<i className="fas fa-rss" />
-								</a>
+									<i className="fas fa-rss pl-1" />
+								</a>{' '}
+								available
 							</div>
 						</div>
-					</div>
+					</>
 				)}
 			</div>
 		</div>

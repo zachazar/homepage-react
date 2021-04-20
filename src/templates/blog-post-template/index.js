@@ -8,6 +8,7 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import BlogLayout from '../../components/blog-layout'
 import BlogMetaData from '../../components/blog-meta-data'
+import SubscriptionForm from '../../components/subscription-form'
 import useSiteMetadata from '../../hooks/use-site-meta-data'
 
 import * as styles from './styles.module.scss'
@@ -73,8 +74,31 @@ const BlogPostTemplate = ({
 					// eslint-disable-next-line react/no-danger
 					dangerouslySetInnerHTML={{ __html: html }}
 				/>
-				<div className={cx('columns', styles.share)}>
-					<div className="column is-8">
+				<div className="level">
+					<div className={cx('level-item', styles.shareButtons)}>
+						<a
+							className="button"
+							href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
+								title
+							)}`}
+							target="blank"
+						>
+							<i className="fab fa-twitter mr-1" alt="Twitter logo" /> Tweet
+						</a>
+						<a
+							className="button"
+							href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
+							target="blank"
+						>
+							<i className="fab fa-facebook mr-1" alt="Facebook logo" /> Share
+						</a>
+					</div>
+				</div>
+				<div className="level">
+					<p className={cx('level-item', styles.endDivider)}>. . .</p>
+				</div>
+				<div className={cx('columns', styles.footerSection)}>
+					<div className="column is-7">
 						<div className="card">
 							<div className="card-content">
 								<div className={cx('media', styles.media)}>
@@ -113,27 +137,9 @@ const BlogPostTemplate = ({
 							</div>
 						</div>
 					</div>
-					<div className={cx('column', styles.shareButtons)}>
-						<div>
-							<a
-								className="button"
-								href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
-									title
-								)}`}
-								target="blank"
-							>
-								<i className="fab fa-twitter mr-1" alt="Twitter logo" /> Tweet
-							</a>
-						</div>
-						<div>
-							<a
-								className="button"
-								href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
-								target="blank"
-							>
-								<i className="fab fa-facebook mr-1" alt="Facebook logo" /> Share
-							</a>
-						</div>
+					<div className="column is-1" />
+					<div className="column ">
+						<SubscriptionForm />
 					</div>
 				</div>
 			</BlogLayout>
