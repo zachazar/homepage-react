@@ -91,7 +91,9 @@ If you use these questions as a template, I strongly suggest reading their posts
 
 **What is the problem and who have it?**
 
-_The problem is everything - so let's only talk about the problem first. What are the pain points? Who are the personas that are encountering this problem?_
+_The problem is everything - so let's only talk about the problem first. What are the pain points? Do I know any specific people who have the problem (red flag if not)? General personas of those people?_
+
+> Note: we should try to become experts on the problem during the Validation phase.
 
 **How can I solve that problem?**
 
