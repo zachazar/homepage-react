@@ -10,7 +10,17 @@ import * as styles from './styles.module.scss'
 const BlogPostPreview = ({
 	post: {
 		timeToRead,
-		frontmatter: { date, slug, title, tags, image, imageAlt, description },
+		frontmatter: {
+			date,
+			slug,
+			title,
+			primaryTitle,
+			subtitle,
+			tags,
+			image,
+			imageAlt,
+			description,
+		},
 	},
 }) => (
 	<div className="columns">
@@ -28,9 +38,19 @@ const BlogPostPreview = ({
 		<div className="column is-three-fifths">
 			<p className={cx('title has-text-weight-light', styles.titleContainer)}>
 				<Link to={slug} className={styles.title}>
-					{title}
+					{primaryTitle || title}
 				</Link>
 			</p>
+			{subtitle && (
+				<p
+					className={cx(
+						'subtitle has-text-weight-light',
+						styles.titleContainer
+					)}
+				>
+					{subtitle}
+				</p>
+			)}
 			<div className={styles.metaContainer}>
 				<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
 			</div>
@@ -49,6 +69,8 @@ BlogPostPreview.propTypes = {
 			date: PropTypes.string,
 			slug: PropTypes.string,
 			title: PropTypes.string,
+			primaryTitle: PropTypes.string,
+			subtitle: PropTypes.string,
 			timeToRead: PropTypes.number,
 			tags: PropTypes.arrayOf(PropTypes.string),
 			imageAlt: PropTypes.string,

@@ -2,14 +2,15 @@
 slug: '/blog/new-blog-setting-the-mood'
 date: '2021-03-28'
 title: 'New blog! Setting the mood'
+primaryTitle: 'New blog!'
+subtitle: 'Setting the mood'
 tags: ['blogging']
 description: "Welcome! I'm excited to launch this blog to share what I've learned over the years to connect with all of you."
 additionalKeywords: ['hello world']
 image: ../images/blog-welcome.jpg
 imageAlt: 'Zach carrying his dog Rooney'
+imageCaption: "This is Rooney. You won't meet a sweeter dog."
 ---
-
-This is Rooney. You won't meet a sweeter dog.
 
 # Welcome
 

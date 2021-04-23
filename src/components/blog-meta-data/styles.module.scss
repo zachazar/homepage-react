@@ -1,17 +1,14 @@
 @import '../../styles/style-variables.scss';
 
-.spacer {
-	padding: 0.5rem;
-	&::before {
-		content: '|';
-	}
-}
-
 .info {
 	font-size: $font-size-small;
 	& div,
 	p {
 		display: inline;
+	}
+
+	& .read-info {
+		padding: 0 1rem;
 	}
 
 	@media (max-width: $break-width-small) {

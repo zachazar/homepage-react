@@ -29,3 +29,11 @@ body {
 	background: inherit;
 	margin: inherit;
 }
+
+// For posts since we can't use modules
+
+.image-caption-container {
+	text-align: center;
+	margin-top: -1em;
+	margin-bottom: 1em;
+}

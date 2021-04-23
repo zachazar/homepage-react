@@ -1,8 +1,15 @@
+/* eslint-disable react/no-danger */
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import cx from 'classnames'
+import {
+	EmailShareButton,
+	FacebookShareButton,
+	LinkedinShareButton,
+	TwitterShareButton,
+} from 'react-share'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -26,6 +33,7 @@ const BlogPostTemplate = ({
 				image,
 				description,
 				imageAlt,
+				imageCaption,
 				additionalKeywords,
 				slug,
 			},
@@ -40,6 +48,7 @@ const BlogPostTemplate = ({
 			fallback: { src: publicURL },
 		},
 	} = image.childImageSharp.gatsbyImageData
+	const shareUrl = `${siteUrl}${slug}`
 	return (
 		<Layout>
 			<SEO
@@ -60,43 +69,69 @@ const BlogPostTemplate = ({
 					<h1 className="title has-text-weight-light">{title}</h1>
 				</div>
 				<div className={styles.metaContainer}>
-					<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+					<div className="level">
+						<div className="level-left">
+							<div className="level-item">
+								<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
+							</div>
+						</div>
+						<div className="level-right">
+							<div className={cx('level-item', styles.shareContainer)}>
+								<p>Share:</p>
+								<div className={styles.shareButtons}>
+									{/* TODO: Add facebook, LI, and Twitter. Edit with specific props */}
+									<EmailShareButton
+										url={shareUrl}
+										subject={title}
+										body="Hey! Check out this article: "
+										className="button"
+										resetButtonStyle={false}
+									>
+										<i className="fas fa-envelope" alt="Share using email" />{' '}
+									</EmailShareButton>
+									<TwitterShareButton
+										url={shareUrl}
+										title={title}
+										related={['zachrazar']}
+										className="button "
+										resetButtonStyle={false}
+									>
+										<i className="fab fa-twitter" alt="Share on Twitter" />
+									</TwitterShareButton>
+									<FacebookShareButton
+										url={shareUrl}
+										className="button"
+										resetButtonStyle={false}
+									>
+										<i className="fab fa-facebook" alt="Share on Facebook" />
+									</FacebookShareButton>
+									<LinkedinShareButton
+										url={shareUrl}
+										title={title}
+										summary={description}
+										source={shareUrl}
+										className="button"
+										resetButtonStyle={false}
+									>
+										<i className="fab fa-linkedin-in" alt="Share on LinkedIn" />
+									</LinkedinShareButton>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div className={styles.imageContainer}>
+				<figure className={styles.imageContainer}>
 					<GatsbyImage
 						image={image.childImageSharp.gatsbyImageData}
 						alt={imageAlt}
 						placeholder="blurred"
 					/>
-				</div>
-				<div
-					className="content"
-					// eslint-disable-next-line react/no-danger
-					dangerouslySetInnerHTML={{ __html: html }}
-				/>
-				<div className="level">
-					<div className={cx('level-item', styles.shareButtons)}>
-						<a
-							className="button"
-							href={`https://twitter.com/intent/tweet?url=${siteUrl}${slug}&text=${encodeURI(
-								title
-							)}`}
-							target="blank"
-						>
-							<i className="fab fa-twitter mr-1" alt="Twitter logo" /> Tweet
-						</a>
-						<a
-							className="button"
-							href={`https://www.facebook.com/sharer.php?u=${siteUrl}${slug}`}
-							target="blank"
-						>
-							<i className="fab fa-facebook mr-1" alt="Facebook logo" /> Share
-						</a>
-					</div>
-				</div>
-				<div className="level">
-					<p className={cx('level-item', styles.endDivider)}>. . .</p>
-				</div>
+					{imageCaption && (
+						<figcaption dangerouslySetInnerHTML={{ __html: imageCaption }} />
+					)}
+				</figure>
+				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+
 				<div className={cx('columns', styles.footerSection)}>
 					<div className="column is-7">
 						<div className="card">
@@ -155,6 +190,7 @@ BlogPostTemplate.propTypes = {
 				date: PropTypes.string,
 				tags: PropTypes.arrayOf(PropTypes.string),
 				imageAlt: PropTypes.string,
+				imageCaption: PropTypes.string,
 				// eslint-disable-next-line react/forbid-prop-types
 				image: PropTypes.object,
 				additionalKeywords: PropTypes.arrayOf(PropTypes.string),
@@ -185,6 +221,7 @@ export const pageQuery = graphql`
 					}
 				}
 				imageAlt
+				imageCaption
 			}
 		}
 	}
