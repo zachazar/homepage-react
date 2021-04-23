@@ -7,7 +7,12 @@ import * as styles from './styles.module.scss'
 
 const BlogMetaData = ({ date, timeToRead, tags }) => (
 	<div className="level">
-		<div className={cx('level-left', styles.info)}>
+		<div
+			className={cx(styles.info, {
+				'level-left': tags,
+				'level-item': !tags,
+			})}
+		>
 			<div className="level-item">
 				<i className="fas fa-calendar-alt" />
 				<p className={styles.afterIcon}>{date}</p>

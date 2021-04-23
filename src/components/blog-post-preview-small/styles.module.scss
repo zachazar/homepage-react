@@ -6,6 +6,11 @@
 	@include on-screens-larger-than-small {
 		min-height: 600px;
 	}
+	cursor: pointer;
+	border: 2px solid $color-background;
+	&:hover {
+		border-color: $color-active-blue;
+	}
 }
 .title-container {
 	@media (max-width: $break-width-small) {
@@ -17,9 +22,9 @@
 	.title {
 		color: $color-text;
 		font-size: $font-size-medium;
-		&:hover {
-			color: $color-active-blue;
-		}
+		// &:hover {
+		// 	color: $color-active-blue;
+		// }
 	}
 }
 
