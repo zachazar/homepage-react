@@ -1,6 +1,6 @@
 ---
 slug: '/blog/use-a-system-to-evaluate-your-startup-ideas'
-date: '2021-04-19'
+date: '2021-04-23'
 title: 'Use a system to evaluate your startup ideas (plus a bonus Notion template)'
 primaryTitle: 'Use a system to evaluate your startup ideas'
 subtitle: 'Plus a bonus Notion template!'
