@@ -17,21 +17,20 @@ imageCaption: 'Image by <a href="https://pixabay.com/users/madsliebst-746391">Ma
 
 You should imagine your startup ideas going through three phases of a funnel: **idea creation**, **evaluation**, and **validation**.
 
-If you're looking to improve the startup ideas that you're pursuing, you can optimize and even measure the individual sections to make your process more successful. Let's briefly discuss each.
+If you're looking to improve the startup ideas that you're pursuing, you can optimize and even measure those individual sections to make your process more successful. Let's briefly discuss each.
 
 ### Idea creation
 
-The idea creation phase is more like a lifestyle. You're deliberating putting on a new lens to try to see the problems, inconveniences, or holes in a market in the world around us. It takes time and awareness (and will be covered in a separate post). This comes naturally for some - whereas for others (like myself), we really have to practice it. You want LOTS of these flowing in.
+The idea creation phase is more like a lifestyle. You're deliberating putting on a new lens to try to see the problems, inconveniences, or holes in a market in the world around us. It takes time and awareness (and will be covered in a separate post). This comes naturally for some - whereas for others (like myself), we really have to practice it. You want LOTS of these ideas flowing in.
 
 ### Evaluation
 
-Ok, you now have ideas overflowing and you think they're as good as gold. But which ones do you pursue? We have limited time and resources - and realizing 6 months into an MVP that there's no clear path to making money with your idea can be brutal. It's time to evaluate those ideas and cut most of them using a system (this post).
+Ok, you now have ideas overflowing and you think they're as good as gold. But which ones do you pursue? We have limited time and resources - and realizing 6 months into an MVP that there's no clear path to making money with your idea can be brutal. It's time to evaluate those ideas and cut most of them using a system.
 
 ### Validation
 
-Does your product _actually_ solve a real problem? Even if the solution would scratch your own itch, do others have that same itch (and more importantly, are they willing to pay for a solution)? Resources like [the Mom Test](https://www.goodreads.com/book/show/52283963-the-mom-test) can help with this.
+Does your product _actually_ solve a real problem? Even if the solution would scratch your own itch, do others have that same itch (and more importantly, are they willing to pay for a solution)? Resources like [the Mom Test](https://www.goodreads.com/book/show/52283963-the-mom-test) can help you validate your idea with user research.
 
-<br/>
 <br/>
 
 This post is all about the **Evaluation** section of that funnel. Most see this step as being part of validation and do it subconsciously but having it as a separate step makes this phase even more lethal to bad ideas.
@@ -42,13 +41,13 @@ _This strategy is based on Tyler Tringas's ["How to Get Startup Ideas: The Meat 
 
 Once the ideas start flowing, they pile up. It's common for entrepreneurs (and entrepreneurial hopefuls) to have a notebook filled with them (or a virtual notebook like a Trello board, Notion page, iPhone Notes page, ... - or a combination of all of these 😄). Sound familiar?
 
-Cut almost all of them ✂️. Keeping this notebook of scattered could-be ideas isn't helping you achieve your goals.
+Cut almost all of them ✂️. Keeping that notebook of scattered could-be ideas isn't helping you achieve your goals.
 
 > _What are you talking about?! These ideas are worth at least a million bucks._
 
 Hear me out. Ideas summed up in a few sentences in a notebook _sound_ promising and _appear_ super valuable. But they're not. Unless you're a startup veteran, most of those ideas are probably bad in that they don't meet your goals, you don't have what it takes to execute them well (and that's ok), or the market isn't actually there to support them as viable businesses.
 
-Instead of keeping these could-be ideass sitting on the back burner for months (taking up mental energy and giving you the false sense that you have a treasure trove of startup goodness to fall back on if you lost your job), you're much better off defining your goals, creating a _system_ to help you cut those ideas, and then removing them from your mental headspace so that you can churn through more ideas to find something special.
+Instead of keeping these could-be ideas sitting on the back burner for months (taking up mental energy and giving you the false sense that you have a treasure trove of startup goodness to fall back on if you lost your job), you're much better off defining your goals, creating a _system_ to help you cut those ideas based on your goals, and then removing them from your mental headspace so that you can churn through more ideas to find something special.
 
 # Define your goals
 
@@ -60,7 +59,7 @@ Whether you're looking for a side-hustle to bring in a little extra income, aimi
 
 For me (and this may change), I'm looking to start a small, bootstrapped business that can replace my full-time income and provide a happy work-life balance. I'm most interested in B2B SaaS through a web application.
 
-If you're not sure what you want, explore what's out there and see what others have done! Listening to the [IndieHacker podcast](https://www.indiehackers.com/podcasts) and exploring that community helped me to see that there are more options than just the venture capital rapid growth route. (However, a great conversation I had with [Aviel Ginzburg](https://twitter.com/aviel) recently has me reconsidering the VC path).
+If you're not sure what you want, explore what's out there and see what others have done! Listening to the [IndieHacker podcast](https://www.indiehackers.com/podcasts) and exploring that community helped me to see that there are more options than just the venture capital, rapid growth route. (However, a great conversation I had with [Aviel Ginzburg](https://twitter.com/aviel) recently has me reconsidering the VC path).
 
 # Build a system with questions based on your goals
 
@@ -70,13 +69,13 @@ Ideas sitting in a backlog are doing nothing for you. Instead, you want an idea 
 
 **Your questions should be geared toward your goals.**
 
+<br/>
+
 For some examples:
 
 - if you're looking to start a unicorn startup, you should have questions about the size of the market, how you might achieve rapid growth, and how you could pitch the vision to investors.
 - if you're looking to build a physical product, you might have questions like "do I have manufacturing connections who can help me design and build this?" or "how can I fund this?"
 - if your goal is to start a non-profit, you might ask "is my local community facing this problem?" or "is this a viable idea for a non-profit or does this have a better chance of succeeding as a for-profit with a strong mission?"
-
-<br/>
 
 Below is the list of questions that I use which are geared toward my goals. Many of these could be used in your system, but others are very specific to what I'm looking for.
 
@@ -88,9 +87,9 @@ I pulled all of these questions from the super talented people below who have st
 
 If you use these questions as a template, I strongly suggest reading their posts to better understand the questions and why they're worth asking.
 
-### The Questions in my System
+### The Questions in my system
 
-**What is the the problem and who have it?**
+**What is the problem and who have it?**
 
 _The problem is everything - so let's only talk about the problem first. What are the pain points? Who are the personas that are encountering this problem?_
 
@@ -116,11 +115,11 @@ _Will this business be able to last long term? What moats will I aim to develop?
 
 **Am I the person to build this business? Would I enjoy this in the day-to-day?**
 
-_Be honest here. It might take years for this to pick up. Would you enjoy solving this problem day-after-day in the long-term?_
+_Be honest here. It might take years for this to pick up. Would you enjoy solving this problem day after day over the long term?_
 
-**If this is a micro-Sass solution: is it too innovative and new? Is it low maintenance for the customer?**
+**If this is a micro-SaaS solution: is it too innovative and new? Is it low maintenance for the customer?**
 
-_Micro-SaaS should be set-it-and-forget it for users (and not require a massive Marketing and Sales budget to convince users that they have the problem to begin with)_
+_Micro-SaaS should be set-it-and-forget-it for users (and not require a massive marketing and sales budget to convince users that they have the problem to begin with)_
 
 ## My system
 
@@ -136,17 +135,17 @@ When I have a new idea, I create a card in "Just created". Once I'm ready to eva
 
 ### Brain tricks
 
-My brain fights this process and naturally wants to stockpile ideas instead (even though I know this system works _way_ better than stockpiling).
+My brain fights this process and naturally wants to stockpile ideas (even though I know this system works _way_ better than idea hoarding).
 
 To help me avoid that, I use the following brain tricks:
 
-- I try to fill these questions out pretty quickly so that I don't have the friction of the process cause me to make excuses and not do it.
-- I highlight <span class="has-text-danger">red flags</span> as I'm typing to help convince my brain that something doesn't feel right and that it's OK to cut this idea.
+- I try to answer these questions pretty quickly so that the friction of the process doesn't cause me to make excuses and bail.
+- I highlight <span class="has-text-danger">red flags</span> as I'm typing to help convince my brain that something doesn't feel right and that it's OK to cut the idea.
 
 <br/>
 
-**_Now spend an afternoon *actually* evaluating those ideas that you have pilled up, cut through the ideas that don't match your goals using a system, and find the gem that you should focus on *now.*_**
+**Now go spend an afternoon evaluating those pilled up ideas, cut through any that don't meet your goals using a system like this, and find that gem that you should focus on now.**
 
 <br/>
 
-Good luck! Let me know how this process is working out for you.
+Good luck! Let me know how it goes.
