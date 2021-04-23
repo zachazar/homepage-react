@@ -132,7 +132,8 @@ const AboutPage = () => {
 						<p>
 							In my free time, my favorite weekend activity is to road trip
 							around Washington with my wife and{' '}
-							<Link to="/blog/new-blog-setting-the-mood">dog 🐶</Link>.
+							<Link to="/blog/new-blog-setting-the-mood">dog 🐶</Link>. I prefer
+							he/him pronouns.
 						</p>
 					</div>
 				</div>
