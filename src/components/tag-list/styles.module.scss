@@ -3,6 +3,11 @@
 .tags {
 	display: inline;
 	color: $color-text;
+	text-align: center;
+
+	& a {
+		margin-bottom: 0 !important; // overrides a bulma oddity
+	}
 
 	.active,
 	:active,

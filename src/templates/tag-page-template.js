@@ -50,6 +50,8 @@ export const pageQuery = graphql`
 					timeToRead
 					frontmatter {
 						title
+						primaryTitle
+						subtitle
 						date(formatString: "MMMM DD, YYYY")
 						slug
 						tags

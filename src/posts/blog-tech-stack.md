@@ -2,16 +2,17 @@
 slug: '/blog/how-I-built-this-blog-tech-stack'
 date: '2021-03-29'
 title: 'How I built this: The tech stack behind this blog'
+primaryTitle: 'How I built this'
+subtitle: 'The tech stack behind this blog'
 tags: ['Gatsby', 'React', 'blogging', 'technical']
 description: 'This blog is made with a handful of different technologies including the JAMstack, Netlify, React, Gatsby, Bulma, and D3.'
 additionalKeywords: ['JAMstack', 'Netlify', 'D3']
 image: ../images/zach-coding-in-sunlight.jpg
 imageAlt: 'Zach coding in the sun'
+imageCaption: "Sometimes you have to wear a sunhat on the rare, sunny days in Seattle and pretend you're on the beach."
 ---
 
-Sometimes you have to wear a sunhat on the rare, sunny days in Seattle and pretend you're on the beach.
-
-Tech stack summary:
+### tl;dr - Tech stack:
 
 - Netlify
 - React

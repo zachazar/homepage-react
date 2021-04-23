@@ -13,16 +13,19 @@ const BlogPostPreviewSmall = ({
 		frontmatter: { date, slug, title, image, imageAlt },
 	},
 }) => (
-	<div className={cx('card container', styles.container)}>
+	<div
+		className={cx('card container', styles.container)}
+		role="button"
+		tabIndex={0}
+		onClick={() => navigate(slug)}
+		onKeyPress={() => navigate(slug)}
+	>
 		<div className={cx('card-image', styles.thumbnailContainer)}>
 			<GatsbyImage
 				image={image.childImageSharp.gatsbyImageData}
 				alt={imageAlt}
 				className={styles.thumbnail}
 				placeholder="blurred"
-				tabIndex={0}
-				onClick={() => navigate(slug)}
-				onKeyPress={() => navigate(slug)}
 			/>
 		</div>
 		<div className="card-content">

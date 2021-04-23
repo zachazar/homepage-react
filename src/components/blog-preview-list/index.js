@@ -20,6 +20,8 @@ BlogPreviewList.propTypes = {
 				description: PropTypes.string,
 				slug: PropTypes.string,
 				title: PropTypes.string,
+				primaryTitle: PropTypes.string,
+				subtitle: PropTypes.string,
 				timeToRead: PropTypes.number,
 				tags: PropTypes.arrayOf(PropTypes.string),
 				imageAlt: PropTypes.string,
