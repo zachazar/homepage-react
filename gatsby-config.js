@@ -38,6 +38,10 @@ module.exports = {
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: 'UA-81758415-2',
+				// Anonymize IP addresses
+				anonymize: true,
+				// Respect if users have Do Not Track set in their browser
+				respectDNT: true,
 			},
 		},
 		{
