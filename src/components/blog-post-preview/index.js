@@ -55,7 +55,7 @@ const BlogPostPreview = ({
 				<BlogMetaData date={date} timeToRead={timeToRead} tags={tags} />
 			</div>
 			<Link className={styles.description} to={slug}>
-				{description}..
+				{description}
 			</Link>
 		</div>
 	</div>
