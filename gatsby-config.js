@@ -76,7 +76,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sitemap`,
 			options: {
-				exclude: ['/tags/*', '/submitted', '/subscribed', '/404'],
+				excludes: ['/tags/*', '/submitted', '/subscribed', '/404'],
 			},
 		},
 		{

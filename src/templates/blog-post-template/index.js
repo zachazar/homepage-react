@@ -204,7 +204,7 @@ BlogPostTemplate.propTypes = {
 }
 
 export const pageQuery = graphql`
-	query($slug: String!) {
+	query ($slug: String!) {
 		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
 			html
 			timeToRead
