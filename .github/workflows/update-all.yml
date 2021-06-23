@@ -1,8 +1,7 @@
 name: Weekly update
-#on: TODO: Uncomment once done with tests
-#  schedule:
-#    - cron: '0 0 * * 2' # Every Tuesday
-on: push
+on:
+  schedule:
+    - cron: '0 0 * * 2' # Every Tuesday
 
 jobs:
   update_deps:
