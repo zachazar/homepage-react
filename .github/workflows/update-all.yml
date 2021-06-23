@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install npm-check-updates
+        run: 'npm i -g npm-check-updates'
+
       - name: Update all dependencies
         run: 'npm run update-all'
 
