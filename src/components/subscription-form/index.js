@@ -89,7 +89,7 @@ const SubscriptionForm = () => {
 								<div className="control has-icons-left">
 									<input
 										type="text"
-										aria-label="Firs name"
+										aria-label="First name"
 										name="fields[first_name]"
 										placeholder="First Name"
 										onChange={(e) => setName(e.target.value)}
