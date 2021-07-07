@@ -61,7 +61,8 @@
 		"format": "prettier --write \"src/**/*.js\"",
 		"lint": "eslint src/ --ext .js",
 		"clean": "gatsby clean",
-		"update-all": "npx ncu -u && npm i"
+		"update-all": "npx ncu -u && npm i",
+		"post": "./bin/new-post.sh"
 	},
 	"repository": {
 		"type": "git",
