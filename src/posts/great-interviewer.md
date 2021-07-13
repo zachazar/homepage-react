@@ -3,6 +3,7 @@ slug: '/blog/how-to-be-a-great-interviewer'
 date: '2021-07-12'
 title: 'How to be a great interviewer'
 tags: ['team building']
+additionalKeywords: ['interviewing', 'recruiting', 'hiring', 'top-talent']
 description: 'Hire top talent and become a great interviewer by reducing nerves, reducing implicit bias, and demonstrating leadership during the interview.'
 image: ../images/great-interviewers.jpg
 imageAlt: 'Interviewing a new candidate'

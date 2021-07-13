@@ -16,6 +16,7 @@ title: 'This is the main header'
 primaryTitle: '(Optional)This is the first part of the title'
 subtitle: '(Optional) Subtitle'
 tags: ['blogging']
+additionalKeywords: ['other stuff for seo']
 description: 'Short description of the post'
 image: ../images/blog-welcome.jpg
 imageAlt: 'An alt if the image does not load'
