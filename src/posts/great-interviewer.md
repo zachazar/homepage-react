@@ -87,7 +87,7 @@ Define your interview process beforehand
 - Train all interviewers on the specific questions they should ask in each interview along with ideal answers.
 - Define a rubric with the specific qualities you're looking for ("communication", "autonomy", "curiosity", "code fluency", etc.).
 
-Document what you oberseved and reduce bias after the interview
+Document what you observed and reduce bias after the interview
 
 - When the interview ends, ask each interviewer to fill out the rubric from above _before they discuss how it went_. Ask them to provide specific examples for each signal that they perceived.
   - For example, instead of saying "Good collaborator" write "Good collaborator - they asked what I thought of their proposed system design and responded to my feedback".
@@ -101,7 +101,7 @@ Document what you oberseved and reduce bias after the interview
 
 ![Photo of an interview going well](../images/leader.jpg)
 
-   <div class="image-caption-container">Photo by <a href="https://unsplash.com/@amyhirschi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Amy Hirschi</a> on <a href="https://unsplash.com">Unsplash</a></div>
+<div class="image-caption-container">Photo by <a href="https://unsplash.com/@amyhirschi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Amy Hirschi</a> on <a href="https://unsplash.com">Unsplash</a></div>
 
 Why? **The candidate's ability to succeed in an interview is contingent on _your_ ability to lead the interview well.**
 
