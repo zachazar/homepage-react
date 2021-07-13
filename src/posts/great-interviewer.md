@@ -1,6 +1,6 @@
 ---
 slug: '/blog/how-to-be-a-great-interviewer'
-date: '2021-07-12'
+date: '2021-07-13'
 title: 'How to be a great interviewer'
 tags: ['team building']
 additionalKeywords: ['interviewing', 'recruiting', 'hiring', 'top-talent']
