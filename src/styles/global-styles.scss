@@ -31,9 +31,8 @@ body {
 }
 
 // For posts since we can't use modules
-
 .image-caption-container {
-	text-align: center;
-	margin-top: -1em;
-	margin-bottom: 1em;
+	@include post-image-caption;
+	// We need to override a large margin from the image
+	margin-top: -2em;
 }

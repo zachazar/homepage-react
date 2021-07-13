@@ -127,10 +127,16 @@ const BlogPostTemplate = ({
 						placeholder="blurred"
 					/>
 					{imageCaption && (
-						<figcaption dangerouslySetInnerHTML={{ __html: imageCaption }} />
+						<figcaption
+							className={styles.mainCaption}
+							dangerouslySetInnerHTML={{ __html: imageCaption }}
+						/>
 					)}
 				</figure>
-				<div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+				<div
+					className={cx('content', styles.content)}
+					dangerouslySetInnerHTML={{ __html: html }}
+				/>
 
 				<div className={cx('columns', styles.footerSection)}>
 					<div className="column is-7">
