@@ -83,3 +83,10 @@ $font-size-large: 1.5rem;
 
 // Border Radius
 $border-radius-default: 0px;
+
+// Shared across clases
+@mixin post-image-caption {
+	text-align: center;
+	margin-bottom: 1em;
+	font-size: $font-size-teeny;
+}

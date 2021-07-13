@@ -53,7 +53,7 @@ The code for this site is in [GitHub](https://github.com/) (and it's public if y
 
 ![Screenshot of preview/production builds in Netlify](../images/blog-techstack-netlify.png)
 
-_Screenshot of preview/production builds in Netlify_
+<div class="image-caption-container">Screenshot of preview/production builds in Netlify</div>
 
 # Frameworks and Languages
 
