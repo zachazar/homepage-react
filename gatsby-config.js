@@ -58,7 +58,13 @@ module.exports = {
 				path: `${__dirname}/src/posts`,
 			},
 		},
-
+		{
+			resolve: '@sentry/gatsby',
+			options: {
+				dsn: 'https://d8e7cd44a5ec46188b8f27df439fec37@o921277.ingest.sentry.io/5867608',
+				sampleRate: 0.7,
+			},
+		},
 		'gatsby-plugin-image',
 
 		{
