@@ -65,7 +65,7 @@ const AboutPage = () => {
 		allMarkdownRemark: { edges: posts },
 	} = useStaticQuery(homePageImageQuery)
 	// TODO: remove
-	const BadComponent = () => <h1>{will.break}</h1>
+	const BadComponent = () => <h1>{posts.does.not.exist}</h1>
 	return (
 		<Layout>
 			<SEO
