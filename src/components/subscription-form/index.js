@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import * as Sentry from '@sentry/gatsby'
 
 import LoadingIcon from '../loading-icon'
 import * as styles from './styles.module.scss'
@@ -40,8 +41,7 @@ const SubscriptionForm = () => {
 			throw new Error('failed', json)
 		} catch (err) {
 			setStatus(STATUSES.ERROR)
-			// eslint-disable-next-line no-console
-			console.log(err)
+			Sentry.captureException(err)
 		}
 	}
 
