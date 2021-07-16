@@ -64,6 +64,8 @@ const AboutPage = () => {
 		},
 		allMarkdownRemark: { edges: posts },
 	} = useStaticQuery(homePageImageQuery)
+	// TODO: remove
+	const BadComponent = () => <h1>{will.break}</h1>
 	return (
 		<Layout>
 			<SEO
@@ -90,6 +92,7 @@ const AboutPage = () => {
 					</div>
 					<div className={cx('column', styles.aboutItem)}>
 						<div className="title has-text-weight-light">Welcome!</div>
+						<BadComponent />
 						<p>
 							My name is Zach Azar and I&apos;m a Software Engineer living in
 							Seattle, WA. Originally from Albuquerque, NM, I discovered
