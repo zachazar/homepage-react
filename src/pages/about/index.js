@@ -64,8 +64,6 @@ const AboutPage = () => {
 		},
 		allMarkdownRemark: { edges: posts },
 	} = useStaticQuery(homePageImageQuery)
-	// TODO: remove
-	const BadComponent = () => <h1>{posts.does.not.exist}</h1>
 	return (
 		<Layout>
 			<SEO
@@ -92,7 +90,13 @@ const AboutPage = () => {
 					</div>
 					<div className={cx('column', styles.aboutItem)}>
 						<div className="title has-text-weight-light">Welcome!</div>
-						<BadComponent />
+						<button
+							onClick={() => {
+								throw new Error('Break it all!!')
+							}}
+						>
+							Break everything
+						</button>
 						<p>
 							My name is Zach Azar and I&apos;m a Software Engineer living in
 							Seattle, WA. Originally from Albuquerque, NM, I discovered
