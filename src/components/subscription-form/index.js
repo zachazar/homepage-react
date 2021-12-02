@@ -45,7 +45,7 @@ const SubscriptionForm = () => {
 		}
 	}
 
-	const FeedbackText = () => {
+	const feedbackText = () => {
 		switch (status) {
 			case 'SUCCESS':
 				return (
@@ -61,7 +61,7 @@ const SubscriptionForm = () => {
 					</p>
 				)
 			default:
-				return <></>
+				return null
 		}
 	}
 	const buttonText = () => {
@@ -134,7 +134,7 @@ const SubscriptionForm = () => {
 					<p className={styles.disclaimer}>
 						I won&apos;t spam you. Unsubscribe at any time.
 					</p>
-					<FeedbackText />
+					{feedbackText()}
 				</div>
 			</div>
 		</div>
