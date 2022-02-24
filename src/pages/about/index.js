@@ -144,6 +144,11 @@ const AboutPage = () => {
 							<BlogPostPreviewSmall post={post} />
 						</div>
 					))}
+					<Link
+						className={cx('column is-full-mobile is-2-desktop', styles.dots)}
+						to="/blog"
+						title="See more posts"
+					/>
 				</div>
 			</div>
 		</Layout>

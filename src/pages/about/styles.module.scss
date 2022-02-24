@@ -32,3 +32,17 @@
 .recentPosts {
 	padding: 2rem;
 }
+
+.dots {
+	cursor: pointer;
+	background-image: radial-gradient(circle, black 10px, transparent 11px);
+
+	// horizontal
+	background-size: 33.33% 100%;
+
+	@media (max-width: $break-width-bulma-desktop) {
+		// Vertical
+		background-size: 100% 33.33%;
+		height: 100px;
+	}
+}
