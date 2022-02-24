@@ -6,6 +6,10 @@ $break-width-smallish: 900px;
 $break-width-medium: 1200px;
 $break-width-large: 1800px;
 
+$break-width-bulma-mobile: 768px;
+$break-width-bulma-tablet: 769px;
+$break-width-bulma-desktop: 1024px;
+
 @mixin on-screens-smaller-than-teeny {
 	@media (max-width: $break-width-teeny) {
 		@content;
