@@ -23,7 +23,7 @@ const BlogPostPreview = ({
 		},
 	},
 }) => (
-	<div className="columns">
+	<div className={cx('columns', styles.container)}>
 		<div className={cx('column', styles.thumbnailContainer)}>
 			<GatsbyImage
 				image={image.childImageSharp.gatsbyImageData}
