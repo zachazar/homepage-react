@@ -91,10 +91,11 @@ const AboutPage = () => {
 					<div className={cx('column', styles.aboutItem)}>
 						<div className="title has-text-weight-light">Welcome!</div>
 						<p>
-							My name is Zach Azar (he/him) and I&apos;m a software engineer and
-							technology entrepreneur living in Albuquerque, NM. I&apos;m
-							currently taking a sabbatical and exploring my hometown after
-							being on the west coast for the past 6 years.
+							My name is Zach Azar (he/him) and this is my homepage. I&apos;m a
+							software engineer and technology entrepreneur living in
+							Albuquerque, NM. I&apos;m currently taking a sabbatical and
+							exploring my hometown after being on the west coast for the past 6
+							years.
 						</p>
 						<p>
 							I&apos;ve been developing software for 10+ years and have earned
@@ -106,29 +107,29 @@ const AboutPage = () => {
 								BuildingConnected{' '}
 							</a>{' '}
 							and was able to experience real startup growth in San Francisco
-							🚀. Starting as a full-stack engineer, I ramped up to lead a team
-							of engineers and then became an Engineering Manager helping to
-							train other managers. Meanwhile, I was overseeing engineering for
-							our subcontractor product{' '}
+							🚀. Starting as a full-stack engineer when the business had 30
+							employees, I ramped up to lead a team of engineers and then became
+							an Engineering Manager helping to train other managers. Meanwhile,
+							I was overseeing engineering for our subcontractor product (
 							<a
 								href="https://www.buildingconnected.com/bid-board/"
 								target="blank"
 							>
 								Bid Board
 							</a>{' '}
-							working closely with Product and Design leads.
+							) and working closely with Product and Design leads.
 						</p>
 						<p>
 							It&apos;s been a whirlwind! After we were acquired by{' '}
 							<a href="https://www.autodesk.com/" target="blank">
 								Autodesk
 							</a>{' '}
-							in 2019, I decided to return to the technical track and worked
-							remotely out of Seattle in various technical roles including as a
-							Platform Team lead and a consultant (similar to a Software
-							Architect) for teams looking to scale their web applications.
-							Check out my <Link to="/resume">Résumé</Link> to see all of the
-							skills that I&apos;ve picked up along the way.
+							in 2019 with 230 employees, I decided to return to the technical
+							track and worked remotely out of Seattle in various technical
+							roles including as a Platform Team lead and a consultant (similar
+							to a Software Architect) for teams looking to scale their web
+							applications. Check out my <Link to="/resume">résumé page</Link>{' '}
+							to see all of the skills that I&apos;ve picked up along the way.
 						</p>
 						<p>
 							In my free time, I enjoy biking around the city and taking day
