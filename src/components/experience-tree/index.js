@@ -28,6 +28,17 @@ const ExperienceTree = () => {
 				id="leftPanel"
 				role="tree"
 			>
+				<a
+					type="button"
+					className={cx('button is-small is-rounded', styles.download)}
+					href="/Zach Azar-Resume.pdf"
+					target="blank"
+				>
+					<span>Download</span>{' '}
+					<span className="icon is-small">
+						<i className="fas fa-file-pdf" />
+					</span>{' '}
+				</a>
 				<div className={cx('title', 'has-text-weight-light')}>Experience</div>
 				{workExperienceCards}
 				<div className={cx('title', 'has-text-weight-light')}>Education</div>

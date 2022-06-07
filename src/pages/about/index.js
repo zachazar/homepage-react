@@ -91,49 +91,53 @@ const AboutPage = () => {
 					<div className={cx('column', styles.aboutItem)}>
 						<div className="title has-text-weight-light">Welcome!</div>
 						<p>
-							My name is Zach Azar and I&apos;m a Software Engineer living in
-							Seattle, WA. Originally from Albuquerque, NM, I discovered
-							Computer Science while attending Vanderbilt University in
-							Nashville, TN and I&apos;ve never looked back.
+							My name is Zach Azar (he/him) and this is my homepage. I&apos;m a
+							software engineer and technology entrepreneur living in
+							Albuquerque, NM. I&apos;m currently taking a sabbatical and
+							exploring my hometown after being on the west coast for the past 6
+							years.
 						</p>
 						<p>
-							After graduating from Vandy, I worked in industry for a few years,
-							then returned to academia to work as a Teaching Assistant and earn
-							my M.S. from the University of Denver.
-						</p>
-						<p>
-							Once I completed my master&apos;s degree, I was a technical
-							co-founder briefly (it didn&apos;t blast off unfortunately) but
-							then I joined
+							I&apos;ve been developing software for 10+ years and have earned
+							my Bachelor&apos;s and Master&apos;s degrees in Computer Science.
+							In 2016, I was a technical co-founder (it didn&apos;t blast off,
+							unfortunately) but then I joined
 							<a target="blank" href="https://www.buildingconnected.com/">
 								{' '}
 								BuildingConnected{' '}
-							</a>
-							and was fortunate enough to experience real startup growth in SF
-							🚀. Starting as a full-stack engineer, I ramped up to lead a team
-							of engineers, and then became an Engineering Manager helping to
-							train other managers. Meanwhile, I was overseeing engineering for
-							our subcontractor product (
+							</a>{' '}
+							and was able to experience real startup growth in San Francisco
+							🚀. Starting as a full-stack engineer when the business had ~30
+							employees, I ramped up to lead a team of engineers and then became
+							an Engineering Manager helping to train other managers and scale
+							the engineering organization. Meanwhile, I was overseeing
+							engineering for our subcontractor product (
 							<a
 								href="https://www.buildingconnected.com/bid-board/"
 								target="blank"
 							>
 								Bid Board
 							</a>
-							).
+							) and worked closely with Product and Design leads.
 						</p>
 						<p>
-							It&apos;s been a whirlwind. After we got acquired by Autodesk, I
-							decided to return to the technical track and now I work fully
-							remotely out of Seattle. Check out{' '}
-							<Link to="/resume">the Résumé page</Link> to see all of the skills
-							I&apos;ve picked up along the way.
+							It&apos;s been a whirlwind! After we were acquired by{' '}
+							<a href="https://www.autodesk.com/" target="blank">
+								Autodesk
+							</a>{' '}
+							in 2019 with ~230 employees, I decided to return to the technical
+							track and worked remotely out of Seattle in various technical
+							roles including as a Platform Team lead and a consultant (similar
+							to a Software Architect) for teams looking to scale their web
+							applications. Check out my <Link to="/resume">résumé page</Link>{' '}
+							to see all of the skills that I&apos;ve picked up along the way.
 						</p>
 						<p>
-							In my free time, my favorite weekend activity is to road trip
-							around Washington with my wife and{' '}
-							<Link to="/blog/new-blog-setting-the-mood">dog 🐶</Link>. I prefer
-							he/him pronouns.
+							In my free time, I enjoy biking around the city and taking day
+							trips with my wife and{' '}
+							<Link to="/blog/new-blog-setting-the-mood">dog 🐶</Link>. Feel
+							free to <Link to="/contact">reach out</Link> if I can help you
+							with anything!
 						</p>
 					</div>
 				</div>
