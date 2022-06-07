@@ -107,24 +107,25 @@ const AboutPage = () => {
 								BuildingConnected{' '}
 							</a>{' '}
 							and was able to experience real startup growth in San Francisco
-							🚀. Starting as a full-stack engineer when the business had 30
+							🚀. Starting as a full-stack engineer when the business had ~30
 							employees, I ramped up to lead a team of engineers and then became
-							an Engineering Manager helping to train other managers. Meanwhile,
-							I was overseeing engineering for our subcontractor product (
+							an Engineering Manager helping to train other managers and scale
+							the engineering organization. Meanwhile, I was overseeing
+							engineering for our subcontractor product (
 							<a
 								href="https://www.buildingconnected.com/bid-board/"
 								target="blank"
 							>
 								Bid Board
-							</a>{' '}
-							) and working closely with Product and Design leads.
+							</a>
+							) and worked closely with Product and Design leads.
 						</p>
 						<p>
 							It&apos;s been a whirlwind! After we were acquired by{' '}
 							<a href="https://www.autodesk.com/" target="blank">
 								Autodesk
 							</a>{' '}
-							in 2019 with 230 employees, I decided to return to the technical
+							in 2019 with ~230 employees, I decided to return to the technical
 							track and worked remotely out of Seattle in various technical
 							roles including as a Platform Team lead and a consultant (similar
 							to a Software Architect) for teams looking to scale their web
